@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */; };
+		C57D6B381C47EB4E00C92E33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B371C47EB4E00C92E33 /* ViewController.swift */; };
+		C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B391C47EB4E00C92E33 /* Main.storyboard */; };
+		C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */; };
+		C57D6B401C47EB4E00C92E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */; };
+		C57D6B4B1C47EB4F00C92E33 /* AutoLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B4A1C47EB4F00C92E33 /* AutoLifeTests.swift */; };
+		C57D6B561C47EB4F00C92E33 /* AutoLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B551C47EB4F00C92E33 /* AutoLifeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C57D6B471C47EB4F00C92E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57D6B2A1C47EB4E00C92E33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C57D6B311C47EB4E00C92E33;
+			remoteInfo = AutoLife;
+		};
+		C57D6B521C47EB4F00C92E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57D6B2A1C47EB4E00C92E33 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C57D6B311C47EB4E00C92E33;
+			remoteInfo = AutoLife;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C57D6B321C47EB4E00C92E33 /* AutoLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C57D6B371C47EB4E00C92E33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C57D6B3A1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C57D6B3F1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C57D6B411C47EB4E00C92E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57D6B461C47EB4F00C92E33 /* AutoLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57D6B4A1C47EB4F00C92E33 /* AutoLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLifeTests.swift; sourceTree = "<group>"; };
+		C57D6B4C1C47EB4F00C92E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57D6B551C47EB4F00C92E33 /* AutoLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLifeUITests.swift; sourceTree = "<group>"; };
+		C57D6B571C47EB4F00C92E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C57D6B2F1C47EB4E00C92E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B431C47EB4F00C92E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B4E1C47EB4F00C92E33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C57D6B291C47EB4E00C92E33 = {
+			isa = PBXGroup;
+			children = (
+				C57D6B341C47EB4E00C92E33 /* AutoLife */,
+				C57D6B491C47EB4F00C92E33 /* AutoLifeTests */,
+				C57D6B541C47EB4F00C92E33 /* AutoLifeUITests */,
+				C57D6B331C47EB4E00C92E33 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C57D6B331C47EB4E00C92E33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B321C47EB4E00C92E33 /* AutoLife.app */,
+				C57D6B461C47EB4F00C92E33 /* AutoLifeTests.xctest */,
+				C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C57D6B341C47EB4E00C92E33 /* AutoLife */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */,
+				C57D6B371C47EB4E00C92E33 /* ViewController.swift */,
+				C57D6B391C47EB4E00C92E33 /* Main.storyboard */,
+				C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */,
+				C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */,
+				C57D6B411C47EB4E00C92E33 /* Info.plist */,
+			);
+			path = AutoLife;
+			sourceTree = "<group>";
+		};
+		C57D6B491C47EB4F00C92E33 /* AutoLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B4A1C47EB4F00C92E33 /* AutoLifeTests.swift */,
+				C57D6B4C1C47EB4F00C92E33 /* Info.plist */,
+			);
+			path = AutoLifeTests;
+			sourceTree = "<group>";
+		};
+		C57D6B541C47EB4F00C92E33 /* AutoLifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B551C47EB4F00C92E33 /* AutoLifeUITests.swift */,
+				C57D6B571C47EB4F00C92E33 /* Info.plist */,
+			);
+			path = AutoLifeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C57D6B311C47EB4E00C92E33 /* AutoLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57D6B5A1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLife" */;
+			buildPhases = (
+				C57D6B2E1C47EB4E00C92E33 /* Sources */,
+				C57D6B2F1C47EB4E00C92E33 /* Frameworks */,
+				C57D6B301C47EB4E00C92E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLife;
+			productName = AutoLife;
+			productReference = C57D6B321C47EB4E00C92E33 /* AutoLife.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C57D6B451C47EB4F00C92E33 /* AutoLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57D6B5D1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeTests" */;
+			buildPhases = (
+				C57D6B421C47EB4F00C92E33 /* Sources */,
+				C57D6B431C47EB4F00C92E33 /* Frameworks */,
+				C57D6B441C47EB4F00C92E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C57D6B481C47EB4F00C92E33 /* PBXTargetDependency */,
+			);
+			name = AutoLifeTests;
+			productName = AutoLifeTests;
+			productReference = C57D6B461C47EB4F00C92E33 /* AutoLifeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C57D6B501C47EB4F00C92E33 /* AutoLifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57D6B601C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeUITests" */;
+			buildPhases = (
+				C57D6B4D1C47EB4F00C92E33 /* Sources */,
+				C57D6B4E1C47EB4F00C92E33 /* Frameworks */,
+				C57D6B4F1C47EB4F00C92E33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C57D6B531C47EB4F00C92E33 /* PBXTargetDependency */,
+			);
+			name = AutoLifeUITests;
+			productName = AutoLifeUITests;
+			productReference = C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C57D6B2A1C47EB4E00C92E33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "徐成";
+				TargetAttributes = {
+					C57D6B311C47EB4E00C92E33 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C57D6B451C47EB4F00C92E33 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C57D6B311C47EB4E00C92E33;
+					};
+					C57D6B501C47EB4F00C92E33 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C57D6B311C47EB4E00C92E33;
+					};
+				};
+			};
+			buildConfigurationList = C57D6B2D1C47EB4E00C92E33 /* Build configuration list for PBXProject "AutoLife" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C57D6B291C47EB4E00C92E33;
+			productRefGroup = C57D6B331C47EB4E00C92E33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C57D6B311C47EB4E00C92E33 /* AutoLife */,
+				C57D6B451C47EB4F00C92E33 /* AutoLifeTests */,
+				C57D6B501C47EB4F00C92E33 /* AutoLifeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C57D6B301C47EB4E00C92E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57D6B401C47EB4E00C92E33 /* LaunchScreen.storyboard in Resources */,
+				C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */,
+				C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B441C47EB4F00C92E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B4F1C47EB4F00C92E33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C57D6B2E1C47EB4E00C92E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57D6B381C47EB4E00C92E33 /* ViewController.swift in Sources */,
+				C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B421C47EB4F00C92E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57D6B4B1C47EB4F00C92E33 /* AutoLifeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57D6B4D1C47EB4F00C92E33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57D6B561C47EB4F00C92E33 /* AutoLifeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C57D6B481C47EB4F00C92E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C57D6B311C47EB4E00C92E33 /* AutoLife */;
+			targetProxy = C57D6B471C47EB4F00C92E33 /* PBXContainerItemProxy */;
+		};
+		C57D6B531C47EB4F00C92E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C57D6B311C47EB4E00C92E33 /* AutoLife */;
+			targetProxy = C57D6B521C47EB4F00C92E33 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C57D6B391C47EB4E00C92E33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C57D6B3A1C47EB4E00C92E33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C57D6B3F1C47EB4E00C92E33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C57D6B581C47EB4F00C92E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C57D6B591C47EB4F00C92E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C57D6B5B1C47EB4F00C92E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AutoLife/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C57D6B5C1C47EB4F00C92E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AutoLife/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C57D6B5E1C47EB4F00C92E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AutoLifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLife.app/AutoLife";
+			};
+			name = Debug;
+		};
+		C57D6B5F1C47EB4F00C92E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AutoLifeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLifeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLife.app/AutoLife";
+			};
+			name = Release;
+		};
+		C57D6B611C47EB4F00C92E33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AutoLifeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AutoLife;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C57D6B621C47EB4F00C92E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AutoLifeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLifeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AutoLife;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C57D6B2D1C47EB4E00C92E33 /* Build configuration list for PBXProject "AutoLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57D6B581C47EB4F00C92E33 /* Debug */,
+				C57D6B591C47EB4F00C92E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C57D6B5A1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57D6B5B1C47EB4F00C92E33 /* Debug */,
+				C57D6B5C1C47EB4F00C92E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C57D6B5D1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57D6B5E1C47EB4F00C92E33 /* Debug */,
+				C57D6B5F1C47EB4F00C92E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C57D6B601C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57D6B611C47EB4F00C92E33 /* Debug */,
+				C57D6B621C47EB4F00C92E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C57D6B2A1C47EB4E00C92E33 /* Project object */;
+}
