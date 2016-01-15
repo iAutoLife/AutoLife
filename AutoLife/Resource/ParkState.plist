@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>京AB1212</key>
+	<array>
+		<array>
+			<string>19:20:27</string>
+			<string>¥ 5.00</string>
+		</array>
+		<array>
+			<string>北京邮电大学科研楼</string>
+			<string>B2058</string>
+			<array>
+				<string>7:00-21:00 ¥2.00/15min</string>
+				<string>7:00-21:00 ¥2.00/15min</string>
+			</array>
+		</array>
+		<array>
+			<false/>
+			<string>¥2.00</string>
+		</array>
+	</array>
+	<key>京PC5465</key>
+	<array>
+		<array>
+			<string>17:20:20</string>
+			<string>¥10:00</string>
+		</array>
+		<array>
+			<string>牡丹园停车场</string>
+			<string>B2059</string>
+			<array>
+				<string>7:00-21:00 ¥2.00/15min</string>
+				<string>7:00-21:00 ¥2.00/15min</string>
+				<string>7:00-21:00 ¥2.00/15min</string>
+			</array>
+		</array>
+		<array>
+			<true/>
+			<string>¥5.00</string>
+		</array>
+	</array>
+</dict>
+</plist>

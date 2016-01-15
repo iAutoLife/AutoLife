@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>brand</key>
+			<string>fute</string>
+			<key>plate</key>
+			<string>京AB1212</string>
+			<key>cerificate</key>
+			<false/>
+			<key>authorize</key>
+			<true/>
+			<key>assist</key>
+			<array>
+				<string>13210988901</string>
+			</array>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>baoma</string>
+			<key>plate</key>
+			<string>京QJ8235</string>
+			<key>cerificate</key>
+			<true/>
+			<key>authorize</key>
+			<false/>
+			<key>assist</key>
+			<array>
+				<string>15676091010</string>
+				<string>15510010981</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>brand</key>
+			<string>fute</string>
+			<key>plate</key>
+			<string>京PB8212</string>
+			<key>authorize</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>brand</key>
+			<string>baoma</string>
+			<key>plate</key>
+			<string>京E8T921</string>
+			<key>authorize</key>
+			<false/>
+		</dict>
+	</array>
+</array>
+</plist>

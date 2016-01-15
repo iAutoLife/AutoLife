@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>address</key>
+		<string>枫蓝国际停车场</string>
+		<key>cost</key>
+		<string>¥4.50</string>
+		<key>plate</key>
+		<string>京A B1212</string>
+		<key>date</key>
+		<string>2015/11/05 12:34:10</string>
+		<key>totalTime</key>
+		<string>02:20:06</string>
+		<key>bill</key>
+		<dict>
+			<key>parkTime</key>
+			<string>2015/11/05 12:34:10 - 2015/11/06 07:21:10</string>
+			<key>totalTime</key>
+			<string>18:47:00</string>
+			<key>plate</key>
+			<string>京A B1212</string>
+			<key>fee</key>
+			<string>¥15.0</string>
+			<key>parking</key>
+			<string>枫蓝国际停车场</string>
+			<key>enter</key>
+			<string>A2</string>
+			<key>exit</key>
+			<string>B3</string>
+			<key>chargeStandard</key>
+			<array>
+				<string>07:00-21:00 ¥3.00/15min</string>
+				<string>21:00-07:00 ¥0.50/15min</string>
+				<string>09:00-16:00 ¥1.00/15min</string>
+			</array>
+			<key>coupon</key>
+			<string>物美超市优惠券 5h</string>
+			<key>payway</key>
+			<string>钱包 ¥15.00</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>address</key>
+		<string>北京北城亚运村汽车交易市场</string>
+		<key>cost</key>
+		<string>¥12.00</string>
+		<key>plate</key>
+		<string>京A B1212</string>
+		<key>totalTime</key>
+		<string>03:20:06</string>
+		<key>date</key>
+		<string>2015/9/25 10:59:59</string>
+		<key>bill</key>
+		<dict>
+			<key>payway</key>
+			<string>钱包  ¥12.00</string>
+			<key>enter</key>
+			<string>A1</string>
+			<key>coupon</key>
+			<string>海底捞优惠券 2h</string>
+			<key>totalTime</key>
+			<string>03:20:06</string>
+			<key>parkTime</key>
+			<string>2015/9/25 10:59:59 - 2015/9/25 14:20:05</string>
+			<key>chargeStandard</key>
+			<array>
+				<string>09：00-21：00  ¥2.00/15min</string>
+			</array>
+			<key>parking</key>
+			<string>北京北辰亚运村汽车交易市场</string>
+			<key>fee</key>
+			<string>¥12.00</string>
+			<key>plate</key>
+			<string>京A B1212</string>
+			<key>exit</key>
+			<string>B2</string>
+		</dict>
+	</dict>
+</array>
+</plist>

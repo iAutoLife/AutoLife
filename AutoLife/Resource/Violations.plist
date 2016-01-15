@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>plate</key>
+		<string>京AB1212</string>
+		<key>times</key>
+		<integer>0</integer>
+		<key>points</key>
+		<integer>0</integer>
+		<key>forfeit</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>plate</key>
+		<string>京CD3434</string>
+		<key>times</key>
+		<integer>1</integer>
+		<key>points</key>
+		<integer>6</integer>
+		<key>forfeit</key>
+		<integer>200</integer>
+		<key>info</key>
+		<array>
+			<dict>
+				<key>address</key>
+				<string>河北省京港澳高速北京方向63km处</string>
+				<key>content</key>
+				<string>驾驶中型以上载客载货汽车、校车、危险物品运输车辆以外的其他机动车超过规定时速20%以上未达到50%的</string>
+				<key>reason</key>
+				<string>超速</string>
+				<key>date</key>
+				<string>2015/11/11 12:13</string>
+				<key>point</key>
+				<string>6分</string>
+				<key>forfeit</key>
+				<string>¥200.00</string>
+				<key>numbers</key>
+				<string>2人</string>
+			</dict>
+			<dict>
+				<key>address</key>
+				<string>河北省京广高速广州方向78km处</string>
+				<key>content</key>
+				<string>驾驶小型汽车超速30%，违章驾驶。驾驶中型以上载客载货汽车、校车、危险物品运输车辆以外的其他机动车超过规定时速20%以上未达到50%的</string>
+				<key>reason</key>
+				<string>超载</string>
+				<key>date</key>
+				<string>2015/11/20 15:51</string>
+				<key>point</key>
+				<string>6分</string>
+				<key>forfeit</key>
+				<string>¥300.00</string>
+				<key>numbers</key>
+				<string>1</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

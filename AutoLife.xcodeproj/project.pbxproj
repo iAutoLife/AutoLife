@@ -8,12 +8,80 @@
 
 /* Begin PBXBuildFile section */
 		C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */; };
-		C57D6B381C47EB4E00C92E33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B371C47EB4E00C92E33 /* ViewController.swift */; };
 		C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B391C47EB4E00C92E33 /* Main.storyboard */; };
 		C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */; };
 		C57D6B401C47EB4E00C92E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */; };
 		C57D6B4B1C47EB4F00C92E33 /* AutoLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B4A1C47EB4F00C92E33 /* AutoLifeTests.swift */; };
 		C57D6B561C47EB4F00C92E33 /* AutoLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B551C47EB4F00C92E33 /* AutoLifeUITests.swift */; };
+		C57D6B651C47EC1000C92E33 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B631C47EC1000C92E33 /* AMapSearchKit.framework */; };
+		C57D6B661C47EC1000C92E33 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B641C47EC1000C92E33 /* MAMapKit.framework */; };
+		C57D6B681C47EC2300C92E33 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B671C47EC2300C92E33 /* AMap.bundle */; };
+		C57D6B6A1C47ECC800C92E33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B691C47ECC800C92E33 /* UIKit.framework */; };
+		C57D6B6C1C47ECD100C92E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B6B1C47ECD100C92E33 /* Foundation.framework */; };
+		C57D6B6E1C47ECF800C92E33 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B6D1C47ECF800C92E33 /* QuartzCore.framework */; };
+		C57D6B701C47ED0900C92E33 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B6F1C47ED0800C92E33 /* SystemConfiguration.framework */; };
+		C57D6B721C47ED1300C92E33 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B711C47ED1300C92E33 /* OpenGLES.framework */; };
+		C57D6B741C47ED1B00C92E33 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B731C47ED1B00C92E33 /* CoreLocation.framework */; };
+		C57D6B761C47ED2200C92E33 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B751C47ED2200C92E33 /* CoreTelephony.framework */; };
+		C57D6B781C47ED2800C92E33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B771C47ED2800C92E33 /* CoreGraphics.framework */; };
+		C57D6B7A1C47ED3100C92E33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B791C47ED3100C92E33 /* libz.tbd */; };
+		C57D6B7C1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */; };
+		C57D6B7E1C47ED4900C92E33 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B7D1C47ED4900C92E33 /* libc++.tbd */; };
+		C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B871C47EF1900C92E33 /* LoginViewController.swift */; };
+		C57D6B8B1C47F08700C92E33 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */; };
+		C57D6B8F1C47F13A00C92E33 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8C1C47F13A00C92E33 /* KeyChain.swift */; };
+		C57D6B901C47F13A00C92E33 /* XuRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */; };
+		C57D6B911C47F13A00C92E33 /* XuUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */; };
+		C57D6B9A1C47F17000C92E33 /* CarInfomation.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B931C47F17000C92E33 /* CarInfomation.plist */; };
+		C57D6B9B1C47F17000C92E33 /* Carport.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B941C47F17000C92E33 /* Carport.plist */; };
+		C57D6B9C1C47F17000C92E33 /* CarportState.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B951C47F17000C92E33 /* CarportState.plist */; };
+		C57D6B9D1C47F17000C92E33 /* CityAndArea.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B961C47F17000C92E33 /* CityAndArea.plist */; };
+		C57D6B9E1C47F17000C92E33 /* ParkingRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B971C47F17000C92E33 /* ParkingRecord.plist */; };
+		C57D6B9F1C47F17000C92E33 /* ParkState.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B981C47F17000C92E33 /* ParkState.plist */; };
+		C57D6BA01C47F17000C92E33 /* Violations.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B991C47F17000C92E33 /* Violations.plist */; };
+		C57D6BA51C47F20F00C92E33 /* NewAutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BA41C47F20F00C92E33 /* NewAutoViewController.swift */; };
+		C57D6BA71C47F5EB00C92E33 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BA61C47F5EB00C92E33 /* AgreementViewController.swift */; };
+		C57D6BAC1C47F6D100C92E33 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BAB1C47F6D100C92E33 /* MasterViewController.swift */; };
+		C57D6BB21C47F9D500C92E33 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BB11C47F9D500C92E33 /* UIButton+Block.m */; };
+		C57D6BBC1C47FBBA00C92E33 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BBA1C47FBBA00C92E33 /* HoshiTextField.swift */; };
+		C57D6BBD1C47FBBA00C92E33 /* TextFieldsEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BBB1C47FBBA00C92E33 /* TextFieldsEffects.swift */; };
+		C57D6BC51C47FC1200C92E33 /* MasterMapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BC41C47FC1200C92E33 /* MasterMapDelegate.swift */; };
+		C57D6BD31C47FCF300C92E33 /* FootMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BCC1C47FCF300C92E33 /* FootMenuView.swift */; };
+		C57D6BD41C47FCF300C92E33 /* SubMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BCD1C47FCF300C92E33 /* SubMasterView.swift */; };
+		C57D6BD51C47FCF300C92E33 /* XuAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BCE1C47FCF300C92E33 /* XuAnnotationView.swift */; };
+		C57D6BD61C47FCF300C92E33 /* XuCustomPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BCF1C47FCF300C92E33 /* XuCustomPointView.swift */; };
+		C57D6BD71C47FCF300C92E33 /* XuMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BD01C47FCF300C92E33 /* XuMapView.swift */; };
+		C57D6BD81C47FCF300C92E33 /* XuPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BD11C47FCF300C92E33 /* XuPointAnnotation.swift */; };
+		C57D6BD91C47FCF300C92E33 /* XuStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BD21C47FCF300C92E33 /* XuStepper.swift */; };
+		C57D6BDB1C47FD4700C92E33 /* CarMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BDA1C47FD4700C92E33 /* CarMaster.swift */; };
+		C57D6BDD1C48A8FD00C92E33 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BDC1C48A8FD00C92E33 /* MessageViewController.swift */; };
+		C57D6BE01C48A94A00C92E33 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BDE1C48A94A00C92E33 /* PersonalViewController.swift */; };
+		C57D6BE11C48A94A00C92E33 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BDF1C48A94A00C92E33 /* SettingViewController.swift */; };
+		C57D6BE31C48A9BB00C92E33 /* XuTableViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */; };
+		C57D6BE61C48A9FD00C92E33 /* ViolationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BE41C48A9FD00C92E33 /* ViolationDetailViewController.swift */; };
+		C57D6BE71C48A9FD00C92E33 /* ViolationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BE51C48A9FD00C92E33 /* ViolationViewController.swift */; };
+		C57D6BF21C48AAD800C92E33 /* ParkingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BF01C48AAD800C92E33 /* ParkingRecordViewController.swift */; };
+		C57D6BF31C48AAD800C92E33 /* ParkStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BF11C48AAD800C92E33 /* ParkStateViewController.swift */; };
+		C57D6BF71C48AB0E00C92E33 /* NewPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BF41C48AB0E00C92E33 /* NewPayViewController.swift */; };
+		C57D6BF81C48AB0E00C92E33 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */; };
+		C57D6BF91C48AB0E00C92E33 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */; };
+		C57D6BFC1C48AB4D00C92E33 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BFA1C48AB4D00C92E33 /* CarViewController.swift */; };
+		C57D6BFD1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BFB1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift */; };
+		C57D6C001C48AB6F00C92E33 /* CarportShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BFE1C48AB6F00C92E33 /* CarportShareViewController.swift */; };
+		C57D6C011C48AB6F00C92E33 /* CarportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6BFF1C48AB6F00C92E33 /* CarportViewController.swift */; };
+		C57D6C031C48AC1600C92E33 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C021C48AC1600C92E33 /* Extension.swift */; };
+		C57D6C071C48AC9300C92E33 /* UniversalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */; };
+		C57D6C091C48ACF600C92E33 /* VArrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C081C48ACF600C92E33 /* VArrayTableViewCell.swift */; };
+		C57D6C0B1C48ADBA00C92E33 /* ViolationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C0A1C48ADBA00C92E33 /* ViolationObject.swift */; };
+		C57D6C0D1C48ADE800C92E33 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */; };
+		C57D6C0F1C48AE1E00C92E33 /* CarOwnership.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C0E1C48AE1E00C92E33 /* CarOwnership.swift */; };
+		C57D6C111C48AE7300C92E33 /* ViolationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C101C48AE7300C92E33 /* ViolationTableViewCell.swift */; };
+		C57D6C131C48AEF900C92E33 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C121C48AEF900C92E33 /* HeaderView.swift */; };
+		C57D6C151C48AF5800C92E33 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C141C48AF5800C92E33 /* RecordTableViewCell.swift */; };
+		C57D6C171C48AF9F00C92E33 /* CarportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C161C48AF9F00C92E33 /* CarportTableViewCell.swift */; };
+		C57D6C191C48AFB700C92E33 /* Carport.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C181C48AFB700C92E33 /* Carport.swift */; };
+		C57D6C1B1C48B33300C92E33 /* XuPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C1A1C48B33300C92E33 /* XuPickerView.swift */; };
+		C57D6C1D1C48B34E00C92E33 /* SwiftColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6C1C1C48B34E00C92E33 /* SwiftColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C57D6B321C47EB4E00C92E33 /* AutoLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57D6B321C47EB4E00C92E33 /* i车生活.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i车生活.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57D6B371C47EB4E00C92E33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C57D6B3A1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57D6B3F1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +114,77 @@
 		C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D6B551C47EB4F00C92E33 /* AutoLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLifeUITests.swift; sourceTree = "<group>"; };
 		C57D6B571C47EB4F00C92E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57D6B631C47EC1000C92E33 /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = AutoLife/Framework/AMapSearchKit.framework; sourceTree = "<group>"; };
+		C57D6B641C47EC1000C92E33 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = AutoLife/Framework/MAMapKit.framework; sourceTree = "<group>"; };
+		C57D6B671C47EC2300C92E33 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = AutoLife/Framework/AMap.bundle; sourceTree = "<group>"; };
+		C57D6B691C47ECC800C92E33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C57D6B6B1C47ECD100C92E33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C57D6B6D1C47ECF800C92E33 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C57D6B6F1C47ED0800C92E33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C57D6B711C47ED1300C92E33 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C57D6B731C47ED1B00C92E33 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C57D6B751C47ED2200C92E33 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C57D6B771C47ED2800C92E33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C57D6B791C47ED3100C92E33 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		C57D6B7D1C47ED4900C92E33 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C57D6B871C47EF1900C92E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Classes/MasterBranch/Controller/LoginViewController.swift; sourceTree = "<group>"; };
+		C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeDefine.swift; path = Classes/Assistant/TypeDefine.swift; sourceTree = "<group>"; };
+		C57D6B8C1C47F13A00C92E33 /* KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyChain.swift; path = Classes/Assistant/KeyChain.swift; sourceTree = "<group>"; };
+		C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuRegularExpression.swift; path = Classes/Assistant/XuRegularExpression.swift; sourceTree = "<group>"; };
+		C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuUserDefault.swift; path = Classes/Assistant/XuUserDefault.swift; sourceTree = "<group>"; };
+		C57D6B931C47F17000C92E33 /* CarInfomation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CarInfomation.plist; path = Resource/CarInfomation.plist; sourceTree = "<group>"; };
+		C57D6B941C47F17000C92E33 /* Carport.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Carport.plist; path = Resource/Carport.plist; sourceTree = "<group>"; };
+		C57D6B951C47F17000C92E33 /* CarportState.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CarportState.plist; path = Resource/CarportState.plist; sourceTree = "<group>"; };
+		C57D6B961C47F17000C92E33 /* CityAndArea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = CityAndArea.plist; path = Resource/CityAndArea.plist; sourceTree = "<group>"; };
+		C57D6B971C47F17000C92E33 /* ParkingRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ParkingRecord.plist; path = Resource/ParkingRecord.plist; sourceTree = "<group>"; };
+		C57D6B981C47F17000C92E33 /* ParkState.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ParkState.plist; path = Resource/ParkState.plist; sourceTree = "<group>"; };
+		C57D6B991C47F17000C92E33 /* Violations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Violations.plist; path = Resource/Violations.plist; sourceTree = "<group>"; };
+		C57D6BA41C47F20F00C92E33 /* NewAutoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewAutoViewController.swift; path = Classes/CarBranch/Controller/NewAutoViewController.swift; sourceTree = "<group>"; };
+		C57D6BA61C47F5EB00C92E33 /* AgreementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgreementViewController.swift; path = Classes/MasterBranch/Controller/AgreementViewController.swift; sourceTree = "<group>"; };
+		C57D6BAB1C47F6D100C92E33 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Classes/MapBranch/Controller/MasterViewController.swift; sourceTree = "<group>"; };
+		C57D6BAF1C47F9D400C92E33 /* AutoLife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutoLife-Bridging-Header.h"; sourceTree = "<group>"; };
+		C57D6BB01C47F9D500C92E33 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Block.h"; path = "Classes/Assistant/UIButton+Block.h"; sourceTree = "<group>"; };
+		C57D6BB11C47F9D500C92E33 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Block.m"; path = "Classes/Assistant/UIButton+Block.m"; sourceTree = "<group>"; };
+		C57D6BBA1C47FBBA00C92E33 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = Classes/Assistant/ExtentClass/HoshiTextField.swift; sourceTree = "<group>"; };
+		C57D6BBB1C47FBBA00C92E33 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = Classes/Assistant/ExtentClass/TextFieldsEffects.swift; sourceTree = "<group>"; };
+		C57D6BC41C47FC1200C92E33 /* MasterMapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterMapDelegate.swift; path = Classes/MapBranch/Controller/MasterMapDelegate.swift; sourceTree = "<group>"; };
+		C57D6BCC1C47FCF300C92E33 /* FootMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FootMenuView.swift; path = Classes/MapBranch/View/FootMenuView.swift; sourceTree = "<group>"; };
+		C57D6BCD1C47FCF300C92E33 /* SubMasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubMasterView.swift; path = Classes/MapBranch/View/SubMasterView.swift; sourceTree = "<group>"; };
+		C57D6BCE1C47FCF300C92E33 /* XuAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuAnnotationView.swift; path = Classes/MapBranch/View/XuAnnotationView.swift; sourceTree = "<group>"; };
+		C57D6BCF1C47FCF300C92E33 /* XuCustomPointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuCustomPointView.swift; path = Classes/MapBranch/View/XuCustomPointView.swift; sourceTree = "<group>"; };
+		C57D6BD01C47FCF300C92E33 /* XuMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuMapView.swift; path = Classes/MapBranch/View/XuMapView.swift; sourceTree = "<group>"; };
+		C57D6BD11C47FCF300C92E33 /* XuPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuPointAnnotation.swift; path = Classes/MapBranch/View/XuPointAnnotation.swift; sourceTree = "<group>"; };
+		C57D6BD21C47FCF300C92E33 /* XuStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuStepper.swift; path = Classes/MapBranch/View/XuStepper.swift; sourceTree = "<group>"; };
+		C57D6BDA1C47FD4700C92E33 /* CarMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarMaster.swift; path = Classes/MapBranch/Model/CarMaster.swift; sourceTree = "<group>"; };
+		C57D6BDC1C48A8FD00C92E33 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Classes/MasterBranch/Controller/MessageViewController.swift; sourceTree = "<group>"; };
+		C57D6BDE1C48A94A00C92E33 /* PersonalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonalViewController.swift; path = Classes/MasterBranch/Controller/PersonalViewController.swift; sourceTree = "<group>"; };
+		C57D6BDF1C48A94A00C92E33 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Classes/MasterBranch/Controller/SettingViewController.swift; sourceTree = "<group>"; };
+		C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuTableViewSetting.swift; path = Classes/Assistant/XuTableViewSetting.swift; sourceTree = "<group>"; };
+		C57D6BE41C48A9FD00C92E33 /* ViolationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationDetailViewController.swift; path = Classes/CarBranch/Controller/ViolationDetailViewController.swift; sourceTree = "<group>"; };
+		C57D6BE51C48A9FD00C92E33 /* ViolationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationViewController.swift; path = Classes/CarBranch/Controller/ViolationViewController.swift; sourceTree = "<group>"; };
+		C57D6BF01C48AAD800C92E33 /* ParkingRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingRecordViewController.swift; path = Classes/ParkBranch/Controller/ParkingRecordViewController.swift; sourceTree = "<group>"; };
+		C57D6BF11C48AAD800C92E33 /* ParkStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkStateViewController.swift; path = Classes/ParkBranch/Controller/ParkStateViewController.swift; sourceTree = "<group>"; };
+		C57D6BF41C48AB0E00C92E33 /* NewPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPayViewController.swift; path = Classes/PayBranch/Controller/NewPayViewController.swift; sourceTree = "<group>"; };
+		C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayViewController.swift; path = Classes/PayBranch/Controller/PayViewController.swift; sourceTree = "<group>"; };
+		C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiptViewController.swift; path = Classes/PayBranch/Controller/ReceiptViewController.swift; sourceTree = "<group>"; };
+		C57D6BFA1C48AB4D00C92E33 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewController.swift; path = Classes/CarBranch/Controller/CarViewController.swift; sourceTree = "<group>"; };
+		C57D6BFB1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OwnerIdentifyViewController.swift; path = Classes/CarBranch/Controller/OwnerIdentifyViewController.swift; sourceTree = "<group>"; };
+		C57D6BFE1C48AB6F00C92E33 /* CarportShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportShareViewController.swift; path = Classes/ParkBranch/Controller/CarportShareViewController.swift; sourceTree = "<group>"; };
+		C57D6BFF1C48AB6F00C92E33 /* CarportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportViewController.swift; path = Classes/ParkBranch/Controller/CarportViewController.swift; sourceTree = "<group>"; };
+		C57D6C021C48AC1600C92E33 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Classes/Assistant/Extension.swift; sourceTree = "<group>"; };
+		C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalTableViewCell.swift; path = Classes/Universal/Cell/UniversalTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C081C48ACF600C92E33 /* VArrayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VArrayTableViewCell.swift; path = Classes/CarBranch/Cell/VArrayTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C0A1C48ADBA00C92E33 /* ViolationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationObject.swift; path = Classes/CarBranch/Model/ViolationObject.swift; sourceTree = "<group>"; };
+		C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Classes/CarBranch/Cell/CarTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C0E1C48AE1E00C92E33 /* CarOwnership.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarOwnership.swift; path = Classes/CarBranch/Model/CarOwnership.swift; sourceTree = "<group>"; };
+		C57D6C101C48AE7300C92E33 /* ViolationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationTableViewCell.swift; path = Classes/CarBranch/Cell/ViolationTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C121C48AEF900C92E33 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = Classes/PayBranch/View/HeaderView.swift; sourceTree = "<group>"; };
+		C57D6C141C48AF5800C92E33 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordTableViewCell.swift; path = Classes/ParkBranch/Cell/RecordTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C161C48AF9F00C92E33 /* CarportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportTableViewCell.swift; path = Classes/ParkBranch/Cell/CarportTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C181C48AFB700C92E33 /* Carport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Carport.swift; path = Classes/ParkBranch/Model/Carport.swift; sourceTree = "<group>"; };
+		C57D6C1A1C48B33300C92E33 /* XuPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuPickerView.swift; path = Classes/Assistant/ExtentClass/XuPickerView.swift; sourceTree = "<group>"; };
+		C57D6C1C1C48B34E00C92E33 /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColors.swift; path = Classes/Assistant/ExtentClass/SwiftColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +192,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57D6B651C47EC1000C92E33 /* AMapSearchKit.framework in Frameworks */,
+				C57D6B661C47EC1000C92E33 /* MAMapKit.framework in Frameworks */,
+				C57D6B7E1C47ED4900C92E33 /* libc++.tbd in Frameworks */,
+				C57D6B7C1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd in Frameworks */,
+				C57D6B7A1C47ED3100C92E33 /* libz.tbd in Frameworks */,
+				C57D6B781C47ED2800C92E33 /* CoreGraphics.framework in Frameworks */,
+				C57D6B761C47ED2200C92E33 /* CoreTelephony.framework in Frameworks */,
+				C57D6B741C47ED1B00C92E33 /* CoreLocation.framework in Frameworks */,
+				C57D6B721C47ED1300C92E33 /* OpenGLES.framework in Frameworks */,
+				C57D6B701C47ED0900C92E33 /* SystemConfiguration.framework in Frameworks */,
+				C57D6B6E1C47ECF800C92E33 /* QuartzCore.framework in Frameworks */,
+				C57D6B6C1C47ECD100C92E33 /* Foundation.framework in Frameworks */,
+				C57D6B6A1C47ECC800C92E33 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				C57D6B341C47EB4E00C92E33 /* AutoLife */,
+				C57D6B7F1C47ED5900C92E33 /* Framework */,
 				C57D6B491C47EB4F00C92E33 /* AutoLifeTests */,
 				C57D6B541C47EB4F00C92E33 /* AutoLifeUITests */,
 				C57D6B331C47EB4E00C92E33 /* Products */,
@@ -87,7 +239,7 @@
 		C57D6B331C47EB4E00C92E33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6B321C47EB4E00C92E33 /* AutoLife.app */,
+				C57D6B321C47EB4E00C92E33 /* i车生活.app */,
 				C57D6B461C47EB4F00C92E33 /* AutoLifeTests.xctest */,
 				C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */,
 			);
@@ -97,12 +249,8 @@
 		C57D6B341C47EB4E00C92E33 /* AutoLife */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */,
-				C57D6B371C47EB4E00C92E33 /* ViewController.swift */,
-				C57D6B391C47EB4E00C92E33 /* Main.storyboard */,
-				C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */,
-				C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */,
-				C57D6B411C47EB4E00C92E33 /* Info.plist */,
+				C57D6B811C47EDE500C92E33 /* MainClass */,
+				C57D6B801C47EDCB00C92E33 /* MainFile */,
 			);
 			path = AutoLife;
 			sourceTree = "<group>";
@@ -125,6 +273,295 @@
 			path = AutoLifeUITests;
 			sourceTree = "<group>";
 		};
+		C57D6B7F1C47ED5900C92E33 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B7D1C47ED4900C92E33 /* libc++.tbd */,
+				C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */,
+				C57D6B791C47ED3100C92E33 /* libz.tbd */,
+				C57D6B771C47ED2800C92E33 /* CoreGraphics.framework */,
+				C57D6B751C47ED2200C92E33 /* CoreTelephony.framework */,
+				C57D6B731C47ED1B00C92E33 /* CoreLocation.framework */,
+				C57D6B711C47ED1300C92E33 /* OpenGLES.framework */,
+				C57D6B6F1C47ED0800C92E33 /* SystemConfiguration.framework */,
+				C57D6B6D1C47ECF800C92E33 /* QuartzCore.framework */,
+				C57D6B6B1C47ECD100C92E33 /* Foundation.framework */,
+				C57D6B691C47ECC800C92E33 /* UIKit.framework */,
+				C57D6B671C47EC2300C92E33 /* AMap.bundle */,
+				C57D6B631C47EC1000C92E33 /* AMapSearchKit.framework */,
+				C57D6B641C47EC1000C92E33 /* MAMapKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		C57D6B801C47EDCB00C92E33 /* MainFile */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BAF1C47F9D400C92E33 /* AutoLife-Bridging-Header.h */,
+				C57D6B391C47EB4E00C92E33 /* Main.storyboard */,
+				C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */,
+				C57D6B3E1C47EB4E00C92E33 /* LaunchScreen.storyboard */,
+				C57D6B411C47EB4E00C92E33 /* Info.plist */,
+				C57D6B921C47F15E00C92E33 /* Resource */,
+			);
+			name = MainFile;
+			sourceTree = "<group>";
+		};
+		C57D6B811C47EDE500C92E33 /* MainClass */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */,
+				C57D6B821C47EE5800C92E33 /* MasterBranch */,
+				C57D6B831C47EE7400C92E33 /* MapBranch */,
+				C57D6B861C47EEA100C92E33 /* CarBranch */,
+				C57D6B851C47EE9800C92E33 /* PayBranch */,
+				C57D6B841C47EE8400C92E33 /* ParkBranch */,
+				C57D6B891C47EF5600C92E33 /* Assistant */,
+				C57D6C041C48AC3500C92E33 /* Universal */,
+			);
+			name = MainClass;
+			sourceTree = "<group>";
+		};
+		C57D6B821C47EE5800C92E33 /* MasterBranch */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B871C47EF1900C92E33 /* LoginViewController.swift */,
+				C57D6BA61C47F5EB00C92E33 /* AgreementViewController.swift */,
+				C57D6BDC1C48A8FD00C92E33 /* MessageViewController.swift */,
+				C57D6BDE1C48A94A00C92E33 /* PersonalViewController.swift */,
+				C57D6BDF1C48A94A00C92E33 /* SettingViewController.swift */,
+			);
+			name = MasterBranch;
+			sourceTree = "<group>";
+		};
+		C57D6B831C47EE7400C92E33 /* MapBranch */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BAA1C47F67400C92E33 /* Controller */,
+				C57D6BA91C47F66F00C92E33 /* Model */,
+				C57D6BA81C47F65E00C92E33 /* View */,
+			);
+			name = MapBranch;
+			sourceTree = "<group>";
+		};
+		C57D6B841C47EE8400C92E33 /* ParkBranch */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BEF1C48AA5E00C92E33 /* Controller */,
+				C57D6BEE1C48AA5600C92E33 /* view */,
+				C57D6BED1C48AA5100C92E33 /* Model */,
+				C57D6BEC1C48AA4C00C92E33 /* Cell */,
+			);
+			name = ParkBranch;
+			sourceTree = "<group>";
+		};
+		C57D6B851C47EE9800C92E33 /* PayBranch */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BEB1C48AA3700C92E33 /* Controller */,
+				C57D6BEA1C48AA3100C92E33 /* View */,
+				C57D6BE91C48AA2C00C92E33 /* Model */,
+				C57D6BE81C48AA2500C92E33 /* Cell */,
+			);
+			name = PayBranch;
+			sourceTree = "<group>";
+		};
+		C57D6B861C47EEA100C92E33 /* CarBranch */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BA11C47F1AF00C92E33 /* Controller */,
+				C57D6BA31C47F1C700C92E33 /* Cell */,
+				C57D6BA21C47F1BA00C92E33 /* Model */,
+			);
+			name = CarBranch;
+			sourceTree = "<group>";
+		};
+		C57D6B891C47EF5600C92E33 /* Assistant */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BB51C47FAA500C92E33 /* ExtentClass */,
+				C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */,
+				C57D6C021C48AC1600C92E33 /* Extension.swift */,
+				C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */,
+				C57D6B8C1C47F13A00C92E33 /* KeyChain.swift */,
+				C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */,
+				C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */,
+				C57D6BB01C47F9D500C92E33 /* UIButton+Block.h */,
+				C57D6BB11C47F9D500C92E33 /* UIButton+Block.m */,
+			);
+			name = Assistant;
+			sourceTree = "<group>";
+		};
+		C57D6B921C47F15E00C92E33 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B931C47F17000C92E33 /* CarInfomation.plist */,
+				C57D6B941C47F17000C92E33 /* Carport.plist */,
+				C57D6B951C47F17000C92E33 /* CarportState.plist */,
+				C57D6B961C47F17000C92E33 /* CityAndArea.plist */,
+				C57D6B971C47F17000C92E33 /* ParkingRecord.plist */,
+				C57D6B981C47F17000C92E33 /* ParkState.plist */,
+				C57D6B991C47F17000C92E33 /* Violations.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C57D6BA11C47F1AF00C92E33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BA41C47F20F00C92E33 /* NewAutoViewController.swift */,
+				C57D6BE41C48A9FD00C92E33 /* ViolationDetailViewController.swift */,
+				C57D6BE51C48A9FD00C92E33 /* ViolationViewController.swift */,
+				C57D6BFA1C48AB4D00C92E33 /* CarViewController.swift */,
+				C57D6BFB1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C57D6BA21C47F1BA00C92E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C0E1C48AE1E00C92E33 /* CarOwnership.swift */,
+				C57D6C0A1C48ADBA00C92E33 /* ViolationObject.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C57D6BA31C47F1C700C92E33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C081C48ACF600C92E33 /* VArrayTableViewCell.swift */,
+				C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */,
+				C57D6C101C48AE7300C92E33 /* ViolationTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C57D6BA81C47F65E00C92E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BCC1C47FCF300C92E33 /* FootMenuView.swift */,
+				C57D6BCD1C47FCF300C92E33 /* SubMasterView.swift */,
+				C57D6BCE1C47FCF300C92E33 /* XuAnnotationView.swift */,
+				C57D6BCF1C47FCF300C92E33 /* XuCustomPointView.swift */,
+				C57D6BD01C47FCF300C92E33 /* XuMapView.swift */,
+				C57D6BD11C47FCF300C92E33 /* XuPointAnnotation.swift */,
+				C57D6BD21C47FCF300C92E33 /* XuStepper.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C57D6BA91C47F66F00C92E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BDA1C47FD4700C92E33 /* CarMaster.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C57D6BAA1C47F67400C92E33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BAB1C47F6D100C92E33 /* MasterViewController.swift */,
+				C57D6BC41C47FC1200C92E33 /* MasterMapDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C57D6BB51C47FAA500C92E33 /* ExtentClass */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BBA1C47FBBA00C92E33 /* HoshiTextField.swift */,
+				C57D6BBB1C47FBBA00C92E33 /* TextFieldsEffects.swift */,
+				C57D6C1C1C48B34E00C92E33 /* SwiftColors.swift */,
+				C57D6C1A1C48B33300C92E33 /* XuPickerView.swift */,
+			);
+			name = ExtentClass;
+			sourceTree = "<group>";
+		};
+		C57D6BE81C48AA2500C92E33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C57D6BE91C48AA2C00C92E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C57D6BEA1C48AA3100C92E33 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C121C48AEF900C92E33 /* HeaderView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C57D6BEB1C48AA3700C92E33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BF41C48AB0E00C92E33 /* NewPayViewController.swift */,
+				C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */,
+				C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C57D6BEC1C48AA4C00C92E33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C161C48AF9F00C92E33 /* CarportTableViewCell.swift */,
+				C57D6C141C48AF5800C92E33 /* RecordTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		C57D6BED1C48AA5100C92E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C181C48AFB700C92E33 /* Carport.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C57D6BEE1C48AA5600C92E33 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		C57D6BEF1C48AA5E00C92E33 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6BF01C48AAD800C92E33 /* ParkingRecordViewController.swift */,
+				C57D6BF11C48AAD800C92E33 /* ParkStateViewController.swift */,
+				C57D6BFE1C48AB6F00C92E33 /* CarportShareViewController.swift */,
+				C57D6BFF1C48AB6F00C92E33 /* CarportViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C57D6C041C48AC3500C92E33 /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C051C48AC5200C92E33 /* Cell */,
+			);
+			name = Universal;
+			sourceTree = "<group>";
+		};
+		C57D6C051C48AC5200C92E33 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,7 +579,7 @@
 			);
 			name = AutoLife;
 			productName = AutoLife;
-			productReference = C57D6B321C47EB4E00C92E33 /* AutoLife.app */;
+			productReference = C57D6B321C47EB4E00C92E33 /* i车生活.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C57D6B451C47EB4F00C92E33 /* AutoLifeTests */ = {
@@ -229,9 +666,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57D6BA01C47F17000C92E33 /* Violations.plist in Resources */,
+				C57D6B9D1C47F17000C92E33 /* CityAndArea.plist in Resources */,
+				C57D6B9E1C47F17000C92E33 /* ParkingRecord.plist in Resources */,
+				C57D6B9B1C47F17000C92E33 /* Carport.plist in Resources */,
 				C57D6B401C47EB4E00C92E33 /* LaunchScreen.storyboard in Resources */,
 				C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */,
+				C57D6B681C47EC2300C92E33 /* AMap.bundle in Resources */,
+				C57D6B9A1C47F17000C92E33 /* CarInfomation.plist in Resources */,
 				C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */,
+				C57D6B9F1C47F17000C92E33 /* ParkState.plist in Resources */,
+				C57D6B9C1C47F17000C92E33 /* CarportState.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +701,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C57D6B381C47EB4E00C92E33 /* ViewController.swift in Sources */,
+				C57D6C011C48AB6F00C92E33 /* CarportViewController.swift in Sources */,
+				C57D6BD51C47FCF300C92E33 /* XuAnnotationView.swift in Sources */,
+				C57D6BF71C48AB0E00C92E33 /* NewPayViewController.swift in Sources */,
+				C57D6C191C48AFB700C92E33 /* Carport.swift in Sources */,
+				C57D6C111C48AE7300C92E33 /* ViolationTableViewCell.swift in Sources */,
+				C57D6C0B1C48ADBA00C92E33 /* ViolationObject.swift in Sources */,
+				C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */,
+				C57D6C091C48ACF600C92E33 /* VArrayTableViewCell.swift in Sources */,
+				C57D6B8F1C47F13A00C92E33 /* KeyChain.swift in Sources */,
+				C57D6C0F1C48AE1E00C92E33 /* CarOwnership.swift in Sources */,
+				C57D6BD31C47FCF300C92E33 /* FootMenuView.swift in Sources */,
+				C57D6C131C48AEF900C92E33 /* HeaderView.swift in Sources */,
+				C57D6C0D1C48ADE800C92E33 /* CarTableViewCell.swift in Sources */,
+				C57D6BF21C48AAD800C92E33 /* ParkingRecordViewController.swift in Sources */,
+				C57D6BFD1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift in Sources */,
+				C57D6BE61C48A9FD00C92E33 /* ViolationDetailViewController.swift in Sources */,
+				C57D6BA51C47F20F00C92E33 /* NewAutoViewController.swift in Sources */,
+				C57D6BD91C47FCF300C92E33 /* XuStepper.swift in Sources */,
+				C57D6B901C47F13A00C92E33 /* XuRegularExpression.swift in Sources */,
+				C57D6B911C47F13A00C92E33 /* XuUserDefault.swift in Sources */,
+				C57D6C031C48AC1600C92E33 /* Extension.swift in Sources */,
+				C57D6BD81C47FCF300C92E33 /* XuPointAnnotation.swift in Sources */,
+				C57D6BFC1C48AB4D00C92E33 /* CarViewController.swift in Sources */,
+				C57D6BE11C48A94A00C92E33 /* SettingViewController.swift in Sources */,
+				C57D6BE01C48A94A00C92E33 /* PersonalViewController.swift in Sources */,
+				C57D6BC51C47FC1200C92E33 /* MasterMapDelegate.swift in Sources */,
+				C57D6BD61C47FCF300C92E33 /* XuCustomPointView.swift in Sources */,
+				C57D6BD71C47FCF300C92E33 /* XuMapView.swift in Sources */,
+				C57D6BAC1C47F6D100C92E33 /* MasterViewController.swift in Sources */,
+				C57D6BB21C47F9D500C92E33 /* UIButton+Block.m in Sources */,
 				C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */,
+				C57D6BF31C48AAD800C92E33 /* ParkStateViewController.swift in Sources */,
+				C57D6BDD1C48A8FD00C92E33 /* MessageViewController.swift in Sources */,
+				C57D6BE71C48A9FD00C92E33 /* ViolationViewController.swift in Sources */,
+				C57D6BE31C48A9BB00C92E33 /* XuTableViewSetting.swift in Sources */,
+				C57D6BBD1C47FBBA00C92E33 /* TextFieldsEffects.swift in Sources */,
+				C57D6C151C48AF5800C92E33 /* RecordTableViewCell.swift in Sources */,
+				C57D6C001C48AB6F00C92E33 /* CarportShareViewController.swift in Sources */,
+				C57D6B8B1C47F08700C92E33 /* TypeDefine.swift in Sources */,
+				C57D6BF81C48AB0E00C92E33 /* PayViewController.swift in Sources */,
+				C57D6BDB1C47FD4700C92E33 /* CarMaster.swift in Sources */,
+				C57D6BBC1C47FBBA00C92E33 /* HoshiTextField.swift in Sources */,
+				C57D6C1D1C48B34E00C92E33 /* SwiftColors.swift in Sources */,
+				C57D6C171C48AF9F00C92E33 /* CarportTableViewCell.swift in Sources */,
+				C57D6C071C48AC9300C92E33 /* UniversalTableViewCell.swift in Sources */,
+				C57D6BF91C48AB0E00C92E33 /* ReceiptViewController.swift in Sources */,
+				C57D6C1B1C48B33300C92E33 /* XuPickerView.swift in Sources */,
+				C57D6BA71C47F5EB00C92E33 /* AgreementViewController.swift in Sources */,
+				C57D6BD41C47FCF300C92E33 /* SubMasterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +889,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AutoLife/Framework",
+				);
 				INFOPLIST_FILE = AutoLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = AutoLife;
+				PRODUCT_NAME = "i车生活";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLife/AutoLife-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,10 +909,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AutoLife/Framework",
+				);
 				INFOPLIST_FILE = AutoLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = AutoLife;
+				PRODUCT_NAME = "i车生活";
+				SWIFT_OBJC_BRIDGING_HEADER = "AutoLife/AutoLife-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +991,7 @@
 				C57D6B5C1C47EB4F00C92E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57D6B5D1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +1000,7 @@
 				C57D6B5F1C47EB4F00C92E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C57D6B601C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +1009,7 @@
 				C57D6B621C47EB4F00C92E33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

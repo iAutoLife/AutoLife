@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>车位3</key>
+    <array>
+        <array>
+            <string>7:26:05</string>
+            <string>12:27:55</string>
+            <string>¥19.00</string>
+        </array>
+        <array>
+            <string>枫蓝国际B3018车位</string>
+            <string>一、二、四、五17:00-09:00</string>
+            <string>¥2.00/15min</string>
+        </array>
+	</array>
+	<key>车位1</key>
+	<array>
+		<array>
+			<string>17:26:05</string>
+			<string>02:27:55</string>
+			<string>¥10.00</string>
+		</array>
+		<array>
+			<string>北邮B3018车位</string>
+			<string>日、一、二、四、五17:00-09:00</string>
+			<string>¥1.00/15min</string>
+		</array>
+	</array>
+    <key>车位2</key>
+    <array>
+        <array>
+            <string>12:20:05</string>
+            <string>08:47:05</string>
+            <string>¥8.00</string>
+        </array>
+        <array>
+            <string>牡丹园B3018车位</string>
+            <string>一、二、三、四、五17:00-09:00</string>
+            <string>¥1.50/15min</string>
+        </array>
+	</array>
+</dict>
+</plist>
