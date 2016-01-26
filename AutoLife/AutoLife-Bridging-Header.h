@@ -6,3 +6,6 @@
 
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+
+
+#import "MBProgressHUD.h"

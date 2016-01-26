@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B0227922EB8FBACAF957BFFF3A816D32806228FF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B0227922EB8FBACAF957BFFF3A816D32806228FF" : 0,
+    "0807EDB8EA6643F7808F2826132FCFE29F78EC04" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "702A61B0-9049-4244-BD9B-123050998E57",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B0227922EB8FBACAF957BFFF3A816D32806228FF" : "AutoLife\/",
+    "0807EDB8EA6643F7808F2826132FCFE29F78EC04" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AutoLife",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AutoLife.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:iAutoLife\/AutoLife.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0807EDB8EA6643F7808F2826132FCFE29F78EC04"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:iAutoLife\/AutoLife.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B0227922EB8FBACAF957BFFF3A816D32806228FF"
+    }
+  ]
+}

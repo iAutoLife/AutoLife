@@ -84,18 +84,14 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForFooterInSection(section))
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(XuWidth - 85, 15, 60, 20)
+        button.frame = CGRectMake(XuWidth - 120, 15, 110, 20)
         button.setTitle("添加车辆", forState: UIControlState.Normal)
         button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
         button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        button.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
+        button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         button.addTarget(self, action: "addCarlincense:", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
-        
-        let addBtn = UIButton(type: UIButtonType.System)
-        addBtn.frame = CGRectMake(CGRectGetMinX(button.frame) - 35, 18, 25, 15)
-        addBtn.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
-        addBtn.addTarget(self, action: "addCarlincense:", forControlEvents: UIControlEvents.TouchUpInside)
-        view.addSubview(addBtn)
         
         return view
     }
@@ -137,7 +133,8 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     
     func addCarlincense(sender:UIButton) {
         let newLincenseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewLicensePlateViewController")
-        self.navigationController?.pushViewController(newLincenseVC, animated: true)
+        self.presentViewController(UINavigationController(rootViewController: newLincenseVC), animated: true, completion: nil)
+//        self.navigationController?.pushViewController(newLincenseVC, animated: true)
     }
     
     //MARK: --ControllerAction

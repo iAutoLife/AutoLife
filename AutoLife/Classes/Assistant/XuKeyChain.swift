@@ -59,13 +59,13 @@ struct XuKeyChainConstants {
     }
 }
 
-class KeyChain: NSObject {
+class XuKeyChain: NSObject {
     
     
     //MARK: -- NEW
     class func set(value:String ,forkey key:String) -> Bool{
         guard let data = value.dataUsingEncoding(NSUTF8StringEncoding) else {return false}
-        KeyChain.remove(key)
+        XuKeyChain.remove(key)
         let query = [
             XuKeyChainConstants.xClass       : kSecClassGenericPassword,
             XuKeyChainConstants.xAttrAcount  : " \(key)",
@@ -75,7 +75,7 @@ class KeyChain: NSObject {
     }
     
     class func setDictionary(xDictionary:NSDictionary,forkey key:String) -> Bool {
-        KeyChain.remove(key)
+        XuKeyChain.remove(key)
         let query = [
             XuKeyChainConstants.xClass       : kSecClassGenericPassword,
             XuKeyChainConstants.xAttrAcount  : " \(key)",
@@ -85,7 +85,7 @@ class KeyChain: NSObject {
     }
     
     class func setArray(xArray:NSArray,forkey key:String) -> Bool {
-        KeyChain.remove(key)
+        XuKeyChain.remove(key)
         let query = [
             XuKeyChainConstants.xClass       : kSecClassGenericPassword,
             XuKeyChainConstants.xAttrAcount  : " \(key)",
@@ -95,17 +95,17 @@ class KeyChain: NSObject {
     }
     
     class func get(key:String) -> String? {
-        guard let data = KeyChain.data(key) else {return nil}
+        guard let data = XuKeyChain.data(key) else {return nil}
         return NSString(data: (data as NSData), encoding: NSUTF8StringEncoding) as? String
     }
     
     class func getDictionary(key:String) -> NSDictionary? {
-        guard let data = KeyChain.data(key) else {return nil}
+        guard let data = XuKeyChain.data(key) else {return nil}
         return data.dictionaryValue()
     }
     
     class func getArray(key:String) -> NSArray? {
-        guard let data = KeyChain.data(key) else {return nil}
+        guard let data = XuKeyChain.data(key) else {return nil}
         return data.arrayValue()
     }
     

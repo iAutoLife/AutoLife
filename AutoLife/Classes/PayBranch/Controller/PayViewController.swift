@@ -117,7 +117,7 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         if indexPath.section == 0 {
             self.paywayChanged(indexPath.row)
             tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Fade)
-        }
+        }//cell.accessoryType == UITableViewCellAccessoryCheckmark
     }
     
     //MARK: --ControllerAction

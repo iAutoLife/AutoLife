@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MAMapServices.sharedServices().apiKey = XuAPIKey
         AMapSearchServices.sharedServices().apiKey = XuAPIKey
         
-        if XuRegularExpression.isVaild(KeyChain.get(XuCurrentUser), fortype: XuRegularType.phone) {
+        if XuRegularExpression.isVaild(XuKeyChain.get(XuCurrentUser), fortype: XuRegularType.phone) {
             self.window?.rootViewController = UINavigationController(rootViewController: MasterViewController())
         }
         return true

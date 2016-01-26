@@ -95,9 +95,9 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         if indexPath.section == 3 {
             let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
             loginVC?.loginType = XuLoginType.Default
-            loginVC?.defaultUser = KeyChain.get(XuCurrentUser)
+            loginVC?.defaultUser = XuKeyChain.get(XuCurrentUser)
             self.presentViewController(loginVC!, animated: true, completion: { () -> Void in
-                KeyChain.set("", forkey: XuCurrentUser)
+                XuKeyChain.set("", forkey: XuCurrentUser)
             })
         }
     }

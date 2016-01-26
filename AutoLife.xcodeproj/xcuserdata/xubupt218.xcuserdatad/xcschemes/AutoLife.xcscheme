@@ -48,6 +48,16 @@
                ReferencedContainer = "container:AutoLife.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8FF92BBE1C4C7EB400D5C3F8"
+               BuildableName = "AlamofireTests.xctest"
+               BlueprintName = "AlamofireTests"
+               ReferencedContainer = "container:AutoLife.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
