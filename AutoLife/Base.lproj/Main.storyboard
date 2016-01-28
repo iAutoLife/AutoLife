@@ -118,14 +118,20 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车牌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Sp-wuS">
-                                        <rect key="frame" x="10" y="64" width="42" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车牌号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-Sp-wuS">
+                                        <rect key="frame" x="10" y="64" width="45" height="21"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="BY6-gu-HIr"/>
                                             <constraint firstAttribute="width" constant="42" id="Qfp-rK-Kiu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Qfp-rK-Kiu"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="违章查询和车主认证使用（选填）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ExZ-WB-kuA">
                                         <rect key="frame" x="80" y="118" width="231" height="16"/>
@@ -197,13 +203,26 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHG-kq-oe8">
+                                        <rect key="frame" x="80" y="62" width="30" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="2sX-gB-SAo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="哈">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="provinceClicked:" destination="np3-Le-ceS" eventType="touchUpInside" id="BZT-6x-ejp"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="车牌号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePZ-TJ-Im2">
-                                        <rect key="frame" x="80" y="65" width="97" height="18"/>
+                                        <rect key="frame" x="110" y="64" width="97" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="97" id="oAe-KW-Fbp"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,13 +230,14 @@
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="VPx-dA-Uda" secondAttribute="bottom" constant="18" id="0rR-vg-VI3"/>
                                     <constraint firstItem="ExZ-WB-kuA" firstAttribute="leading" secondItem="F4S-ge-HPK" secondAttribute="trailing" constant="10" id="0ve-QW-moX"/>
                                     <constraint firstItem="F4S-ge-HPK" firstAttribute="leading" secondItem="4TC-YR-aRw" secondAttribute="leading" constant="10" id="3iF-Gt-Uyr"/>
+                                    <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="vHG-kq-oe8" secondAttribute="bottom" constant="16" id="4gt-ce-XwL"/>
                                     <constraint firstItem="F4S-ge-HPK" firstAttribute="top" secondItem="pso-8n-Dp7" secondAttribute="bottom" constant="14" id="5UA-Rn-MEq"/>
                                     <constraint firstItem="ydq-Sp-wuS" firstAttribute="centerY" secondItem="4TC-YR-aRw" secondAttribute="centerY" id="5gv-fW-MJt"/>
                                     <constraint firstItem="ExZ-WB-kuA" firstAttribute="centerY" secondItem="F4S-ge-HPK" secondAttribute="centerY" id="6Xc-O3-7YF"/>
                                     <constraint firstAttribute="trailing" secondItem="0ik-2H-fYt" secondAttribute="trailing" constant="1" id="6sr-Uk-L3R"/>
                                     <constraint firstItem="pGr-zV-13t" firstAttribute="leading" secondItem="4TC-YR-aRw" secondAttribute="leading" id="8Yw-ai-aZT"/>
                                     <constraint firstItem="0ik-2H-fYt" firstAttribute="leading" secondItem="ah9-ss-yhz" secondAttribute="trailing" constant="8" id="8kW-4c-b32"/>
-                                    <constraint firstItem="ePZ-TJ-Im2" firstAttribute="leading" secondItem="ydq-Sp-wuS" secondAttribute="trailing" constant="28" id="CzD-cj-UBv"/>
+                                    <constraint firstItem="ePZ-TJ-Im2" firstAttribute="leading" secondItem="ydq-Sp-wuS" secondAttribute="trailing" constant="55" id="CzD-cj-UBv"/>
                                     <constraint firstItem="ydq-Sp-wuS" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="14" id="EHk-bg-u4d"/>
                                     <constraint firstAttribute="trailing" secondItem="0ik-2H-fYt" secondAttribute="trailing" constant="30" id="G3R-t2-UFg"/>
                                     <constraint firstItem="ah9-ss-yhz" firstAttribute="leading" secondItem="VPx-dA-Uda" secondAttribute="trailing" constant="-5" id="HAe-Hy-CZI"/>
@@ -228,11 +248,13 @@
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="VPx-dA-Uda" secondAttribute="bottom" constant="18" id="MbI-Rn-kuz"/>
                                     <constraint firstAttribute="trailing" secondItem="pso-8n-Dp7" secondAttribute="trailing" id="N8B-1f-DP1"/>
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="leading" secondItem="4TC-YR-aRw" secondAttribute="leading" id="NKr-NX-t22"/>
+                                    <constraint firstItem="vHG-kq-oe8" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="12" id="NTQ-2x-ARI"/>
                                     <constraint firstAttribute="height" constant="150" id="Ngk-WO-P2Y"/>
                                     <constraint firstAttribute="trailing" secondItem="pGr-zV-13t" secondAttribute="trailing" id="PCU-WG-2qP"/>
                                     <constraint firstItem="ah9-ss-yhz" firstAttribute="leading" secondItem="VPx-dA-Uda" secondAttribute="trailing" constant="1" id="QmF-vX-hsp"/>
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="rno-j0-rjh" secondAttribute="bottom" constant="15" id="Ru0-Ra-KNM"/>
                                     <constraint firstItem="0ik-2H-fYt" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="17" id="T5V-2f-KWe"/>
+                                    <constraint firstItem="vHG-kq-oe8" firstAttribute="leading" secondItem="ydq-Sp-wuS" secondAttribute="trailing" constant="25" id="V0k-YL-f3u"/>
                                     <constraint firstAttribute="trailing" secondItem="0ik-2H-fYt" secondAttribute="trailing" constant="39" id="V5O-eZ-JAo"/>
                                     <constraint firstAttribute="bottom" secondItem="F4S-ge-HPK" secondAttribute="bottom" constant="14" id="Wb9-J1-1as"/>
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="ah9-ss-yhz" secondAttribute="bottom" constant="10" id="Y41-hG-tHL"/>
@@ -252,6 +274,7 @@
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="50" id="vRC-79-3Ok"/>
                                     <constraint firstAttribute="trailing" secondItem="g1C-zb-YXr" secondAttribute="trailing" constant="10" id="wcP-N4-sj9"/>
                                     <constraint firstItem="VPx-dA-Uda" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="17" id="wnf-dt-uiO"/>
+                                    <constraint firstItem="ePZ-TJ-Im2" firstAttribute="leading" secondItem="vHG-kq-oe8" secondAttribute="trailing" id="xak-5g-HW4"/>
                                     <constraint firstItem="VPx-dA-Uda" firstAttribute="leading" secondItem="rno-j0-rjh" secondAttribute="trailing" constant="8" id="yWb-Mb-mNF"/>
                                     <constraint firstItem="pso-8n-Dp7" firstAttribute="top" secondItem="0ik-2H-fYt" secondAttribute="bottom" constant="18" id="zV3-SI-DjR"/>
                                     <constraint firstItem="g1C-zb-YXr" firstAttribute="top" secondItem="VSj-Kn-vYr" secondAttribute="bottom" constant="10" id="zYU-Dm-WLH"/>
@@ -302,7 +325,9 @@
                         <outlet property="checkNoButton" destination="0ik-2H-fYt" id="5sC-pY-Wf2"/>
                         <outlet property="checkYesButton" destination="VPx-dA-Uda" id="Nvp-sF-Am7"/>
                         <outlet property="determineButton" destination="BdD-Ya-7Nb" id="8tn-Bx-GZK"/>
+                        <outlet property="engineNumTF" destination="ExZ-WB-kuA" id="Hgi-P9-2No"/>
                         <outlet property="plateTextField" destination="ePZ-TJ-Im2" id="VvS-pF-qQe"/>
+                        <outlet property="provinceBtn" destination="vHG-kq-oe8" id="Awf-mq-cEq"/>
                         <outlet property="selectView" destination="pGr-zV-13t" id="ejP-ra-Ere"/>
                     </connections>
                 </viewController>

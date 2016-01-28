@@ -40,7 +40,6 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
-        print(brandJSON)
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -192,7 +191,6 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
                 self.navigationController?.popToRootViewControllerAnimated(true)
             })
         }
-        print(superVC?.brand)
     }
     
     func brandPickerDidGoback() {

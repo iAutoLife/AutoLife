@@ -15,11 +15,4 @@ class Assistant: NSObject {
         alert.addAction(UIAlertAction(title: "好的", style: UIAlertActionStyle.Cancel, handler: nil))
         return alert
     }
-    
-    class func excuteAfter(mSec:UInt64 ,closure:()->Void) {
-        let gcdAfter = dispatch_time(DISPATCH_TIME_NOW, Int64(mSec * USEC_PER_SEC))
-        dispatch_after(gcdAfter, dispatch_get_main_queue()) { () -> Void in
-            closure()
-        }
-    }
 }

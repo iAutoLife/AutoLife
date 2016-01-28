@@ -17,8 +17,12 @@ class NewAutoViewController: UIViewController {
     @IBOutlet weak var determineButton: UIButton!
     @IBOutlet weak var checkYesButton: UIButton!
     @IBOutlet weak var checkNoButton: UIButton!
+    @IBOutlet weak var provinceBtn: UIButton!
+    @IBOutlet weak var engineNumTF: UITextField!
     
     var isNewLogin = false
+    private var isOwner = 0
+    private var provinceView:ProvincesView!
     
     var brand = ("","") {
         didSet{
@@ -32,10 +36,15 @@ class NewAutoViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: "skipThisTap:")
         }
         
+        provinceBtn.buttonWithLeft("京", right: UIImage(named: "down"))
+        provinceBtn.layer.borderColor = XuColorBlueThin.CGColor
+        provinceBtn.layer.borderWidth = 1
+        provinceBtn.layer.cornerRadius = XuCornerRadius
+        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: "goback:")
         
-        let chooseBrandTap = UITapGestureRecognizer(target: self, action: "chooseBrandTap:")
-        selectView.addGestureRecognizer(chooseBrandTap)
+        boundsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapSuperView:"))
+        selectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "chooseBrandTap:"))
         
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([
             NSForegroundColorAttributeName:XuColorBlue,
@@ -54,10 +63,32 @@ class NewAutoViewController: UIViewController {
         self.checkYesButton.setImage(UIImage(named: "check_on"), forState: UIControlState.Selected)
         checkNoButton.setImage(UIImage(named: "check_off"), forState: UIControlState.Normal)
         self.checkNoButton.setImage(UIImage(named: "check_on"), forState: UIControlState.Selected)
+        
+        self.setTextFieldInputView()
+    }
+    
+    func setTextFieldInputView() {
+        let nView = NumberView()
+        nView.selectItem = { (nus) in
+            self.plateTextField.text! += nus
+        }
+        plateTextField.inputAccessoryView = nView
     }
     
     func goback(sender:UIBarButtonItem) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func tapSuperView(sender:NSObject) {
+        self.plateTextField.resignFirstResponder()
+        if provinceView != nil {
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.provinceView.transform = CGAffineTransformIdentity
+                self.provinceView.removeFromSuperview()
+                }, completion: { (_) -> Void in
+                    self.provinceView = nil
+            })
+        }
     }
     
     func chooseBrandTap(sender:NSObject) {
@@ -73,10 +104,10 @@ class NewAutoViewController: UIViewController {
             brandVC.superVC = self
             
             xhud.hide(true)
-            }, failed: { error in
+            }, failed: { error,isTimeOut in
                 xhud.labelText = "请求失败"
                 xhud.hide(true, afterDelay: 1)
-                print("error : \(error)")
+                assert(isTimeOut, "error : \(error)")
         })
     }
     
@@ -85,28 +116,69 @@ class NewAutoViewController: UIViewController {
         let nav = UINavigationController(rootViewController: mapView)
         self.presentViewController(nav, animated: true, completion: nil)
     }
+    
+    @IBAction func provinceClicked(sender: UIButton) {
+        guard provinceView == nil else {return}
+        self.plateTextField.resignFirstResponder()
+        self.engineNumTF.resignFirstResponder()
+        provinceView = ProvincesView(oy: XuHeight)
+        self.view.addSubview(provinceView)
+        provinceView.selectItem = { (itemString) in
+            UIView.animateWithDuration(0.3, animations: { () -> Void in
+                self.provinceView.transform = CGAffineTransformIdentity
+                self.provinceView.removeFromSuperview()
+                }, completion: { (_) -> Void in
+                    self.provinceView = nil
+                    self.plateTextField.becomeFirstResponder()
+            })
+            if itemString != nil {
+                self.provinceBtn.setTitle(itemString!, forState: UIControlState.Normal)
+            }
+        }
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.provinceView.transform = CGAffineTransformMakeTranslation(0, 15-self.provinceView.frame.height)
+            }, completion: nil)
+    }
 
     @IBAction func determainAction(sender: AnyObject) {
-        if isNewLogin {
-            self.skipThisTap(nil)
-        }else {
-//            XuAlamofire.postParameters(uHeader + "", parameters: ["phone":XuKeyChain.get(XuCurrentUser)!,
-//                ], reString: { (result) -> Void in
-//                
-//                }, failed: { (xError) -> Void? in
-//                    print(xError)
-//            })
-        }
+        self.plateTextField.resignFirstResponder()
+        self.engineNumTF.resignFirstResponder()
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "正在提交";hud.show(true)
+        let carLicense = (provinceBtn.titleLabel?.text)! + plateTextField!.text!
+        XuAlamofire.postParameters(uHeader + "car/add_info", parameters: ["phone":XuKeyChain.get(XuCurrentUser)!,
+            "carLicense":carLicense,"isOwner":isOwner,"carBrand":self.brand.0,"engineNum":"\(engineNumTF.text)"], successWithString: { (result) -> Void in
+                if result == "true" {
+                    hud.mode = MBProgressHUDMode.CustomView
+                    hud.labelText = "提交成功"
+                    hud.customView = UIImageView(image: UIImage(named: "check"))
+                    XuGCD.after(1000, closure: { () -> Void in
+                        //添加成功后跳转
+                    })
+                }else {
+                    hud.labelText = "提交失败"
+                }
+                hud.hide(true, afterDelay: 1)
+            }, failed: { (xError) -> Void in
+                print(xError)
+                hud.labelText = "提交失败"
+                hud.hide(true, afterDelay: 1)
+        })
+        
     }
     
     @IBAction func checkedClicked(sender: AnyObject) {
+        self.plateTextField.resignFirstResponder()
+        self.engineNumTF.resignFirstResponder()
         switch sender.tag {
         case 1,2:
             self.checkYesButton.selected = (self.checkYesButton.selected ? false : true)
             self.checkNoButton.selected = false
+            isOwner = 1
         default:
             self.checkNoButton.selected = (self.checkNoButton.selected ? false : true)
             self.checkYesButton.selected = false
+            isOwner = 0
         }
     }
     

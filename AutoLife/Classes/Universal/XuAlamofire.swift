@@ -11,22 +11,34 @@ import Alamofire
 
 class XuAlamofire: NSObject {
     
-    class func getString(url:String,success:(String?)->Void,failed:(NSError)->Void) {
-        let request = Alamofire.request(.GET, url)
+    static var manager:Alamofire.Manager = {
+        var once:dispatch_once_t = 0
+        var xmanager:Alamofire.Manager!
+        dispatch_once(&once, { () -> Void in
+            let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+            config.timeoutIntervalForRequest = 5
+            print("dispatch_once manager")
+            xmanager = Manager(configuration:config)
+        })
+        return xmanager
+    }()
+    
+    class func getString(url:String,success:(String?)->Void,failed:(NSError,Bool)->Void) {
+        let request = manager.request(.GET, url)
         request.responseString { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!)
+                failed(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             success(xRe.result.value)
         }
     }
     
-    class func getJSON(url:String,success:(JSON?)->Void,failed:(NSError)->Void) {
-        let request = Alamofire.request(.GET, url)
+    class func getJSON(url:String,success:(JSON?)->Void,failed:(NSError,Bool)->Void) {
+        let request = manager.request(.GET, url)
         request.responseJSON { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!)
+                failed(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             if xRe.result.value != nil {
@@ -35,22 +47,21 @@ class XuAlamofire: NSObject {
         }
     }
     
-    class func postParameters(url:String,parameters:[String:AnyObject]?,reString success:(String?)->Void,failed:(NSError)->Void?) {
-        let request = Alamofire.request(.POST, url, parameters: parameters)
-        request.responseString(encoding: NSUTF8StringEncoding) { (xRe) -> Void in
+    class func postParameters(url:String,parameters:[String:AnyObject]?,successWithString success:(String?)->Void,failed:(NSError,Bool)->Void) {
+        manager.request(.POST, url, parameters: parameters).responseString { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!)
+                failed(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             success(xRe.result.value)
         }
     }
     
-    class func postParameters(url:String,parameters:[String:AnyObject]?,reJSON success:(JSON?)->Void,failed:(NSError)->Void?) {
-        let request = Alamofire.request(.POST, url, parameters: parameters)
+    class func postParameters(url:String,parameters:[String:AnyObject]?,successWithJSON success:(JSON?)->Void,failed:(NSError,Bool)->Void?) {
+        let request = manager.request(.POST, url, parameters: parameters)
         request.responseJSON(options: NSJSONReadingOptions.AllowFragments) { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!)
+                failed(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             if xRe.result.value != nil {
@@ -62,7 +73,7 @@ class XuAlamofire: NSObject {
     class func postData(url:String,
         multipartFormData:MultipartFormData->Void,
         progress:(Int64,Int64)->Void,
-        reJSON success:JSON->Void,
+        successWithJSON success:JSON->Void,
         failed:(ErrorType)->Void,
         outTime:()->Void?) {
         Alamofire.upload(.POST, url, multipartFormData: multipartFormData) { (xResult) -> Void in
@@ -80,7 +91,6 @@ class XuAlamofire: NSObject {
             }
         }
     }
-
 }
 
 extension UIImageView {

@@ -54,4 +54,12 @@ static char overViewKey;
     
 }
 
+- (void) buttonWithLeft:(NSString*)title right:(UIImage*)image {
+    [self setTitle:title forState:UIControlStateNormal];
+    [self setImage:image forState:UIControlStateNormal];
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imageView.frame.size.width, 0, self.imageView.frame.size.width);
+    self.imageEdgeInsets = UIEdgeInsetsMake(0, self.titleLabel.frame.size.width, 0, 0);
+
+}
+
 @end

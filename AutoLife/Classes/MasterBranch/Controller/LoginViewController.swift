@@ -143,7 +143,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         case .DynamicCode:
             let url = uHeader + "applogin/message.check"
             XuAlamofire.postParameters(url, parameters: ["p":userTextField.text!,"m":pwTextField.text!],
-                reString: { (xrString) -> Void in
+                successWithString: { (xrString) -> Void in
                     print(xrString)
                     switch xrString! {
                     case "false":
@@ -153,21 +153,24 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                         xhud.customView = UIImageView(image: UIImage(named: "check"))
                         xhud.mode = MBProgressHUDMode.CustomView
                         xhud.labelText = "登录成功"
-                        Assistant.excuteAfter(1500, closure: { () -> Void in
+                        XuGCD.after(1500, closure: { () -> Void in
                             self.saveLoginInfo()
                         })
                     default:
+                        xhud.hide(true)
                         self.presentViewController(Assistant.alertHint(nil, message: "数据异常！"), animated: true, completion: nil)
                     }
                     xhud.hide(true, afterDelay: 1)
-                }, failed: { (xError) -> Void in
-                    self.presentViewController(Assistant.alertHint(nil, message: "数据异常！"), animated: true, completion: nil)
+                }, failed: { (xError,isTimeOut) -> Void in
+                    let message = isTimeOut ? "请求超时" : "数据错误！"
+                    self.presentViewController(Assistant.alertHint(nil, message: message), animated: true, completion: nil)
+                    xhud.hide(true)
                     print("login failed!   error:\(xError)")
             })
         default:
             let url = uHeader + "applogin/password"
             XuAlamofire.postParameters(url, parameters: ["p":userTextField.text!,"pwd":pwTextField.text!],
-                reString: { (xrString) -> Void in
+                successWithString: { (xrString) -> Void in
                     print(xrString)
                     switch xrString! {
                     case "-2":
@@ -183,7 +186,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                         xhud.customView = UIImageView(image: UIImage(named: "check"))
                         xhud.mode = MBProgressHUDMode.CustomView
                         xhud.labelText = "登录成功"
-                        Assistant.excuteAfter(1500, closure: { () -> Void in
+                        XuGCD.after(1500, closure: { () -> Void in
                             self.saveLoginInfo()
                         })
                     case "2":
@@ -192,7 +195,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                         self.presentViewController(Assistant.alertHint(nil, message: "请求异常！"), animated: true, completion: nil)
                     }
                     xhud.hide(true, afterDelay: 1)
-                }, failed: { (xError) -> Void in
+                }, failed: { (xError,isTimeOut) -> Void in
                     print("login failed!   error:\(xError)")
             })
         }
@@ -209,7 +212,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         XuAlamofire.getString(url, success: { (xString) -> Void in
             print(xString)
             self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "OnTimer:", userInfo: nil, repeats: true)
-            }) { (xError) -> Void in
+            }) { (xError,isTimeOut) -> Void in
                 print("error   error:\(xError)")
         }
     }
