@@ -35,7 +35,6 @@ class NewAutoViewController: UIViewController {
         if isNewLogin {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: "skipThisTap:")
         }
-        
         provinceBtn.buttonWithLeft("京", right: UIImage(named: "down"))
         provinceBtn.layer.borderColor = XuColorBlueThin.CGColor
         provinceBtn.layer.borderWidth = 1
@@ -145,9 +144,10 @@ class NewAutoViewController: UIViewController {
         self.engineNumTF.resignFirstResponder()
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.labelText = "正在提交";hud.show(true)
+        print(self.engineNumTF.text)
         let carLicense = (provinceBtn.titleLabel?.text)! + plateTextField!.text!
         XuAlamofire.postParameters(uHeader + "car/add_info", parameters: ["phone":XuKeyChain.get(XuCurrentUser)!,
-            "carLicense":carLicense,"isOwner":isOwner,"carBrand":self.brand.0,"engineNum":"\(engineNumTF.text)"], successWithString: { (result) -> Void in
+            "carLicense":carLicense,"isOwner":isOwner,"carBrand":self.brand.0,"engineNum":"\(engineNumTF.text!)"], successWithString: { (result) -> Void in
                 if result == "true" {
                     hud.mode = MBProgressHUDMode.CustomView
                     hud.labelText = "提交成功"
@@ -155,6 +155,8 @@ class NewAutoViewController: UIViewController {
                     XuGCD.after(1000, closure: { () -> Void in
                         //添加成功后跳转
                     })
+                }else if result == "-1" {
+                    hud.labelText = "您已添加过此车辆"
                 }else {
                     hud.labelText = "提交失败"
                 }
