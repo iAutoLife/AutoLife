@@ -51,9 +51,22 @@ class XuMapView: MAMapView {
     //MARK: --func
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.compassOrigin = CGPointMake(10, 10)
+//        self.compassOrigin = CGPointMake(10, 10)
+        self.showsCompass = false
         self.showsScale = false
         self.rotateEnabled = false
+        
+        let trafficBtn = UIButton(type: UIButtonType.Custom)
+        trafficBtn.frame = CGRectMake(XuWidth - 45, 50, 40, 40)
+        trafficBtn.setImage(UIImage(named: "traffic_show"), forState: UIControlState.Normal)
+        trafficBtn.setImage(UIImage(named: "traffic_hide"), forState: UIControlState.Normal)
+        self.addSubview(trafficBtn)
+        
+        let feedbackBtn = UIButton(type: UIButtonType.Custom)
+        feedbackBtn.frame = CGRectMake(XuWidth - 45, 95, 40, 40)
+        feedbackBtn.setImage(UIImage(named: "feedback"), forState: UIControlState.Normal)
+        self.addSubview(feedbackBtn)
+        
         
         trackButton = UIButton(type: UIButtonType.Custom);trackButton?.tag = 1
         trackButton?.frame = CGRectMake(5, frame.height - 100, 40, 40)

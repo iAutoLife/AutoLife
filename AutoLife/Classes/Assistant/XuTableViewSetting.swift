@@ -35,10 +35,7 @@ func XutableView(tableView:UITableView,willDisplayCell cell:UITableViewCell,forR
     lineLayer.frame = CGRectMake(CGRectGetMinX(bounds), bounds.size.height - lineHeight, bounds.size.width, lineHeight)
     lineLayer.backgroundColor = XuColorGrayThin.CGColor
     layer.addSublayer(lineLayer)
-    let testView = UIView(frame: bounds)
-    testView.layer.insertSublayer(layer, atIndex: 0)
-    testView.backgroundColor = UIColor.clearColor()
-    cell.backgroundView = testView
+    cell.layer.insertSublayer(layer, atIndex: 0)
 }
 
 func XutableView(tableView:UITableView,willDisplayCell cell:UITableViewCell,forRowIndexPath indexPath:NSIndexPath,leftShft:CGFloat) {

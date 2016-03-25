@@ -17,5 +17,6 @@ typedef void(^ActionBlock)(UIButton* button);
 - (void) setup:(NSString*)title fontsize:(CGFloat)size fontColor:(UIColor*)fcolor bkColor:(UIColor*)bkcolor;
 - (void) setup:(UIImage*)image framesize:(CGSize)size;
 - (void) buttonWithLeft:(NSString*)title right:(UIImage*)image;
+- (void) buttonWith:(UIColor*)backColor verticalLine:(UIColor*)lineColor leftTitle:(NSString*)title rightImage:(UIImage*)image;
 
 @end

@@ -41,6 +41,10 @@ class ProvincesView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate
         self.addSubview(button)
     }
     
+    func finished(sender:UIButton) {
+        self.selectItem?(nil)
+    }
+    
     override func canBecomeFirstResponder() -> Bool {
         return true
     }

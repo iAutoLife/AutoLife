@@ -80,6 +80,7 @@ class ReceiptViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         var cell = tableView.dequeueReusableCellWithIdentifier("cell") as? UniversalTableViewCell
         if cell == nil {
             cell = UniversalTableViewCell(universalStyle: UniversalCellStyle.TextField, reuseIdentifier: "cell")
+            cell?.textField?.delegate = self
         }
         cell?.leftLabelText = tbArray[indexPath.section][indexPath.row]
         cell?.textPlaceholder = "\(tbArray[indexPath.section][indexPath.row])"
@@ -105,6 +106,10 @@ class ReceiptViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     func XuPickerViewDidSelected(pickerString: String) {
         UITextField.appearance().resignFirstResponder()
         print(pickerString)
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        return true
     }
 
     override func didReceiveMemoryWarning() {

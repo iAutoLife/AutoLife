@@ -236,9 +236,10 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         case 3: self.navigationController?.pushViewController(CarViewController(), animated: true)
         case 4: self.navigationController?.pushViewController(CarportViewController(), animated: true)
         case 5: self.navigationController?.pushViewController(ViolationViewController(), animated: true)
-        case 6: self.navigationController?.pushViewController(PersonalViewController(), animated: true)
+        case 6: self.navigationController?.pushViewController(InsuranceViewController(), animated: true)
         case 7: self.navigationController?.pushViewController(PersonalViewController(), animated: true)
-        case 8: self.navigationController?.pushViewController(SettingViewController(), animated: true)
+        case 8: self.navigationController?.pushViewController(PersonalViewController(), animated: true)
+        case 9: self.navigationController?.pushViewController(SettingViewController(), animated: true)
         default:break
         }
     }
@@ -248,6 +249,8 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     func initNavigationItemView() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "head_protraits"), style: UIBarButtonItemStyle.Plain, target: self, action: "showSubMasterView:")   //head_protraits
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.titleView = MapTitleView(city: "北京", text: "今日限行0/5")
+        
         self.search = AMapSearchAPI()
         search.delegate = mapDelegate
         
@@ -268,11 +271,11 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         mapView.headingFilter = 5
         mapView.desiredAccuracy = kCLLocationAccuracyKilometer
         
-        let searchBar = UISearchBar(frame: CGRectMake(0,0,XuWidth,40))
-        searchBar.searchBarStyle = UISearchBarStyle.Minimal
-        //searchBar.translucent = true
-        searchBar.placeholder = "搜索停车场"
-        mapView.addSubview(searchBar)
+//        let searchBar = UISearchBar(frame: CGRectMake(0,0,XuWidth,40))
+//        searchBar.searchBarStyle = UISearchBarStyle.Minimal
+//        //searchBar.translucent = true
+//        searchBar.placeholder = "搜索"
+//        mapView.addSubview(searchBar)
         
         mapView.compassOrigin = CGPointMake(10, 35)
         
@@ -289,7 +292,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
             mapView.addSubview(button)
         }
         
-        let carMaster = CarMaster(logo: UIImage(named: "fute")!, plate: "京AB1212", timesOfViolation: 1, scoresOfViolation: 6, timeParking: "69:20:20", revenue: 25.00)
+        let carMaster = CarMaster(logo: UIImage(named: "fute")!, plate: "京P23C8", timesOfViolation: 1, scoresOfViolation: 6, timeParking: "9:20:20", revenue: 25.00)
         let footView = FootMenuView(carmaster: carMaster)
         footView.center = CGPointMake(mapView.center.x, mapView.frame.height - 40)
         self.mapView.addSubview(footView)
@@ -309,6 +312,31 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
                 self.navigationController?.pushViewController(carportVC, animated: true)
             }
         }
+    }
+}
+
+class MapTitleView: UIView {
+    var locaBtn:UIButton!
+    var titleLabel:UILabel!
+    
+    init(city:String,text:String) {
+        super.init(frame: CGRectMake(0, 0, 100, 44))
+        locaBtn = UIButton(type: .Custom)
+        locaBtn.frame = CGRectMake(0, 0, 100, 20)
+        locaBtn.buttonWithLeft(city, right: UIImage(named: "drop"))
+        self.addSubview(locaBtn)
+        locaBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        locaBtn.titleLabel?.font = UIFont.systemFontOfSize(XutextSizeBig)
+        
+        let label = UILabel(frame: CGRectMake(0,22,100,20))
+        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = text
+        self.addSubview(label)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }

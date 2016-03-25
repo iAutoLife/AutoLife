@@ -35,6 +35,7 @@ let XuColorBlueThin = UIColor(red: 127/255, green: 193/255, blue: 1, alpha: 1)
 let XuColorBlue = UIColor(red: 0, green: 132/255, blue: 1, alpha: 1)
 let XuColorWhite = UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
 let XuColorGrayThin = UIColor(red: 230/255, green: 230/255, blue: 235/255, alpha: 1)
+let XuColorBlack = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
 let XuColorGray = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
 
 //MARK: --UserInfomation

@@ -46,6 +46,8 @@
 		<string>北京北城亚运村汽车交易市场</string>
 		<key>cost</key>
 		<string>¥12.00</string>
+		<key>New item</key>
+		<string></string>
 		<key>plate</key>
 		<string>京A B1212</string>
 		<key>totalTime</key>
@@ -66,7 +68,8 @@
 			<string>2015/9/25 10:59:59 - 2015/9/25 14:20:05</string>
 			<key>chargeStandard</key>
 			<array>
-				<string>09：00-21：00  ¥2.00/15min</string>
+				<string>09:00-21:00 ¥2.00/15min</string>
+				<string>21:00-07:00 ¥0.50/15min</string>
 			</array>
 			<key>parking</key>
 			<string>北京北辰亚运村汽车交易市场</string>

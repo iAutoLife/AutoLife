@@ -11,3 +11,4 @@
 #import "MBProgressHUD.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "XuAlipay.h"
+#import "HMSegmentedControl.h"

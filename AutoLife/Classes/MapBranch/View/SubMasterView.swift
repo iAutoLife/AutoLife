@@ -15,11 +15,11 @@ protocol SubMasterViewDelegate {
 class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     
     var tableView:UITableView!
-    let section0 = ["支付":"绑定 京A B1212 在线支付 开","历史记录":""]
-    let section1 = ["车辆":"京A B1212 车主未认证","车位":"车位分享 开","违章":"未处理 1"]
-    let section2 = ["优惠":"3张","推荐有奖":"停车享优惠"]
-    let section3 = ["设置":""]
-    let imageNames = [["pay","record"],["car","carport","violation"],["coupon","recommend"],["setting"]]
+    let section0 = [["支付":"绑定 京A B1212 在线支付 开"],["历史记录":""]]
+    let section1 = [["车辆":"京A B1212 车主未认证"],["车位":"车位分享 开"],["违章":"未处理 1"],["保险":""]]
+    let section2 = [["优惠":"3张"],["推荐有奖":"停车享优惠"]]
+    let section3 = [["设置":""]]
+    let imageNames = [["pay","record"],["car","carport","violation","insurance"],["coupon","recommend"],["setting"]]
     var tableArray : NSMutableArray = []//section0,section1,section2,section3]
     var delegate:SubMasterViewDelegate?
     
@@ -87,7 +87,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let dic = self.tableArray[section] as! NSDictionary
+        let dic = self.tableArray[section] as! NSArray
         return dic.count
     }
     
@@ -101,12 +101,12 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "subMasterCell")
         }
         cell?.imageView?.image = UIImage(named: imageNames[indexPath.section][indexPath.row])
-        let dic = self.tableArray[indexPath.section] as! NSDictionary
+        let dic = self.tableArray[indexPath.section][indexPath.row] as! NSDictionary
         let keys:NSArray = dic.allKeys
-        cell?.textLabel?.text = keys[indexPath.row] as? String
+        cell?.textLabel?.text = keys[0] as? String
         cell?.textLabel?.textColor = UIColor.whiteColor()
         cell?.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        cell?.detailTextLabel?.text = dic.objectForKey(String(keys[indexPath.row])) as? String
+        cell?.detailTextLabel?.text = dic.objectForKey(String(keys[0])) as? String
         cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmallest)
         cell?.backgroundColor = UIColor.clearColor()
         cell?.selectionStyle = UITableViewCellSelectionStyle.None

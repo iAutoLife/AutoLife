@@ -233,6 +233,7 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         textField?.autocorrectionType = UITextAutocorrectionType.No
         textField?.center.y = XuCellHeight / 2
         self.contentView.addSubview(textField!)
+        textField?.addTarget(self, action: "textFieldValueChanged:", forControlEvents: UIControlEvents.AllEditingEvents)
     }
     
     func setupLeft(image:UIImage,andLabel labelText:String) {
@@ -243,6 +244,11 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     //MARK: --control event
     func rightButtonAction(sender:UIButton) {
         self.rightButtonClicked?()
+    }
+    
+    func textFieldValueChanged(textField:UITextField) {
+//        print("\(textField.text):::\(XuRegularExpression.isVaild(textField.text, fortype: XuRegularType.secure))")
+        
     }
     
     func rightSwitchAction(sender:UISwitch) {

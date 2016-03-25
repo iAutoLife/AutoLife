@@ -129,6 +129,8 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                 cell?.rightButtonTitle = "续费"
                 cell?.rightButtonClicked = { () in
                     print("续费")
+                    let rentVC = TBViewController()
+                    self.navigationController?.pushViewController(rentVC, animated: true)
                 }
             }
             cell?.leftLabelText = title as String

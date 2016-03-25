@@ -62,4 +62,18 @@ static char overViewKey;
 
 }
 
+- (void) buttonWith:(UIColor*)backColor verticalLine:(UIColor*)lineColor leftTitle:(NSString*)title rightImage:(UIImage*)image {
+//    [self buttonWithLeft:title right:image];
+    self.backgroundColor = backColor;
+    CALayer *layer = [CALayer layer];
+    [self setTitle:title forState:UIControlStateNormal];
+    [self setImage:image forState:UIControlStateNormal];
+    self.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imageView.frame.size.width, 0, self.imageView.frame.size.width);
+    self.imageEdgeInsets = UIEdgeInsetsMake(0, self.titleLabel.frame.size.width - 5, 0, 4-self.titleLabel.frame.size.width);
+    NSLog(@"current111:%f",CGRectGetMaxX(self.imageView.frame));
+    layer.frame = CGRectMake(CGRectGetMaxX(self.titleLabel.frame), 3, 0.5, self.frame.size.height - 6);
+    layer.backgroundColor = lineColor.CGColor;
+    [self.layer insertSublayer:layer atIndex:0];
+}
+
 @end

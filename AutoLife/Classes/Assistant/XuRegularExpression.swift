@@ -10,7 +10,7 @@ import UIKit
 
 enum XuRegularType {
     //纯数字，手机号或带区号的座机，邮箱，身份证，银行卡号，百分比，小数点
-    case digital,tel,phone,telephone,email,identifyCard,bank,percent,decimal
+    case digital,tel,phone,telephone,email,identifyCard,bank,percent,decimal,secure
 }
 
 //正则表达式  自写
@@ -45,6 +45,8 @@ class XuRegularExpression: NSObject {
             predicateString = "^\\d*(.\\d+)*%$"
         case .decimal:
             predicateString = "^0\\.\\d+$"
+        case .secure:
+            predicateString = "^[a-zA-Z0-9]{6,20}$"
         }
         let predicate = NSPredicate(format: "SELF MATCHES %@", predicateString)
         return predicate.evaluateWithObject(value)

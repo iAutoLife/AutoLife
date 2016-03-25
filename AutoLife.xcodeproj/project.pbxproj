@@ -17,9 +17,17 @@
 		8F0296B51C994C0E00A49D06 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0296AD1C994C0E00A49D06 /* RSADataVerifier.m */; };
 		8F0297991C994DD400A49D06 /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0297981C994DD400A49D06 /* Order.m */; };
 		8F02979C1C994E3B00A49D06 /* XuAlipay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02979B1C994E3B00A49D06 /* XuAlipay.m */; };
+		8F6372BA1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6372B81CA23CE700A5BA4D /* WidthSubTitleTableViewCell.swift */; };
+		8F6372BB1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6372B91CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib */; };
 		8F6A7B181C576AA70071879C /* ProvincesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7B171C576AA70071879C /* ProvincesView.swift */; };
 		8F6A7B1A1C5787A00071879C /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7B191C5787A00071879C /* NumberView.swift */; };
 		8F8069C21C51D1F9007C9DA0 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */; };
+		8FBCC83B1C9F82DF007E868F /* InsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */; };
+		8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83D1C9F9037007E868F /* SegHeadView.swift */; };
+		8FBCC8411C9F96A4007E868F /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC8401C9F96A4007E868F /* HMSegmentedControl.m */; };
+		8FBCC8471C9FDCFD007E868F /* SunTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC8451C9FDCFD007E868F /* SunTableViewCell.swift */; };
+		8FBCC8481C9FDCFD007E868F /* SunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBCC8461C9FDCFD007E868F /* SunTableViewCell.xib */; };
+		8FBCC84A1CA02797007E868F /* ColTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC8491CA02797007E868F /* ColTableViewCell.swift */; };
 		8FD146951C8E70F5009BBB47 /* TBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD146941C8E70F5009BBB47 /* TBViewController.swift */; };
 		8FDA66481C994386006F144C /* AlipaySDK.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66441C994386006F144C /* AlipaySDK.bundle */; };
 		8FDA66491C994386006F144C /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66451C994386006F144C /* AlipaySDK.framework */; };
@@ -281,9 +289,18 @@
 		8F0297981C994DD400A49D06 /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Order.m; path = Classes/PayBranch/Model/Order.m; sourceTree = "<group>"; };
 		8F02979A1C994E3B00A49D06 /* XuAlipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XuAlipay.h; path = Classes/PayBranch/Model/XuAlipay.h; sourceTree = "<group>"; };
 		8F02979B1C994E3B00A49D06 /* XuAlipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XuAlipay.m; path = Classes/PayBranch/Model/XuAlipay.m; sourceTree = "<group>"; };
+		8F6372B81CA23CE700A5BA4D /* WidthSubTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidthSubTitleTableViewCell.swift; path = Classes/Insurance/Cell/WidthSubTitleTableViewCell.swift; sourceTree = "<group>"; };
+		8F6372B91CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WidthSubTitleTableViewCell.xib; path = Classes/Insurance/Cell/WidthSubTitleTableViewCell.xib; sourceTree = "<group>"; };
 		8F6A7B171C576AA70071879C /* ProvincesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProvincesView.swift; path = Classes/CarBranch/view/ProvincesView.swift; sourceTree = "<group>"; };
 		8F6A7B191C5787A00071879C /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberView.swift; path = Classes/CarBranch/view/NumberView.swift; sourceTree = "<group>"; };
 		8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Classes/CarBranch/Controller/PickerViewController.swift; sourceTree = "<group>"; };
+		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; };
+		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; };
+		8FBCC83F1C9F96A4007E868F /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = Classes/Assistant/HMSegmentedControl.h; sourceTree = "<group>"; };
+		8FBCC8401C9F96A4007E868F /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = Classes/Assistant/HMSegmentedControl.m; sourceTree = "<group>"; };
+		8FBCC8451C9FDCFD007E868F /* SunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SunTableViewCell.swift; path = Classes/Insurance/Cell/SunTableViewCell.swift; sourceTree = "<group>"; };
+		8FBCC8461C9FDCFD007E868F /* SunTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SunTableViewCell.xib; path = Classes/Insurance/Cell/SunTableViewCell.xib; sourceTree = "<group>"; };
+		8FBCC8491CA02797007E868F /* ColTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColTableViewCell.swift; path = Classes/Insurance/Cell/ColTableViewCell.swift; sourceTree = "<group>"; };
 		8FD146941C8E70F5009BBB47 /* TBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBViewController.swift; path = Classes/ParkBranch/Controller/TBViewController.swift; sourceTree = "<group>"; };
 		8FDA66441C994386006F144C /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8FDA66451C994386006F144C /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = AutoLife/Framework/AlipaySDK.framework; sourceTree = "<group>"; };
@@ -467,6 +484,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FBCC8361C9F823E007E868F /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				8FBCC8371C9F826C007E868F /* Controller */,
+				8FBCC8391C9F828F007E868F /* Cell */,
+				8FBCC8381C9F8287007E868F /* View */,
+			);
+			name = Insurance;
+			sourceTree = "<group>";
+		};
+		8FBCC8371C9F826C007E868F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FBCC8381C9F8287007E868F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FBCC83D1C9F9037007E868F /* SegHeadView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8FBCC8391C9F828F007E868F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8FBCC8451C9FDCFD007E868F /* SunTableViewCell.swift */,
+				8FBCC8461C9FDCFD007E868F /* SunTableViewCell.xib */,
+				8FBCC8491CA02797007E868F /* ColTableViewCell.swift */,
+				8F6372B81CA23CE700A5BA4D /* WidthSubTitleTableViewCell.swift */,
+				8F6372B91CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		8FBCC8421C9F97D9007E868F /* My */ = {
+			isa = PBXGroup;
+			children = (
+				C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */,
+				8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */,
+				C57D6C021C48AC1600C92E33 /* Extension.swift */,
+				C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */,
+				C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */,
+				C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */,
+				C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */,
+			);
+			name = My;
+			sourceTree = "<group>";
+		};
 		8FDA66521C9943CE006F144C /* AliFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +819,7 @@
 				C57D6B861C47EEA100C92E33 /* CarBranch */,
 				C57D6B851C47EE9800C92E33 /* PayBranch */,
 				C57D6B841C47EE8400C92E33 /* ParkBranch */,
+				8FBCC8361C9F823E007E868F /* Insurance */,
 				C57D6B891C47EF5600C92E33 /* Assistant */,
 				C57D6C041C48AC3500C92E33 /* Universal */,
 			);
@@ -815,13 +885,7 @@
 			children = (
 				C57D6BA31C47F1C700C92E33 /* Cell */,
 				C57D6BB51C47FAA500C92E33 /* ExtentClass */,
-				C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */,
-				8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */,
-				C57D6C021C48AC1600C92E33 /* Extension.swift */,
-				C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */,
-				C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */,
-				C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */,
-				C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */,
+				8FBCC8421C9F97D9007E868F /* My */,
 			);
 			name = Assistant;
 			sourceTree = "<group>";
@@ -869,6 +933,7 @@
 				C57D6C081C48ACF600C92E33 /* VArrayTableViewCell.swift */,
 				C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */,
 				C57D6C101C48AE7300C92E33 /* ViolationTableViewCell.swift */,
+				C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -915,6 +980,8 @@
 				C57D6BB11C47F9D500C92E33 /* UIButton+Block.m */,
 				8FF92C081C4FAFC100D5C3F8 /* MBProgressHUD.h */,
 				8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */,
+				8FBCC83F1C9F96A4007E868F /* HMSegmentedControl.h */,
+				8FBCC8401C9F96A4007E868F /* HMSegmentedControl.m */,
 			);
 			name = ExtentClass;
 			sourceTree = "<group>";
@@ -994,7 +1061,6 @@
 		C57D6C041C48AC3500C92E33 /* Universal */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6C051C48AC5200C92E33 /* Cell */,
 				8FF92BF21C4C7FB800D5C3F8 /* XuAlamofire.swift */,
 				8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */,
 				8FF92C001C4C923000D5C3F8 /* StaticDefine.swift */,
@@ -1002,14 +1068,6 @@
 				8FF92BF51C4C81F000D5C3F8 /* FrameworkFiles */,
 			);
 			name = Universal;
-			sourceTree = "<group>";
-		};
-		C57D6C051C48AC5200C92E33 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1191,11 +1249,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57D6BA01C47F17000C92E33 /* Violations.plist in Resources */,
+				8F6372BB1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib in Resources */,
 				C57D6B9D1C47F17000C92E33 /* CityAndArea.plist in Resources */,
 				C57D6B9E1C47F17000C92E33 /* ParkingRecord.plist in Resources */,
 				C57D6B9B1C47F17000C92E33 /* Carport.plist in Resources */,
 				C57D6B401C47EB4E00C92E33 /* LaunchScreen.storyboard in Resources */,
 				C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */,
+				8FBCC8481C9FDCFD007E868F /* SunTableViewCell.xib in Resources */,
 				C57D6B681C47EC2300C92E33 /* AMap.bundle in Resources */,
 				C57D6B9A1C47F17000C92E33 /* CarInfomation.plist in Resources */,
 				C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */,
@@ -1264,8 +1324,10 @@
 				8F0296AF1C994C0E00A49D06 /* DataSigner.m in Sources */,
 				C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */,
 				C57D6C091C48ACF600C92E33 /* VArrayTableViewCell.swift in Sources */,
+				8FBCC84A1CA02797007E868F /* ColTableViewCell.swift in Sources */,
 				C57D6B8F1C47F13A00C92E33 /* XuKeyChain.swift in Sources */,
 				C57D6C0F1C48AE1E00C92E33 /* CarOwnership.swift in Sources */,
+				8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */,
 				C57D6BD31C47FCF300C92E33 /* FootMenuView.swift in Sources */,
 				8FF92C051C4CCD2900D5C3F8 /* Assistant.swift in Sources */,
 				C57D6C131C48AEF900C92E33 /* HeaderView.swift in Sources */,
@@ -1295,6 +1357,7 @@
 				8FF905E01C59EF2900FF21B4 /* XuGCD.swift in Sources */,
 				C57D6BC51C47FC1200C92E33 /* MasterMapDelegate.swift in Sources */,
 				8FD146951C8E70F5009BBB47 /* TBViewController.swift in Sources */,
+				8FBCC8471C9FDCFD007E868F /* SunTableViewCell.swift in Sources */,
 				C57D6BD61C47FCF300C92E33 /* XuCustomPointView.swift in Sources */,
 				C57D6BD71C47FCF300C92E33 /* XuMapView.swift in Sources */,
 				C57D6BAC1C47F6D100C92E33 /* MasterViewController.swift in Sources */,
@@ -1316,7 +1379,9 @@
 				8F0296B11C994C0E00A49D06 /* MD5DataSigner.m in Sources */,
 				C57D6BBC1C47FBBA00C92E33 /* HoshiTextField.swift in Sources */,
 				8F0296B31C994C0E00A49D06 /* openssl_wrapper.m in Sources */,
+				8FBCC8411C9F96A4007E868F /* HMSegmentedControl.m in Sources */,
 				C57D6C1D1C48B34E00C92E33 /* SwiftColors.swift in Sources */,
+				8FBCC83B1C9F82DF007E868F /* InsuranceViewController.swift in Sources */,
 				C57D6C171C48AF9F00C92E33 /* CarportTableViewCell.swift in Sources */,
 				8F0296B21C994C0E00A49D06 /* NSDataEx.m in Sources */,
 				C57D6C071C48AC9300C92E33 /* UniversalTableViewCell.swift in Sources */,
@@ -1325,6 +1390,7 @@
 				8FF92BFF1C4C86BD00D5C3F8 /* SwiftyJSON.swift in Sources */,
 				C57D6BA71C47F5EB00C92E33 /* AgreementViewController.swift in Sources */,
 				C57D6BD41C47FCF300C92E33 /* SubMasterView.swift in Sources */,
+				8F6372BA1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1551,6 +1617,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1580,6 +1647,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

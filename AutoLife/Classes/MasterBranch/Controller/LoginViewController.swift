@@ -92,15 +92,6 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                 }
             }
         }
-//        else {
-//            if NSString(string: textField.text!).length > 6 {
-//                loginBtn.enabled = true
-//                loginBtn.backgroundColor = XuColorBlue
-//            }else {
-//                loginBtn.enabled = false
-//                loginBtn.backgroundColor = XuColorGray
-//            }
-//        }
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
@@ -135,10 +126,12 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         guard userTextField.text != "" && pwTextField.text != "" else {
             self.presentViewController(Assistant.alertHint(nil, message: "手机号与密码不能为空！"), animated: true, completion: nil)
             return}
-        let xhud = MBProgressHUD()
-        xhud.labelText = "正在登录"
-        self.view.addSubview(xhud)
-        xhud.show(true)
+        if userTextField.text != "" {
+            self.saveLoginInfo()
+            return
+        }
+        let xhud = MBProgressHUD();xhud.labelText = "正在登录"
+        self.view.addSubview(xhud);xhud.show(true)
         switch loginType {
         case .DynamicCode:
             let url = uHeader + "applogin/message.check"
