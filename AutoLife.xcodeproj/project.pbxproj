@@ -21,6 +21,7 @@
 		8F6372BB1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F6372B91CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib */; };
 		8F6A7B181C576AA70071879C /* ProvincesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7B171C576AA70071879C /* ProvincesView.swift */; };
 		8F6A7B1A1C5787A00071879C /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7B191C5787A00071879C /* NumberView.swift */; };
+		8F78F0741CA8D5C800E753F4 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */; };
 		8F8069C21C51D1F9007C9DA0 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */; };
 		8FBCC83B1C9F82DF007E868F /* InsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */; };
 		8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83D1C9F9037007E868F /* SegHeadView.swift */; };
@@ -29,7 +30,6 @@
 		8FBCC8481C9FDCFD007E868F /* SunTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBCC8461C9FDCFD007E868F /* SunTableViewCell.xib */; };
 		8FBCC84A1CA02797007E868F /* ColTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC8491CA02797007E868F /* ColTableViewCell.swift */; };
 		8FD146951C8E70F5009BBB47 /* TBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD146941C8E70F5009BBB47 /* TBViewController.swift */; };
-		8FDA66481C994386006F144C /* AlipaySDK.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66441C994386006F144C /* AlipaySDK.bundle */; };
 		8FDA66491C994386006F144C /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66451C994386006F144C /* AlipaySDK.framework */; };
 		8FDA664A1C994386006F144C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66461C994386006F144C /* libcrypto.a */; };
 		8FDA664B1C994386006F144C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66471C994386006F144C /* libssl.a */; };
@@ -293,6 +293,7 @@
 		8F6372B91CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WidthSubTitleTableViewCell.xib; path = Classes/Insurance/Cell/WidthSubTitleTableViewCell.xib; sourceTree = "<group>"; };
 		8F6A7B171C576AA70071879C /* ProvincesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProvincesView.swift; path = Classes/CarBranch/view/ProvincesView.swift; sourceTree = "<group>"; };
 		8F6A7B191C5787A00071879C /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberView.swift; path = Classes/CarBranch/view/NumberView.swift; sourceTree = "<group>"; };
+		8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Classes/CarBranch/Controller/PickerViewController.swift; sourceTree = "<group>"; };
 		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; };
 		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; };
@@ -302,7 +303,6 @@
 		8FBCC8461C9FDCFD007E868F /* SunTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SunTableViewCell.xib; path = Classes/Insurance/Cell/SunTableViewCell.xib; sourceTree = "<group>"; };
 		8FBCC8491CA02797007E868F /* ColTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColTableViewCell.swift; path = Classes/Insurance/Cell/ColTableViewCell.swift; sourceTree = "<group>"; };
 		8FD146941C8E70F5009BBB47 /* TBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TBViewController.swift; path = Classes/ParkBranch/Controller/TBViewController.swift; sourceTree = "<group>"; };
-		8FDA66441C994386006F144C /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8FDA66451C994386006F144C /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlipaySDK.framework; path = AutoLife/Framework/AlipaySDK.framework; sourceTree = "<group>"; };
 		8FDA66461C994386006F144C /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = AutoLife/Framework/libcrypto.a; sourceTree = "<group>"; };
 		8FDA66471C994386006F144C /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = AutoLife/Framework/libssl.a; sourceTree = "<group>"; };
@@ -446,7 +446,6 @@
 				8FDA66511C9943B0006F144C /* CoreText.framework in Frameworks */,
 				8FDA664F1C99439F006F144C /* CoreMotion.framework in Frameworks */,
 				8FDA664D1C994396006F144C /* CFNetwork.framework in Frameworks */,
-				8FDA66481C994386006F144C /* AlipaySDK.bundle in Frameworks */,
 				8FDA66491C994386006F144C /* AlipaySDK.framework in Frameworks */,
 				8FDA664A1C994386006F144C /* libcrypto.a in Frameworks */,
 				8FDA664B1C994386006F144C /* libssl.a in Frameworks */,
@@ -544,7 +543,7 @@
 				8FDA66501C9943B0006F144C /* CoreText.framework */,
 				8FDA664E1C99439F006F144C /* CoreMotion.framework */,
 				8FDA664C1C994396006F144C /* CFNetwork.framework */,
-				8FDA66441C994386006F144C /* AlipaySDK.bundle */,
+				8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */,
 				8FDA66451C994386006F144C /* AlipaySDK.framework */,
 				8FDA66461C994386006F144C /* libcrypto.a */,
 				8FDA66471C994386006F144C /* libssl.a */,
@@ -1250,6 +1249,7 @@
 			files = (
 				C57D6BA01C47F17000C92E33 /* Violations.plist in Resources */,
 				8F6372BB1CA23CE700A5BA4D /* WidthSubTitleTableViewCell.xib in Resources */,
+				8F78F0741CA8D5C800E753F4 /* AlipaySDK.bundle in Resources */,
 				C57D6B9D1C47F17000C92E33 /* CityAndArea.plist in Resources */,
 				C57D6B9E1C47F17000C92E33 /* ParkingRecord.plist in Resources */,
 				C57D6B9B1C47F17000C92E33 /* Carport.plist in Resources */,

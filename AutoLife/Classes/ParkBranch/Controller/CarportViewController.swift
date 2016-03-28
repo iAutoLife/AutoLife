@@ -193,8 +193,8 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func addCarlincense(sender:UIButton) {
-        let newLincenseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewLicensePlateViewController")
-        self.navigationController?.pushViewController(newLincenseVC, animated: true)
+//        let newLincenseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NewLicensePlateViewController")
+//        self.navigationController?.pushViewController(newLincenseVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

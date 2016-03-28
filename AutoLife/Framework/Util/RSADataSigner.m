@@ -21,9 +21,16 @@
 
 - (NSString*)urlEncodedString:(NSString *)string
 {
+#if IOS8
+    
     NSString * encodedString = (__bridge_transfer  NSString*) CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)string, NULL, (__bridge CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8 );
     
     return encodedString;
+#else
+    NSString * charactersToEscape = @"!*'();:@&=+$,/?%#[]";
+    return [string stringByAddingPercentEncodingWithAllowedCharacters:[[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet]];
+    
+#endif
 }
 
 

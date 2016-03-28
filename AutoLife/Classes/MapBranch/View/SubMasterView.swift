@@ -35,7 +35,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     func initTableView() {
-        tableView = UITableView(frame: CGRectMake(XuWidth / 3, 0, XuWidth * 2 / 3, 464), style: UITableViewStyle.Plain)
+        tableView = UITableView(frame: CGRectMake(XuWidth / 3, 0, XuWidth * 2 / 3, XuHeight), style: UITableViewStyle.Plain)
         tableView.backgroundColor = UIColor(red: 24/255, green: 30/255, blue: 36/255, alpha: 1)
         tableView.dataSource = self
         tableView.delegate = self
