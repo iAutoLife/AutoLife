@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0194731CC5D0A00035FAD5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194721CC5D0A00035FAD5 /* Notifications.swift */; };
+		8F0194751CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */; };
+		8F0194771CC5D0E00035FAD5 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194761CC5D0E00035FAD5 /* Timeline.swift */; };
+		8F0194791CC5D0F20035FAD5 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F0194781CC5D0F20035FAD5 /* Info-tvOS.plist */; };
 		8F0296AE1C994C0E00A49D06 /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02969E1C994C0E00A49D06 /* base64.m */; };
 		8F0296AF1C994C0E00A49D06 /* DataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0296A11C994C0E00A49D06 /* DataSigner.m */; };
 		8F0296B01C994C0E00A49D06 /* DataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0296A31C994C0E00A49D06 /* DataVerifier.m */; };
@@ -193,6 +197,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8F0194721CC5D0A00035FAD5 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		8F0194761CC5D0E00035FAD5 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		8F0194781CC5D0F20035FAD5 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		8F02969D1C994C0E00A49D06 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = AutoLife/Framework/Util/base64.h; sourceTree = "<group>"; };
 		8F02969E1C994C0E00A49D06 /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = base64.m; path = AutoLife/Framework/Util/base64.m; sourceTree = "<group>"; };
 		8F02969F1C994C0E00A49D06 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = AutoLife/Framework/Util/config.h; sourceTree = "<group>"; };
@@ -675,6 +683,7 @@
 				8FF92BD51C4C7EDE00D5C3F8 /* Features */,
 				8FF92BB81C4C7EB400D5C3F8 /* Alamofire.h */,
 				8FF92BBA1C4C7EB400D5C3F8 /* Info.plist */,
+				8F0194781CC5D0F20035FAD5 /* Info-tvOS.plist */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -693,6 +702,7 @@
 			children = (
 				8FF92BD61C4C7EFE00D5C3F8 /* Error.swift */,
 				8FF92BD71C4C7EFE00D5C3F8 /* Manager.swift */,
+				8F0194721CC5D0A00035FAD5 /* Notifications.swift */,
 				8FF92BD81C4C7EFE00D5C3F8 /* ParameterEncoding.swift */,
 				8FF92BD91C4C7EFE00D5C3F8 /* Request.swift */,
 				8FF92BDA1C4C7EFE00D5C3F8 /* Response.swift */,
@@ -706,9 +716,11 @@
 			children = (
 				8FF92BE21C4C7F0E00D5C3F8 /* Download.swift */,
 				8FF92BE31C4C7F0E00D5C3F8 /* MultipartFormData.swift */,
+				8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */,
 				8FF92BE41C4C7F0E00D5C3F8 /* ResponseSerialization.swift */,
 				8FF92BE51C4C7F0E00D5C3F8 /* ServerTrustPolicy.swift */,
 				8FF92BE61C4C7F0E00D5C3F8 /* Stream.swift */,
+				8F0194761CC5D0E00035FAD5 /* Timeline.swift */,
 				8FF92BE71C4C7F0E00D5C3F8 /* Upload.swift */,
 				8FF92BE81C4C7F0E00D5C3F8 /* Validation.swift */,
 			);
@@ -1233,6 +1245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0194791CC5D0F20035FAD5 /* Info-tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1285,7 +1298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0194731CC5D0A00035FAD5 /* Notifications.swift in Sources */,
 				8FF92BEE1C4C7F0E00D5C3F8 /* Upload.swift in Sources */,
+				8F0194751CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift in Sources */,
 				8FF92BED1C4C7F0E00D5C3F8 /* Stream.swift in Sources */,
 				8FF92BE11C4C7EFE00D5C3F8 /* Result.swift in Sources */,
 				8FF92BDE1C4C7EFE00D5C3F8 /* ParameterEncoding.swift in Sources */,
@@ -1293,6 +1308,7 @@
 				8FF92BEA1C4C7F0E00D5C3F8 /* MultipartFormData.swift in Sources */,
 				8FF92BF11C4C7F1700D5C3F8 /* Alamofire.swift in Sources */,
 				8FF92BDF1C4C7EFE00D5C3F8 /* Request.swift in Sources */,
+				8F0194771CC5D0E00035FAD5 /* Timeline.swift in Sources */,
 				8FF92BEB1C4C7F0E00D5C3F8 /* ResponseSerialization.swift in Sources */,
 				8FF92BDC1C4C7EFE00D5C3F8 /* Error.swift in Sources */,
 				8FF92BDD1C4C7EFE00D5C3F8 /* Manager.swift in Sources */,

@@ -101,7 +101,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
             cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "subMasterCell")
         }
         cell?.imageView?.image = UIImage(named: imageNames[indexPath.section][indexPath.row])
-        let dic = self.tableArray[indexPath.section][indexPath.row] as! NSDictionary
+        let dic = (self.tableArray[indexPath.section] as! NSArray)[indexPath.row] as! NSDictionary
         let keys:NSArray = dic.allKeys
         cell?.textLabel?.text = keys[0] as? String
         cell?.textLabel?.textColor = UIColor.whiteColor()

@@ -82,7 +82,7 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let object = self.currentState[indexPath.section][indexPath.row]
+        let object = (self.currentState[indexPath.section] as! NSArray)[indexPath.row]
         switch object {
         case is String:
             return self.cellWithString(indexPath, object: object)
