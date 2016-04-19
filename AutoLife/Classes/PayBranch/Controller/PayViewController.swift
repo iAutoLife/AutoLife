@@ -19,7 +19,7 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         // Do any additional setup after loading the view.
         self.view.backgroundColor = XuColorWhite
         self.navigationItem.title = "支付"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PayViewController.showMessageView(_:)))
         
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)

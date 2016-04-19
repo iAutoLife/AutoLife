@@ -23,7 +23,7 @@ class AgreementViewController: UIViewController {
         self.initView()
         
         if self.previousVC != nil {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: "backPreviousVC:")
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(AgreementViewController.backPreviousVC(_:)))
         }
     }
     

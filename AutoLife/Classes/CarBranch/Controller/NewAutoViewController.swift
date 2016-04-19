@@ -33,17 +33,17 @@ class NewAutoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if isNewLogin {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: "skipThisTap:")
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.skipThisTap(_:)))
         }
         provinceBtn.buttonWithLeft("京", right: UIImage(named: "down"))
         provinceBtn.layer.borderColor = XuColorBlueThin.CGColor
         provinceBtn.layer.borderWidth = 1
         provinceBtn.layer.cornerRadius = XuCornerRadius
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: "goback:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.goback(_:)))
         
-        boundsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapSuperView:"))
-        selectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "chooseBrandTap:"))
+        boundsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NewAutoViewController.tapSuperView(_:))))
+        selectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NewAutoViewController.chooseBrandTap(_:))))
         
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([
             NSForegroundColorAttributeName:XuColorBlue,

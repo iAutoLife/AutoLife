@@ -71,7 +71,7 @@ class ViolationTableViewCell: UITableViewCell {
         locateBtn = UIButton(type: UIButtonType.System)
         locateBtn.frame = CGRectMake(10, 20, 20, 20 * imageOfLocation.size.height / imageOfLocation.size.width)
         locateBtn.setImage(imageOfLocation, forState: UIControlState.Normal)
-        locateBtn.addTarget(self, action: "locationAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        locateBtn.addTarget(self, action: #selector(ViolationTableViewCell.locationAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.contentView.addSubview(locateBtn)
     }
     

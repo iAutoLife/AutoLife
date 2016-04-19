@@ -48,13 +48,13 @@ class HeaderView: UIView {
         button.setTitle(text, forState: UIControlState.Normal)
         button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
         button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        button.addTarget(view, action: "add:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(view, action: #selector(HeaderView.add(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         
         let addBtn = UIButton(type: UIButtonType.System)
         addBtn.frame = CGRectMake(CGRectGetMinX(button.frame) - 30, view.frame.height - 17, 25, 15)
         addBtn.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
-        addBtn.addTarget(view, action: "add:", forControlEvents: UIControlEvents.TouchUpInside)
+        addBtn.addTarget(view, action: #selector(HeaderView.add(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(addBtn)
     }
 

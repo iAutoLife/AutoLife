@@ -60,8 +60,8 @@ class XuStepper: UIControl {
         incrementButton.setBackgroundImage(incrementImage, forState: UIControlState.Normal)
         incrementButton.setBackgroundImage(unIncrementImage, forState: UIControlState.Disabled)
         incrementButton.autoresizingMask = UIViewAutoresizing.None
-        incrementButton.addTarget(self, action: "touchDownIncrement:", forControlEvents: UIControlEvents.TouchDown)
-        incrementButton.addTarget(self, action: "touchUpIncrement:", forControlEvents: UIControlEvents.TouchUpInside)
+        incrementButton.addTarget(self, action: #selector(XuStepper.touchDownIncrement(_:)), forControlEvents: UIControlEvents.TouchDown)
+        incrementButton.addTarget(self, action: #selector(XuStepper.touchUpIncrement(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(incrementButton)
         
         var lineRect = CGRectMake(width - 0.25,5,0.51,width)
@@ -74,8 +74,8 @@ class XuStepper: UIControl {
         }
         decrementButton.setBackgroundImage(decrementImage, forState: UIControlState.Normal)
         decrementButton.setBackgroundImage(unDecrementImage, forState: UIControlState.Disabled)
-        decrementButton.addTarget(self, action: "touchDownDecrement:", forControlEvents: UIControlEvents.TouchDown)
-        decrementButton.addTarget(self, action: "touchUpDecrement:", forControlEvents: UIControlEvents.TouchUpInside)
+        decrementButton.addTarget(self, action: #selector(XuStepper.touchDownDecrement(_:)), forControlEvents: UIControlEvents.TouchDown)
+        decrementButton.addTarget(self, action: #selector(XuStepper.touchUpDecrement(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(decrementButton)
         let view = UIView(frame: lineRect)
         view.backgroundColor  = UIColor(red: 0.852, green: 0.8521, blue: 0.852, alpha: 1)
@@ -96,7 +96,7 @@ class XuStepper: UIControl {
         }
         stepperValueChanged?(self)
         if autoRepeat {
-            self.performSelector("touchDownIncrement:", withObject: nil, afterDelay: autoRepeatInterval)
+            self.performSelector(#selector(XuStepper.touchDownIncrement(_:)), withObject: nil, afterDelay: autoRepeatInterval)
         }
     }
     
@@ -113,7 +113,7 @@ class XuStepper: UIControl {
         }
         stepperValueChanged?(self)
         if autoRepeat {
-            self.performSelector("touchDownDecrement:", withObject: nil, afterDelay: autoRepeatInterval)
+            self.performSelector(#selector(XuStepper.touchDownDecrement(_:)), withObject: nil, afterDelay: autoRepeatInterval)
         }
     }
     

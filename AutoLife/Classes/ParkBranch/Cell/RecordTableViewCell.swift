@@ -57,7 +57,7 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
         locateBtn = UIButton(type: UIButtonType.System)
         locateBtn.frame = CGRectMake(10, 20, 20, 20 * imageOfLocation.size.height / imageOfLocation.size.width)
         locateBtn.setImage(imageOfLocation, forState: UIControlState.Normal)
-        locateBtn.addTarget(self, action: "locationAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        locateBtn.addTarget(self, action: #selector(RecordTableViewCell.locationAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(locateBtn)
     }
     
@@ -67,7 +67,7 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
         showButton.frame = CGRectMake(0, 0, 115, 15)
         showButton.center = CGPointMake(XuWidth / 2, self.frame.height - 5)
         showButton.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
-        showButton.addTarget(self, action: "shownDonwDetail:", forControlEvents: UIControlEvents.TouchUpInside)
+        showButton.addTarget(self, action: #selector(RecordTableViewCell.shownDonwDetail(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(showButton)
     }
     

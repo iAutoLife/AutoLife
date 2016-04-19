@@ -23,7 +23,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
         let pvc = PickerViewController()
         pvc.delegate = self
         pvc.view.frame = CGRectMake(45,0,XuWidth - 45,XuHeight)
-        pvc.backgroundView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "tapBackViewGesture:"))
+        pvc.backgroundView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BrandViewController.tapBackViewGesture(_:))))
         return pvc
     }()
     
@@ -43,7 +43,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
         tableView.dataSource = self
         tableView.delegate = self
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: "goback:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(BrandViewController.goback(_:)))
         
         self.navigationController?.title = "选择车型"
     }

@@ -35,7 +35,7 @@ class ProvincesView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate
         let oXW:(CGFloat,CGFloat) = (XuWidth == 375 ? 294.5 : 251.5,XuWidth == 375 ? 70 : 58)
         button.frame = CGRectMake(oXW.0, 148, oXW.1, 36)
         button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        button.addTarget(self, action: "finished:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(ProvincesView.finished(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         button.setTitle("完 成", forState: UIControlState.Normal)
         button.layer.cornerRadius = XuCornerRadius
         self.addSubview(button)

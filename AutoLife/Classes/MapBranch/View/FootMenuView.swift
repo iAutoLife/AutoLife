@@ -32,10 +32,10 @@ class FootMenuView: UIView {
         self.layer.shadowRadius = 4
         
         self.layer.cornerRadius = XuCornerRadius
-        for var i:CGFloat = 1;i < 4;i++ {
+        for i in 1 ..< 4 {
             let line = UIView(frame: CGRectMake(0, 0, 0.5, 20))
             line.backgroundColor = XuColorGray
-            line.center = CGPointMake(i * width / 4, 20)
+            line.center = CGPointMake(CGFloat(i) * width / 4, 20)
             self.addSubview(line)
         }
         
@@ -51,7 +51,7 @@ class FootMenuView: UIView {
     func initView(subWidth:CGFloat,carmaster:CarMaster) {
         //车牌
         let brandView = UIView(frame: CGRectMake(0, 0, subWidth, XuHeight))
-        let singleTap = UITapGestureRecognizer(target: self, action: "singleTap:")
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(FootMenuView.singleTap(_:)))
         brandView.tag = XuFooterViewType.brand.rawValue
         brandView.addGestureRecognizer(singleTap)
         self.addSubview(brandView)
@@ -66,7 +66,7 @@ class FootMenuView: UIView {
         brandButton.frame = CGRectMake(20, 0, subWidth - 20, 40)
         brandButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
         brandButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        brandButton.addTarget(self, action: "clickedAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        brandButton.addTarget(self, action: #selector(FootMenuView.clickedAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         brandButton.setTitle("\(carmaster.lisencePlate)", forState: UIControlState.Normal)
         brandView.addSubview(brandButton)
         brandButton.tag = XuFooterViewType.brand.rawValue
@@ -76,7 +76,7 @@ class FootMenuView: UIView {
         violationButton.frame = CGRectMake(subWidth, 0, subWidth, 40)
         violationButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
         violationButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        violationButton.addTarget(self, action: "clickedAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        violationButton.addTarget(self, action: #selector(FootMenuView.clickedAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         violationButton.setTitle("违章\(carmaster.timesOfViolation) 扣\(carmaster.scoresOfViolation)分", forState: UIControlState.Normal)
         self.addSubview(violationButton)
         violationButton.tag = XuFooterViewType.violation.rawValue
@@ -86,7 +86,7 @@ class FootMenuView: UIView {
         parkButton.frame = CGRectMake(subWidth * 2, 0, subWidth, 40)
         parkButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
         parkButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        parkButton.addTarget(self, action: "clickedAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        parkButton.addTarget(self, action: #selector(FootMenuView.clickedAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         parkButton.setTitle("停车\(carmaster.timeParking)", forState: UIControlState.Normal)
         self.addSubview(parkButton)
         parkButton.tag = XuFooterViewType.parkTime.rawValue
@@ -96,7 +96,7 @@ class FootMenuView: UIView {
         shareButton.frame = CGRectMake(subWidth * 3, 0, subWidth, XuHeight)
         shareButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
         shareButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        shareButton.addTarget(self, action: "clickedAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        shareButton.addTarget(self, action: #selector(FootMenuView.clickedAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         shareButton.setTitle("分享 ¥\(carmaster.revenue)", forState: UIControlState.Normal)
         self.addSubview(shareButton)
         shareButton.tag = XuFooterViewType.revenue.rawValue

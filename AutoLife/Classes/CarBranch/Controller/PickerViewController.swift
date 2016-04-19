@@ -24,7 +24,7 @@ class PickerViewController: UIViewController ,UITableViewDelegate,UITableViewDat
             self.tableView.reloadData()
             if self.brandJSON[0].count == 3 {
                 isEnd = true
-                self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "上一级", style: UIBarButtonItemStyle.Plain, target: self, action: "didGoback:")
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "上一级", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PickerViewController.didGoback(_:)))
             }else {
                 isEnd = false
             }

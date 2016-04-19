@@ -206,13 +206,13 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         rightButton?.backgroundColor = XuColorBlue
         rightButton?.frame = CGRectZero
         rightButton?.layer.cornerRadius = XuCornerRadius
-        rightButton?.addTarget(self, action: "rightButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        rightButton?.addTarget(self, action: #selector(UniversalTableViewCell.rightButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.contentView.addSubview(rightButton!)
     }
     
     func initRightSwitch() {
         rightSwitch = UISwitch(frame: CGRectZero)
-        rightSwitch?.addTarget(self, action: "rightSwitchAction:", forControlEvents: UIControlEvents.ValueChanged)
+        rightSwitch?.addTarget(self, action: #selector(UniversalTableViewCell.rightSwitchAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         rightSwitch?.transform = CGAffineTransformMakeScale(0.7, 0.7)
         rightSwitch?.center = CGPointMake(XuWidth - 45, XuCellHeight / 2)
         contentView.addSubview(rightSwitch!)
@@ -233,7 +233,7 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         textField?.autocorrectionType = UITextAutocorrectionType.No
         textField?.center.y = XuCellHeight / 2
         self.contentView.addSubview(textField!)
-        textField?.addTarget(self, action: "textFieldValueChanged:", forControlEvents: UIControlEvents.AllEditingEvents)
+        textField?.addTarget(self, action: #selector(UniversalTableViewCell.textFieldValueChanged(_:)), forControlEvents: UIControlEvents.AllEditingEvents)
     }
     
     func setupLeft(image:UIImage,andLabel labelText:String) {

@@ -19,7 +19,7 @@ class ParkingRecordViewController: UIViewController ,UITableViewDelegate,UITable
 
         // Do any additional setup after loading the view.
         self.navigationItem.title = "历史记录"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ParkingRecordViewController.showMessageView(_:)))
         
         //
         self.view.backgroundColor = XuColorWhite

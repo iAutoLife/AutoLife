@@ -49,7 +49,7 @@ class OwnerIdentifyViewController: UIViewController ,UITableViewDelegate,UITable
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button.backgroundColor = XuColorBlue
         button.layer.cornerRadius = XuCornerRadius
-        button.addTarget(self, action: "submitEnsureAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(OwnerIdentifyViewController.submitEnsureAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         view.backgroundColor = UIColor.clearColor()
         return view

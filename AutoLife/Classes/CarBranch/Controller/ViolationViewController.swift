@@ -24,7 +24,7 @@ class ViolationViewController: UIViewController ,UITableViewDelegate,UITableView
         self.view.backgroundColor = XuColorGrayThin
         
         self.navigationItem.title = "违章"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViolationViewController.showMessageView(_:)))
         
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)

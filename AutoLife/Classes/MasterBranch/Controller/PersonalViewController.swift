@@ -19,7 +19,7 @@ class PersonalViewController: UIViewController ,UICollectionViewDataSource,UICol
         // Do any additional setup after loading the view.
         self.view.backgroundColor = XuColorGrayThin
         self.navigationItem.title = "个人资料"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PersonalViewController.showMessageView(_:)))
         self.initCollectionView()
     }
     
@@ -147,8 +147,8 @@ class PersonCollectionViewLayout: UICollectionViewLayout {
     override func prepareLayout() {
         let cells:NSMutableDictionary = [:]
         let headers:NSMutableDictionary = [:];let footers:NSMutableDictionary = [:]
-        for var section = 0;section < self.numberOfSections;section++ {
-            for var row = 0;row < self.collectionView?.numberOfItemsInSection(section);row++ {
+        for section in 0 ..< self.numberOfSections {
+            for row in 0 ..< self.collectionView?.numberOfItemsInSection(section) {
                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                 let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
                 switch indexPath.row {

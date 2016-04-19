@@ -32,7 +32,7 @@ class InsuranceViewController: UIViewController ,UITableViewDelegate,UITableView
         tableView.registerClass(SunTableViewCell.self, forCellReuseIdentifier: "sCell")
         tableView.registerNib(UINib(nibName: "SunTableViewCell", bundle: nil), forCellReuseIdentifier: "sCell")
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .Plain, target: self, action: "back:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .Plain, target: self, action: #selector(InsuranceViewController.back(_:)))
     }
     
     func back(sender:UIBarButtonItem) {

@@ -32,7 +32,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = XuColorWhite
-        let tap = UITapGestureRecognizer(target: self, action: "tapView:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapView(_:)))
         self.view.addGestureRecognizer(tap)
         switch loginType {
         case .Default:
@@ -40,8 +40,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         default:
             self.initDynamicCodeView()
         }
-        userTextField.addTarget(self, action: "textFieldDidChanged:", forControlEvents: UIControlEvents.EditingChanged)
-        pwTextField.addTarget(self, action: "textFieldDidChanged:", forControlEvents: UIControlEvents.EditingChanged)
+        userTextField.addTarget(self, action: #selector(LoginViewController.textFieldDidChanged(_:)), forControlEvents: UIControlEvents.EditingChanged)
+        pwTextField.addTarget(self, action: #selector(LoginViewController.textFieldDidChanged(_:)), forControlEvents: UIControlEvents.EditingChanged)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -204,7 +204,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         let url = uHeader + "applogin/message.send?p=\(userTextField.text!)"
         XuAlamofire.getString(url, success: { (xString) -> Void in
             print(xString)
-            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "OnTimer:", userInfo: nil, repeats: true)
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(LoginViewController.OnTimer(_:)), userInfo: nil, repeats: true)
             }) { (xError,isTimeOut) -> Void in
                 print("error   error:\(xError)")
         }
@@ -291,7 +291,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         changeBtn.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
         changeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
         changeBtn.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        changeBtn.addTarget(self, action: "changeWayOfLogin:", forControlEvents: UIControlEvents.TouchUpInside)
+        changeBtn.addTarget(self, action: #selector(LoginViewController.changeWayOfLogin(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(changeBtn)
         
         let imageView:UIImageView = UIImageView(frame: CGRectMake(0, 0, 60, 60))
@@ -330,7 +330,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         attributedText.addAttributes([NSForegroundColorAttributeName:XuColorBlueThin], range: NSMakeRange(attributedText.length - 6, 6))
         textBtn.frame = CGRectMake(20, originHeight + ctrlHeight + gap * 6 + 10, CGFloat(attributedText.length) * 12, 15)
         textBtn.setAttributedTitle(attributedText, forState: UIControlState.Normal)
-        textBtn.addTarget(self, action: "showAcProtocol:", forControlEvents: UIControlEvents.TouchUpInside)
+        textBtn.addTarget(self, action: #selector(LoginViewController.showAcProtocol(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(textBtn)
         
         loginBtn = UIButton(type: UIButtonType.System)
@@ -343,7 +343,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         //loginBtn.enabled = false
         //loginBtn.backgroundColor = XuColorGray
         loginBtn.backgroundColor = XuColorBlue
-        loginBtn.addTarget(self, action: "loginAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        loginBtn.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         loginBtn.layer.cornerRadius = 6
         self.view.addSubview(loginBtn)
         
@@ -359,7 +359,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
             dynamicCodeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
             dynamicCodeBtn.setTitleColor(XuColorBlue, forState: UIControlState.Normal)
             dynamicCodeBtn.setTitleColor(XuColorGray, forState: UIControlState.Disabled)
-            dynamicCodeBtn.addTarget(self, action: "getDynamicCode:", forControlEvents: UIControlEvents.TouchUpInside)
+            dynamicCodeBtn.addTarget(self, action: #selector(LoginViewController.getDynamicCode(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(dynamicCodeBtn)
             
             self.pwTextField.keyboardType = UIKeyboardType.NumberPad
@@ -381,7 +381,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         changeBtn.setTitle("使用其他方式登录", forState: UIControlState.Normal)
         changeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
         changeBtn.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        changeBtn.addTarget(self, action: "changeWayOfLogin:", forControlEvents: UIControlEvents.TouchUpInside)
+        changeBtn.addTarget(self, action: #selector(LoginViewController.changeWayOfLogin(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(changeBtn)
         
         let imageView:UIImageView = UIImageView(frame: CGRectMake(0, 0, 60, 60))
@@ -416,7 +416,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         loginBtn.frame = CGRectMake(20, originHeight + ctrlHeight + gap * 10, CGRectGetWidth(self.view.frame) - 40, 40)
         loginBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         loginBtn.backgroundColor = XuColorBlue
-        loginBtn.addTarget(self, action: "loginAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        loginBtn.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         loginBtn.layer.cornerRadius = 6
         self.view.addSubview(loginBtn)
     }

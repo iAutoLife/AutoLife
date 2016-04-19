@@ -77,8 +77,8 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
     func initBarView() {
         let bar = UINavigationBar(frame: CGRectMake(0,0,XuWidth,44))
         let navItem = UINavigationItem()
-        navItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "cancel:")
-        navItem.rightBarButtonItem = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.Plain, target: self, action: "ensure:")
+        navItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(XuPickerView.cancel(_:)))
+        navItem.rightBarButtonItem = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(XuPickerView.ensure(_:)))
         bar.pushNavigationItem(navItem, animated: false)
         bar.backgroundColor = UIColor.clearColor()
         self.addSubview(bar)
@@ -88,7 +88,7 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
         datePicker.datePickerMode = datePickerMode
         datePicker.frame = rectPicker
         datePicker.locale = NSLocale(localeIdentifier: "zh_CN")
-        datePicker.addTarget(self, action: "datePickerChanged:", forControlEvents: UIControlEvents.ValueChanged)
+        datePicker.addTarget(self, action: #selector(XuPickerView.datePickerChanged(_:)), forControlEvents: UIControlEvents.ValueChanged)
         self.addSubview(datePicker)
     }
     

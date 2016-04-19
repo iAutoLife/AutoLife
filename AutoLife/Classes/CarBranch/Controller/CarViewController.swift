@@ -23,7 +23,7 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         self.view.backgroundColor = XuColorGrayThin
         
         self.navigationItem.title = "车辆"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CarViewController.showMessageView(_:)))
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
@@ -90,7 +90,7 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
         button.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
         button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        button.addTarget(self, action: "addCarlincense:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(CarViewController.addCarlincense(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         
         return view

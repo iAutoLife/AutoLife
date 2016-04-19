@@ -26,7 +26,7 @@ class ViolationDetailViewController: UIViewController ,UITableViewDelegate,UITab
     func initTableView() {
         self.view.backgroundColor = XuColorGrayThin
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: Selector("showMessageView:"))
         
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)

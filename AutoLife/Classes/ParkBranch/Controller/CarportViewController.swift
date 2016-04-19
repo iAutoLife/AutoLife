@@ -24,7 +24,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         self.view.backgroundColor = XuColorGrayThin
         
         self.navigationItem.title = "车位"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CarportViewController.showMessageView(_:)))
         
         tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
@@ -84,7 +84,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         ruleButton.setTitle(str as String, forState: UIControlState.Normal)
         ruleButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
         ruleButton.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        ruleButton.addTarget(self, action: "showAcProtocol:", forControlEvents: UIControlEvents.TouchUpInside)
+        ruleButton.addTarget(self, action: #selector(CarportViewController.showAcProtocol(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(ruleButton)
         ruleButton.frame = CGRectMake(5, 10, XuTextSizeMiddle * CGFloat(str.length), 20)
         
@@ -93,13 +93,13 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         button.setTitle("添加车位", forState: UIControlState.Normal)
         button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
         button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        button.addTarget(self, action: "addCarlincense:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(CarportViewController.addCarlincense(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         
         let addBtn = UIButton(type: UIButtonType.System)
         addBtn.frame = CGRectMake(CGRectGetMinX(button.frame) - 25, 13, 25, 15)
         addBtn.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
-        addBtn.addTarget(self, action: "addCarlincense:", forControlEvents: UIControlEvents.TouchUpInside)
+        addBtn.addTarget(self, action: #selector(CarportViewController.addCarlincense(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(addBtn)
         
         return view

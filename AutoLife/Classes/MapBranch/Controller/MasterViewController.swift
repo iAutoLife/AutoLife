@@ -42,13 +42,13 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         blackCoverView = UIView(frame: UIScreen.mainScreen().bounds)
         blackCoverView?.backgroundColor = UIColor.blackColor()
         blackCoverView!.alpha = 0
-        subMasterRecoginzerTap = UITapGestureRecognizer(target: self, action: "tapBlackView:")
+        subMasterRecoginzerTap = UITapGestureRecognizer(target: self, action: #selector(MasterViewController.tapBlackView(_:)))
         blackCoverView!.addGestureRecognizer(subMasterRecoginzerTap!)
         
         self.navigationController?.view.addSubview(blackCoverView!)
         secview = SubMasterView()
         secview?.delegate = self
-        subMasterRecoginzerPan = UIPanGestureRecognizer(target: self, action: "panSubMasterView:")
+        subMasterRecoginzerPan = UIPanGestureRecognizer(target: self, action: #selector(MasterViewController.panSubMasterView(_:)))
         secview?.addGestureRecognizer(subMasterRecoginzerPan!)
         self.navigationController?.view.addSubview(secview!)
         secview!.center.x = -self.view.center.x
@@ -220,7 +220,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     }
     
     override func viewWillAppear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideSubMasterView:", name: NotificationOfHideSubMaster, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MasterViewController.hideSubMasterView(_:)), name: NotificationOfHideSubMaster, object: nil)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -247,8 +247,8 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     //MARK: --initview
     
     func initNavigationItemView() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "head_protraits"), style: UIBarButtonItemStyle.Plain, target: self, action: "showSubMasterView:")   //head_protraits
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: "showMessageView:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "head_protraits"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MasterViewController.showSubMasterView(_:)))   //head_protraits
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MasterViewController.showMessageView(_:)))
         self.navigationItem.titleView = MapTitleView(city: "北京", text: "今日限行0/5")
         
         self.search = AMapSearchAPI()
@@ -256,7 +256,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         
         let view = UIView(frame: CGRectMake(0, 0, 50, mapView.frame.height - 100))
         view.backgroundColor = UIColor.clearColor()
-        let panRecognizer = UIPanGestureRecognizer(target: self, action: "panRecognizer:")
+        let panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(MasterViewController.panRecognizer(_:)))
         view.addGestureRecognizer(panRecognizer)
         mapView.addSubview(view)
     }
@@ -279,14 +279,14 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         
         mapView.compassOrigin = CGPointMake(10, 35)
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: "longPressRecoginzer:")
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MasterViewController.longPressRecoginzer(_:)))
         mapView.addGestureRecognizer(longPress)
         
-        for var i:CGFloat = 0; i < 2; i++ {
+        for i in 0 ..< 2 {
             let imageName = (i == 0 ? "parking" : "fuelling")
-            let selector:Selector = (i == 0 ? "parkingSearch:" : "fuellingSearch:")
+            let selector:Selector = (i == 0 ? #selector(MasterViewController.parkingSearch(_:)) : #selector(MasterViewController.fuellingSearch(_:)))
             let button = UIButton(type: UIButtonType.Custom)
-            button.frame = CGRectMake(mapView.frame.width - 45, mapView.frame.height - 300 + i * 45, 40, 40)
+            button.frame = CGRectMake(mapView.frame.width - 45, mapView.frame.height - 300 + CGFloat(i) * 45, 40, 40)
             button.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
             button.addTarget(self, action: selector, forControlEvents: UIControlEvents.TouchUpInside)
             mapView.addSubview(button)

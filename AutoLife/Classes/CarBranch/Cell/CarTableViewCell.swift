@@ -66,7 +66,7 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
         contentView.addSubview(leftLabel!)
         
         rSwtch = UISwitch(frame: CGRectZero)
-        rSwtch?.addTarget(self, action: "swithAuthorize:", forControlEvents: UIControlEvents.ValueChanged)
+        rSwtch?.addTarget(self, action: #selector(CarTableViewCell.swithAuthorize(_:)), forControlEvents: UIControlEvents.ValueChanged)
         rSwtch?.transform = CGAffineTransformMakeScale(0.7, 0.7)
         rSwtch?.center = CGPointMake(XuWidth - 45, centerY)
         contentView.addSubview(rSwtch!)
@@ -98,7 +98,7 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
             button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
             button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
             contentView.addSubview(button)
-            button.addTarget(self, action: "carOwnerCerificate:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action: #selector(CarTableViewCell.carOwnerCerificate(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         }
     }
     
