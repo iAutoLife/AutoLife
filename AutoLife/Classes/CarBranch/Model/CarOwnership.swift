@@ -90,9 +90,10 @@ class ParkingRecord: NSObject {
                 chargeStandard = value as? NSArray
                 if chargeStandard.count > 1{
                     var i = chargeStandard.count - 1
-                    while(i-- != 0) {
+                    while(i != 0) {
                         self.CHI.insertObject("", atIndex: 8)
                         self.KEYS.insertObject("chargeStandard", atIndex: 7)
+                        i -= 1
                     }
                 }
 

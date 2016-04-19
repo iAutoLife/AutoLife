@@ -77,7 +77,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
         view.backgroundColor = UIColor.clearColor()
         line.center.y = view.frame.height - 0.5
         view.addSubview(line)
-        let tap = UITapGestureRecognizer(target: self, action: "headerViewTap:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SubMasterView.headerViewTap(_:)))
         view.addGestureRecognizer(tap)
         return view
     }

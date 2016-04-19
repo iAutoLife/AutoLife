@@ -39,13 +39,15 @@ class CarportShareViewController: UIViewController ,UITableViewDelegate,UITableV
         self.currentState = self.statesDic.objectForKey(statesDic.allKeys.first!) as? NSArray
         titleView.changedAction = { (type) in
             if type == XuTitleViewChangeType.Left {
-                if --self.currentIndex < 0 {self.currentIndex = 0}
+                self.currentIndex -= 1
+                if self.currentIndex < 0 {self.currentIndex = 0}
                 let key = self.statesDic.allKeys[self.currentIndex]
                 self.currentState = self.statesDic.objectForKey(key) as? NSArray
                 titleView.title = key as? String
                 self.tableView.reloadData()
             }else {
-                if ++self.currentIndex > self.statesDic.count - 1 {self.currentIndex = self.statesDic.count - 1}
+                self.currentIndex += 1
+                if self.currentIndex > self.statesDic.count - 1 {self.currentIndex = self.statesDic.count - 1}
                 let key = self.statesDic.allKeys[self.currentIndex]
                 self.currentState = self.statesDic.objectForKey(key) as? NSArray
                 titleView.title = key as? String

@@ -137,7 +137,8 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
         if let v = value as? String {
             cell?.detailTextLabel?.text =  v
         }else if let v = value as? NSArray {
-            cell?.detailTextLabel?.text = v[index++] as? String
+            index += 1
+            cell?.detailTextLabel?.text = v[index] as? String
         }
         cell?.detailTextLabel?.textColor = UIColor.blackColor()
         cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)

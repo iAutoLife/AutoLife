@@ -224,7 +224,8 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
             dynamicCodeBtn.enabled = true
         }else {
             dynamicCodeBtn.enabled = false
-            dynamicCodeBtn.setTitle("（\(--time)）后重发", forState: UIControlState.Normal)
+            dynamicCodeBtn.setTitle("（\(time)）后重发", forState: UIControlState.Normal)
+            time -= 1
         }
     }
     

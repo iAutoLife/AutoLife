@@ -39,7 +39,7 @@ class PickerViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         backgroundView = UIView(frame: UIScreen.mainScreen().bounds)
         backgroundView?.backgroundColor = UIColor.blackColor();backgroundView?.alpha = 0.0
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: "didCancel:")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(didCancel(_:)))
         
         tableView = UITableView(frame: CGRectMake(0, 0, self.view.frame.width - 45, XuHeight + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)

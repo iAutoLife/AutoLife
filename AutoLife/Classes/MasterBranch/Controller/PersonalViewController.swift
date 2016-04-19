@@ -148,7 +148,7 @@ class PersonCollectionViewLayout: UICollectionViewLayout {
         let cells:NSMutableDictionary = [:]
         let headers:NSMutableDictionary = [:];let footers:NSMutableDictionary = [:]
         for section in 0 ..< self.numberOfSections {
-            for row in 0 ..< self.collectionView?.numberOfItemsInSection(section) {
+            for row in 0 ..< self.collectionView!.numberOfItemsInSection(section) {
                 let indexPath = NSIndexPath(forRow: row, inSection: section)
                 let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
                 switch indexPath.row {
@@ -255,13 +255,13 @@ class PersonCollectionReusableView: UICollectionReusableView {
         button.setTitle("添加驾驶员", forState: UIControlState.Normal)
         button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
         button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
-        button.addTarget(self, action: "addDriver:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: #selector(PersonCollectionReusableView.addDriver(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(button)
         
         let addBtn = UIButton(type: UIButtonType.System)
         addBtn.frame = CGRectMake(CGRectGetMinX(button.frame) - 35, 8, 25, 15)
         addBtn.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
-        addBtn.addTarget(self, action: "addDriver:", forControlEvents: UIControlEvents.TouchUpInside)
+        addBtn.addTarget(self, action: #selector(addDriver(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(addBtn)
     }
     

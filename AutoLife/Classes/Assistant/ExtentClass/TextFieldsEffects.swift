@@ -32,14 +32,14 @@ public class TextFieldEffects : UITextField {
     Creates all the animations that are used to leave the textfield in the "entering text" state.
     */
     public func animateViewsForTextEntry() {
-        fatalError("\(__FUNCTION__) must be overridden")
+        fatalError("\(#function) must be overridden")
     }
     
     /**
     Creates all the animations that are used to leave the textfield in the "display input text" state.
     */
     public func animateViewsForTextDisplay() {
-        fatalError("\(__FUNCTION__) must be overridden")
+        fatalError("\(#function) must be overridden")
     }
     
     /**
@@ -48,11 +48,11 @@ public class TextFieldEffects : UITextField {
     - parameter rect:	The portion of the view’s bounds that needs to be updated.
     */
     public func drawViewsForRect(rect: CGRect) {
-        fatalError("\(__FUNCTION__) must be overridden")
+        fatalError("\(#function) must be overridden")
     }
     
     public func updateViewsForBoundsChange(bounds: CGRect) {
-        fatalError("\(__FUNCTION__) must be overridden")
+        fatalError("\(#function) must be overridden")
     }
     
     // MARK: - Overrides
@@ -79,9 +79,9 @@ public class TextFieldEffects : UITextField {
     
     override public func willMoveToSuperview(newSuperview: UIView!) {
         if newSuperview != nil {
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldDidEndEditing", name:UITextFieldTextDidEndEditingNotification, object: self)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textFieldDidEndEditing), name:UITextFieldTextDidEndEditingNotification, object: self)
             
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: "textFieldDidBeginEditing", name:UITextFieldTextDidBeginEditingNotification, object: self)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textFieldDidBeginEditing), name:UITextFieldTextDidBeginEditingNotification, object: self)
         } else {
             NSNotificationCenter.defaultCenter().removeObserver(self)
         }
