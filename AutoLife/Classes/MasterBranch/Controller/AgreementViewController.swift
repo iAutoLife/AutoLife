@@ -13,6 +13,9 @@ class AgreementViewController: UIViewController {
     
     var previousVC:UIViewController?
     
+    deinit {
+        print("deinit")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

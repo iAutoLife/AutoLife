@@ -27,6 +27,7 @@
 		8F6A7B1A1C5787A00071879C /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A7B191C5787A00071879C /* NumberView.swift */; };
 		8F78F0741CA8D5C800E753F4 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */; };
 		8F8069C21C51D1F9007C9DA0 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */; };
+		8FA287EB1CCA5B0900AB9CC5 /* AlStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */; };
 		8FBCC83B1C9F82DF007E868F /* InsuranceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */; };
 		8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC83D1C9F9037007E868F /* SegHeadView.swift */; };
 		8FBCC8411C9F96A4007E868F /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FBCC8401C9F96A4007E868F /* HMSegmentedControl.m */; };
@@ -40,6 +41,7 @@
 		8FDA664D1C994396006F144C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA664C1C994396006F144C /* CFNetwork.framework */; };
 		8FDA664F1C99439F006F144C /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA664E1C99439F006F144C /* CoreMotion.framework */; };
 		8FDA66511C9943B0006F144C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDA66501C9943B0006F144C /* CoreText.framework */; };
+		8FE397691CC71BDE00AF7D9C /* NewPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE397681CC71BDD00AF7D9C /* NewPaymentViewController.swift */; };
 		8FEB94561C510A89009D24CB /* XuIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB94551C510A89009D24CB /* XuIndexView.swift */; };
 		8FF905E01C59EF2900FF21B4 /* XuGCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF905DF1C59EF2900FF21B4 /* XuGCD.swift */; };
 		8FF92BB91C4C7EB400D5C3F8 /* Alamofire.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FF92BB81C4C7EB400D5C3F8 /* Alamofire.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -303,6 +305,7 @@
 		8F6A7B191C5787A00071879C /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberView.swift; path = Classes/CarBranch/view/NumberView.swift; sourceTree = "<group>"; };
 		8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Classes/CarBranch/Controller/PickerViewController.swift; sourceTree = "<group>"; };
+		8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlStyle.swift; path = Classes/Assistant/AlStyle.swift; sourceTree = "<group>"; };
 		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; };
 		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; };
 		8FBCC83F1C9F96A4007E868F /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = Classes/Assistant/HMSegmentedControl.h; sourceTree = "<group>"; };
@@ -317,6 +320,7 @@
 		8FDA664C1C994396006F144C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		8FDA664E1C99439F006F144C /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		8FDA66501C9943B0006F144C /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		8FE397681CC71BDD00AF7D9C /* NewPaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPaymentViewController.swift; path = Classes/PayBranch/Controller/NewPaymentViewController.swift; sourceTree = "<group>"; };
 		8FEB94551C510A89009D24CB /* XuIndexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuIndexView.swift; path = Classes/CarBranch/view/XuIndexView.swift; sourceTree = "<group>"; };
 		8FF905DF1C59EF2900FF21B4 /* XuGCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuGCD.swift; path = Classes/Universal/Files/XuGCD.swift; sourceTree = "<group>"; };
 		8FF92BB61C4C7EB400D5C3F8 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,7 +350,7 @@
 		8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrandViewController.swift; path = Classes/CarBranch/Controller/BrandViewController.swift; sourceTree = "<group>"; };
 		8FF92C081C4FAFC100D5C3F8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Classes/Assistant/MBProgressHUD.h; sourceTree = "<group>"; };
 		8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Classes/Assistant/MBProgressHUD.m; sourceTree = "<group>"; };
-		C57D6B321C47EB4E00C92E33 /* i车生活.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i车生活.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57D6B321C47EB4E00C92E33 /* i車生活.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i車生活.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57D6B3A1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -539,6 +543,7 @@
 				C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */,
 				C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */,
 				C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */,
+				8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -750,7 +755,7 @@
 		C57D6B331C47EB4E00C92E33 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6B321C47EB4E00C92E33 /* i车生活.app */,
+				C57D6B321C47EB4E00C92E33 /* i車生活.app */,
 				C57D6B461C47EB4F00C92E33 /* AutoLifeTests.xctest */,
 				C57D6B511C47EB4F00C92E33 /* AutoLifeUITests.xctest */,
 				8FF92BB61C4C7EB400D5C3F8 /* Alamofire.framework */,
@@ -1027,6 +1032,7 @@
 			isa = PBXGroup;
 			children = (
 				C57D6BF41C48AB0E00C92E33 /* NewPayViewController.swift */,
+				8FE397681CC71BDD00AF7D9C /* NewPaymentViewController.swift */,
 				C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */,
 				C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */,
 			);
@@ -1148,7 +1154,7 @@
 			);
 			name = AutoLife;
 			productName = AutoLife;
-			productReference = C57D6B321C47EB4E00C92E33 /* i车生活.app */;
+			productReference = C57D6B321C47EB4E00C92E33 /* i車生活.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C57D6B451C47EB4F00C92E33 /* AutoLifeTests */ = {
@@ -1336,6 +1342,7 @@
 				C57D6BF71C48AB0E00C92E33 /* NewPayViewController.swift in Sources */,
 				C57D6C191C48AFB700C92E33 /* Carport.swift in Sources */,
 				C57D6C111C48AE7300C92E33 /* ViolationTableViewCell.swift in Sources */,
+				8FE397691CC71BDE00AF7D9C /* NewPaymentViewController.swift in Sources */,
 				C57D6C0B1C48ADBA00C92E33 /* ViolationObject.swift in Sources */,
 				8F0296AF1C994C0E00A49D06 /* DataSigner.m in Sources */,
 				C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */,
@@ -1380,6 +1387,7 @@
 				C57D6BB21C47F9D500C92E33 /* UIButton+Block.m in Sources */,
 				C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */,
 				C57D6BF31C48AAD800C92E33 /* ParkStateViewController.swift in Sources */,
+				8FA287EB1CCA5B0900AB9CC5 /* AlStyle.swift in Sources */,
 				8F0297991C994DD400A49D06 /* Order.m in Sources */,
 				C57D6BDD1C48A8FD00C92E33 /* MessageViewController.swift in Sources */,
 				8FF92C0A1C4FAFC100D5C3F8 /* MBProgressHUD.m in Sources */,
@@ -1649,7 +1657,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
 				PRODUCT_MODULE_NAME = AutoLife;
-				PRODUCT_NAME = "i车生活";
+				PRODUCT_NAME = "i車生活";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AutoLife/AutoLife-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1679,7 +1687,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
 				PRODUCT_MODULE_NAME = AutoLife;
-				PRODUCT_NAME = "i车生活";
+				PRODUCT_NAME = "i車生活";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "AutoLife/AutoLife-Bridging-Header.h";
 			};

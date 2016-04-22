@@ -17,7 +17,7 @@ extension String {
 }
 
 extension UIImage {
-    func resize(size:CGSize)->UIImage {
+    func resize(size:CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)
         self.drawInRect(CGRectMake(0, 0, size.width, size.height))
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -26,23 +26,28 @@ extension UIImage {
     }
 }
 
-extension MBProgressHUD {
-    
+extension UILabel {
+    func widthFitText() -> CGFloat {
+        guard self.text != nil else {return 0}
+        return self.font.pointSize * CGFloat(NSString(string: self.text!).length)
+    }
 }
 
 
 //MARK:--自定义运算符
-infix operator %+ {associativity left precedence 150}
-func %+ (left:Int,right:Int) -> Int {
+//除法向上取整 左结合，优先级150，与 * 、/ 优先级相同
+infix operator /+ {associativity left precedence 150}
+func /+ (left:Int,right:Int) -> Int {
     if left % right != 0 {
         return left / right + 1
     }
     return left / right
 }
 
-func + (left: [Int], right: [Int]) -> [Int] { // 1
-    var sum = [Int]() // 2
-    assert(left.count == right.count, "vector of same length only")  // 3
+//数组和运算
+func + <T : _IntegerArithmeticType> (left: [T], right: [T]) -> [T] { // 1
+    assert(left.count == right.count, "vector of same length only")  // 2
+    var sum = [T]() // 3
     for (key, v) in left.enumerate() {
         sum.append(v + right[key]) // 4
     }

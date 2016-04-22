@@ -61,8 +61,9 @@ class ColTableViewCell: UITableViewCell ,UICollectionViewDataSource,UICollection
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("col", forIndexPath: indexPath) as! TbCollectionViewCell
         cell.set(self.datas, frame: collectionView.frame)
         cell.clipsToBounds = false
-        cell.cellDidSelectedIn = { (row) in
-            self.delegate?.colItemCellDidSelected?(row)
+//        weak var _weakSelf = self
+        cell.cellDidSelectedIn = { [weak self](row) in
+            self?.delegate?.colItemCellDidSelected?(row)
         }
         return cell
     }

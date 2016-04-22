@@ -12,10 +12,30 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     private var tableView:UITableView!
     private var carportArray:NSMutableArray = []
-
+    
+    override func loadView() {
+        print("loadView")
+        print("loadView: \(CFGetRetainCount(self))")
+        self.view = UIView()
+        
+    }
+    
+    deinit {
+        print("deinit: \(CFGetRetainCount(self))")
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        print("viewDidDisappear: \(CFGetRetainCount(self))")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        print("viewDidAppear: \(CFGetRetainCount(self))")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.initTableView()
     }
@@ -127,7 +147,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             if carport.isrent {
                 title.appendString("（租赁\(carport.payway!)）")
                 cell?.rightButtonTitle = "续费"
-                cell?.rightButtonClicked = { () in
+                cell?.rightButtonClicked = { [unowned self]() in
                     print("续费")
                     let rentVC = TBViewController()
                     self.navigationController?.pushViewController(rentVC, animated: true)
@@ -159,18 +179,19 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("didSelectRowAtIndexPath: \(CFGetRetainCount(self))")
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        print("willDisplayCell: \(CFGetRetainCount(self))")
         XutableView(tableView, willDisplayCell: cell, forRowIndexPath: indexPath)
     }
     
     //MARK:--CarportSharesCellDelegate
     func CarportAddButtonClicked(cell: UITableViewCell) {
         let indexPath = tableView.indexPathForCell(cell)
-        print("add")
-        print(indexPath?.section)
+        print(indexPath)
     }
     
     func CarportSwitchChanged(cell: UITableViewCell, boolValue: Bool,index:Int) {

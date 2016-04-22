@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol CarportSharesCellDelegate {
+protocol CarportSharesCellDelegate : class {
     func CarportAddButtonClicked(cell:UITableViewCell)
     func CarportSwitchChanged(cell:UITableViewCell,boolValue:Bool,index:Int)
 }
 
 class CarportTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewDataSource,UniversalTableViewCellDelegate{
     
-    var delegate:CarportSharesCellDelegate?
+    weak var delegate:CarportSharesCellDelegate?
     private var tableView:UITableView!
     var shares:NSArray = [] {
         didSet{

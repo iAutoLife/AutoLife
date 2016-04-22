@@ -160,6 +160,10 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     }
     
     func parkingSearch(sender:UIButton) {   //周边搜索
+        if mapView.annotations.count > 0 {
+            mapView.removeAnnotations(mapView.annotations)
+            return
+        }
         AMapSearchServices.sharedServices().apiKey = XuAPIKey
         //let search = AMapSearchAPI()
         //search.delegate = self
