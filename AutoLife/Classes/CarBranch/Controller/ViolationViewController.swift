@@ -21,12 +21,12 @@ class ViolationViewController: UIViewController ,UITableViewDelegate,UITableView
     }
     
     func initTableView() {
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         
         self.navigationItem.title = "违章"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ViolationViewController.showMessageView(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         

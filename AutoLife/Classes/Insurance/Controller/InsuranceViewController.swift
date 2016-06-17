@@ -24,7 +24,7 @@ class InsuranceViewController: UIViewController ,UITableViewDelegate,UITableView
         self.navigationItem.title = "保险"
         self.headView3 = SegHeadView(title: nil, segs: ["阳  光","人  保","平  安","太平洋","人  寿","其  他"])
         // Do any additional setup after loading the view.
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Plain)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Plain)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -111,11 +111,11 @@ class InsuranceViewController: UIViewController ,UITableViewDelegate,UITableView
                 cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
             }
             let atext = NSMutableAttributedString(string: "综合意外伤害险(至2016-11-11)")
-            atext.addAttributes([NSFontAttributeName:UIFont.systemFontOfSize(XuTextSizeMiddle)], range: NSMakeRange(0, 7))
-            atext.addAttributes([NSFontAttributeName:UIFont.systemFontOfSize(XuTextSizeSmall),NSForegroundColorAttributeName:XuColorGray], range: NSMakeRange(7, atext.length - 7))
+            atext.addAttributes([NSFontAttributeName:AlStyle.font.normal], range: NSMakeRange(0, 7))
+            atext.addAttributes([NSFontAttributeName:AlStyle.font.small,NSForegroundColorAttributeName:AlStyle.color.gray], range: NSMakeRange(7, atext.length - 7))
             cell?.textLabel?.attributedText = atext
             cell?.detailTextLabel?.text = "王麻子 10万 1份  ¥5.00"
-            cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+            cell?.detailTextLabel?.font = AlStyle.font.small
             return cell!
         case 2:
             var cell = tableView.dequeueReusableCellWithIdentifier("1cell") as? ColTableViewCell

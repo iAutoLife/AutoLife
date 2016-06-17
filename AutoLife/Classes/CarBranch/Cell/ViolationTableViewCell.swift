@@ -50,21 +50,21 @@ class ViolationTableViewCell: UITableViewCell {
     func initBaseView() {
         let xShift:CGFloat = (self.accessoryType == UITableViewCellAccessoryType.DisclosureIndicator ? 10 : 0)
         luLabel = UILabel(frame: CGRectMake(30,5,200,15))
-        luLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        luLabel.font = AlStyle.font.small
         self.contentView.addSubview(luLabel)
         
         ldLabel = UILabel(frame: CGRectMake(30,25,220,15))
-        ldLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        ldLabel.font = AlStyle.font.small
         self.contentView.addSubview(ldLabel)
         
         let rs = CGRectGetMaxX(luLabel.frame)
-        ruLabel = UILabel(frame: CGRectMake(rs + 10 - xShift,5,XuWidth - rs - 25,15))
-        ruLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        ruLabel = UILabel(frame: CGRectMake(rs + 10 - xShift,5,AlStyle.size.width - rs - 25,15))
+        ruLabel.font = AlStyle.font.small
         ruLabel.textAlignment = NSTextAlignment.Right
         self.contentView.addSubview(ruLabel)
         
-        rdLabel = UILabel(frame: CGRectMake(rs + 10 - xShift,25,XuWidth - rs - 25,15))
-        rdLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        rdLabel = UILabel(frame: CGRectMake(rs + 10 - xShift,25,AlStyle.size.width - rs - 25,15))
+        rdLabel.font = AlStyle.font.small
         rdLabel.textAlignment = NSTextAlignment.Right
         self.contentView.addSubview(rdLabel)
         

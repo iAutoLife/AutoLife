@@ -21,23 +21,23 @@ class XuCustomPointView: UIView {
     }
     
     init(poi:AMapPOI,index:Int) {
-        super.init(frame: CGRectMake(0, 0, XuWidth - 60, 100))
+        super.init(frame: CGRectMake(0, 0, AlStyle.size.width - 60, 100))
         self.initSubView(poi)
     }
     
     func initSubView(poi:AMapPOI) {
-        titleLabel = UILabel(frame: CGRectMake(10,5,self.frame.width - 20, XuTextSizeMiddle))
-        titleLabel.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        titleLabel = UILabel(frame: CGRectMake(10,5,self.frame.width - 20, AlStyle.font.normal.pointSize))
+        titleLabel.font = AlStyle.font.normal
         self.addSubview(titleLabel)
         
-        detailLabel = UILabel(frame: CGRectMake(30,5,self.frame.width - 20, XuTextSizeMiddle))
-        detailLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
-        detailLabel.textColor = XuColorGray
+        detailLabel = UILabel(frame: CGRectMake(30,5,self.frame.width - 20, AlStyle.font.normal.pointSize))
+        detailLabel.font = AlStyle.font.small
+        detailLabel.textColor = AlStyle.color.gray
         self.addSubview(detailLabel)
         
         moreButton = UIButton(type: UIButtonType.Custom)
         moreButton.frame = CGRectMake(self.frame.width - 60, 30, 50, 20)
-        moreButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        moreButton.titleLabel?.font = AlStyle.font.normal
         moreButton.setImage(UIImage(named: ""), forState: UIControlState.Normal)
         moreButton.setTitle("详情", forState: UIControlState.Normal)
         self.addSubview(moreButton)

@@ -30,7 +30,7 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ParkStateViewController.showMessageView(_:)))
         self.getStateData()
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.sectionHeaderHeight = 20
@@ -129,9 +129,9 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
     }
     
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRectMake(0,0,XuWidth,150))
+        let view = UIView(frame: CGRectMake(0,0,AlStyle.size.width,150))
         let alertButton = UIButton(type: UIButtonType.System)
-        alertButton.setup("警 报", fontsize: XuTextSizeMiddle, fontColor: UIColor.whiteColor(), bkColor: XuColorBlue)
+        alertButton.setup("警 报", fontsize: AlStyle.font.normal.pointSize, fontColor: UIColor.whiteColor(), bkColor: AlStyle.color.blue)
         alertButton.center = CGPointMake(40, 30);view.addSubview(alertButton)
         alertButton.handleControlEvent(UIControlEvents.TouchUpInside) { (_) -> Void in
 //            let camera = XuCamera()
@@ -171,7 +171,7 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
     func timingView(){
         let view = UIImageView(frame: CGRectMake(10, 35, 120, 70))
         view.image = UIImage(named: "timing")
-        view.layer.cornerRadius = XuCornerRadius
+        view.layer.cornerRadius = AlStyle.cornerRadius
         self.tableView.addSubview(view)
         if (UIDevice.currentDevice().systemVersion as AnyObject).floatValue >= 8.0 {
             self.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
@@ -212,7 +212,7 @@ class ArrayTBCell: UITableViewCell ,UITableViewDataSource,UITableViewDelegate{
     private var tableView:UITableView!
     private var xarray:NSArray! {
         didSet{
-            tableView.frame = CGRectMake(0,0,XuWidth,CGFloat(xarray.count) * XuCellHeight)
+            tableView.frame = CGRectMake(0,0,AlStyle.size.width,CGFloat(xarray.count) * XuCellHeight)
             tableView.reloadData()
         }
     }
@@ -226,7 +226,7 @@ class ArrayTBCell: UITableViewCell ,UITableViewDataSource,UITableViewDelegate{
         tableView.dataSource = self
         tableView.rowHeight = XuCellHeight
         tableView.backgroundColor = UIColor.clearColor()
-        tableView.separatorColor = XuColorGrayThin
+        tableView.separatorColor = AlStyle.color.gray_light
         self.addSubview(tableView)
     }
     

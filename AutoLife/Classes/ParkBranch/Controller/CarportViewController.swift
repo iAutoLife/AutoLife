@@ -41,20 +41,20 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func initTableView() {
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         
         self.navigationItem.title = "车位"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CarportViewController.showMessageView(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         tableView.sectionFooterHeight = 0
         tableView.separatorInset = UIEdgeInsetsZero
         tableView.layer.borderWidth = 10
         tableView.layer.cornerRadius = 15
-        tableView.layer.borderColor = XuColorGrayThin.CGColor
-        tableView.backgroundColor = XuColorGrayThin
-        tableView.separatorColor = XuColorGrayThin
+        tableView.layer.borderColor = AlStyle.color.gray_light.CGColor
+        tableView.backgroundColor = AlStyle.color.gray_light
+        tableView.separatorColor = AlStyle.color.gray_light
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -80,10 +80,10 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForHeaderInSection(section))
-        view.backgroundColor = XuColorGrayThin
+        view.backgroundColor = AlStyle.color.gray_light
         let label = UILabel(frame: CGRectMake(15, 10, 200, 15))
         label.text = "车位\(section + 1)"
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         view.addSubview(label)
         
         return view
@@ -99,20 +99,20 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard section == self.carportArray.count - 1 else {return nil}
         let view = UIView(frame: tableView.rectForFooterInSection(section))
-        view.backgroundColor = XuColorGrayThin
+        view.backgroundColor = AlStyle.color.gray_light
         let ruleButton = UIButton(type: UIButtonType.System);let str:NSString = "《车位分享规则》"
         ruleButton.setTitle(str as String, forState: UIControlState.Normal)
-        ruleButton.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        ruleButton.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        ruleButton.titleLabel?.font = AlStyle.font.normal
+        ruleButton.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         ruleButton.addTarget(self, action: #selector(CarportViewController.showAcProtocol(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(ruleButton)
-        ruleButton.frame = CGRectMake(5, 10, XuTextSizeMiddle * CGFloat(str.length), 20)
+        ruleButton.frame = CGRectMake(5, 10, AlStyle.font.normal.pointSize * CGFloat(str.length), 20)
         
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(XuWidth - 70, 10, 60, 20)
+        button.frame = CGRectMake(AlStyle.size.width - 70, 10, 60, 20)
         button.setTitle("添加车位", forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        button.titleLabel?.font = AlStyle.font.normal
+        button.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         button.addTarget(self, action: #selector(CarportViewController.addCarlincense(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         
@@ -154,7 +154,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                 }
             }
             cell?.leftLabelText = title as String
-            cell?.backgroundColor = XuColorGrayThin
+            cell?.backgroundColor = AlStyle.color.gray_light
             return cell!
         case 1:
             var cell = tableView.dequeueReusableCellWithIdentifier("cell1") as? UniversalTableViewCell
@@ -163,7 +163,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             }
             cell?.leftLabelText = "车位收益"
             cell?.rightLabelText = carport.revenue
-            cell?.backgroundColor = XuColorGrayThin
+            cell?.backgroundColor = AlStyle.color.gray_light
             return cell!
         case 2:
             var cell = tableView.dequeueReusableCellWithIdentifier("cell2") as? CarportTableViewCell
@@ -172,7 +172,7 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                 cell?.delegate = self
             }
             cell?.shares = carport.shares!
-            cell?.backgroundColor = XuColorGrayThin
+            cell?.backgroundColor = AlStyle.color.gray_light
             return cell!
         default:return UITableViewCell()
         }

@@ -60,7 +60,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
             self.creatOriginalSubMasterView()
         }
         guard secview != nil else {return}
-        if movement < XuWidth * 2 / 3 {
+        if movement < AlStyle.size.width * 2 / 3 {
             secview?.center.x += (movementX - movement)
             movement = movementX
             blackCoverView?.alpha = movement / self.view.frame.width
@@ -68,9 +68,9 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         
         if panRecognizer.state == UIGestureRecognizerState.Ended {
             if secview != nil {
-                if movement > XuWidth / 3 {
+                if movement > AlStyle.size.width / 3 {
                     UIView.animateWithDuration(0.3, animations: { () -> Void in
-                        self.secview?.center.x = XuWidth / 6
+                        self.secview?.center.x = AlStyle.size.width / 6
                         self.blackCoverView?.alpha = 2/3
                         }, completion: { (_) -> Void in
                             self.movement = 0
@@ -79,7 +79,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
                     self.movement = 0
                     UIView.animateWithDuration(0.3, animations: { () -> Void in
                         self.blackCoverView?.alpha = 0
-                        self.secview?.center.x = -XuWidth/2
+                        self.secview?.center.x = -AlStyle.size.width/2
                         }, completion: { (_) -> Void in
                             self.subMasterViewDidDisAppear()
                     })
@@ -106,7 +106,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         if self.blackCoverView != nil {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
                 self.blackCoverView?.alpha = 0
-                self.secview?.center.x = -XuWidth/2
+                self.secview?.center.x = -AlStyle.size.width/2
                 }, completion: { (_) -> Void in
                     self.blackCoverView?.removeFromSuperview()
                     self.secview?.removeFromSuperview()
@@ -120,21 +120,21 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         let moved = sender.translationInView(sender.view).x
         if moved < 0 {
             if secview != nil && blackCoverView != nil {
-                secview?.center.x = XuWidth / 6 + moved
-                blackCoverView?.alpha = 2 / 3 + moved / XuWidth
+                secview?.center.x = AlStyle.size.width / 6 + moved
+                blackCoverView?.alpha = 2 / 3 + moved / AlStyle.size.width
             }
         }
         if sender.state == UIGestureRecognizerState.Ended {
-            if fabs(moved) > XuWidth / 6 {
+            if fabs(moved) > AlStyle.size.width / 6 {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.blackCoverView?.alpha = 0
-                    self.secview?.center.x = -XuWidth/2
+                    self.secview?.center.x = -AlStyle.size.width/2
                     }, completion: { (_) -> Void in
                         self.subMasterViewDidDisAppear()
                 })
             }else {
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
-                    self.secview?.center.x = XuWidth / 6
+                    self.secview?.center.x = AlStyle.size.width / 6
                     self.blackCoverView?.alpha = 2/3
                     }, completion: nil)
             }
@@ -146,7 +146,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         self.creatOriginalSubMasterView()
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             self.blackCoverView?.alpha = 2 / 3
-            self.secview?.center.x = XuWidth / 6
+            self.secview?.center.x = AlStyle.size.width / 6
             }, completion: nil)
     }
     
@@ -275,7 +275,7 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
         mapView.headingFilter = 5
         mapView.desiredAccuracy = kCLLocationAccuracyKilometer
         
-//        let searchBar = UISearchBar(frame: CGRectMake(0,0,XuWidth,40))
+//        let searchBar = UISearchBar(frame: CGRectMake(0,0,AlStyle.size.width,40))
 //        searchBar.searchBarStyle = UISearchBarStyle.Minimal
 //        //searchBar.translucent = true
 //        searchBar.placeholder = "搜索"
@@ -330,10 +330,10 @@ class MapTitleView: UIView {
         locaBtn.buttonWithLeft(city, right: UIImage(named: "drop"))
         self.addSubview(locaBtn)
         locaBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        locaBtn.titleLabel?.font = UIFont.systemFontOfSize(XutextSizeBig)
+        locaBtn.titleLabel?.font = AlStyle.font.big
         
         let label = UILabel(frame: CGRectMake(0,22,100,20))
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         label.textAlignment = NSTextAlignment.Center
         label.text = text
         self.addSubview(label)

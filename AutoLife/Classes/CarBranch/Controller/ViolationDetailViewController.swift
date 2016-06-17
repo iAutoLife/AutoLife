@@ -24,11 +24,11 @@ class ViolationDetailViewController: UIViewController ,UITableViewDelegate,UITab
     }
     
     func initTableView() {
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(showMessageView(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         
@@ -52,12 +52,12 @@ class ViolationDetailViewController: UIViewController ,UITableViewDelegate,UITab
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         switch chMessages[indexPath.row].keys.first! {
         case "address":
-            guard XuWidth < 375 else {return 50}
+            guard AlStyle.size.width < 375 else {return 50}
             let content = xviolation?["address"] as? String
-            return (content?.sizeWithMaxSize(CGSizeMake(200, 200), fontSize: XuTextSizeMiddle).height)! + 36
+            return (content?.sizeWithMaxSize(CGSizeMake(200, 200), fontSize: AlStyle.font.normal.pointSize).height)! + 36
         case "content":
             let content = xviolation?["content"] as? String
-            return (content?.sizeWithMaxSize(CGSizeMake(XuWidth - 120, XuWidth - 120), fontSize: XuTextSizeMiddle).height)! + 36
+            return (content?.sizeWithMaxSize(CGSizeMake(AlStyle.size.width - 120, AlStyle.size.width - 120), fontSize: AlStyle.font.normal.pointSize).height)! + 36
         default:return 50
         }
     }

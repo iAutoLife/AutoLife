@@ -20,7 +20,7 @@ class XuIndexView: UIView ,UITableViewDataSource,UITableViewDelegate{
         tableView = UITableView(frame: self.frame)
         self.addSubview(tableView)
         tableView.layer.cornerRadius = 6
-        tableView.layer.borderColor = XuColorBlueThin.CGColor
+        tableView.layer.borderColor = AlStyle.color.blue_light.CGColor
         tableView.layer.borderWidth = 1
         tableView.dataSource = self;tableView.delegate = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
@@ -65,12 +65,12 @@ class Indexcell: UITableViewCell {
         label = UILabel(frame: CGRectMake(0,0,20,22))
         self.contentView.addSubview(label)
         label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         self.selectionStyle = UITableViewCellSelectionStyle.None
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
-        let color = selected ? XuColorBlue :UIColor.blackColor()
+        let color = selected ? AlStyle.color.blue :UIColor.blackColor()
         label.textColor = color
     }
     

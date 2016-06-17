@@ -36,21 +36,21 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
     
     func initBaseView() {
         luLabel = UILabel(frame: CGRectMake(30,5,200,15))
-        luLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        luLabel.font = AlStyle.font.small
         self.addSubview(luLabel)
         
         ldLabel = UILabel(frame: CGRectMake(30,25,220,15))
-        ldLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        ldLabel.font = AlStyle.font.small
         self.addSubview(ldLabel)
         
         let rs = CGRectGetMaxX(luLabel.frame)
-        ruLabel = UILabel(frame: CGRectMake(rs + 10,5,XuWidth - rs - 25,15))
-        ruLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        ruLabel = UILabel(frame: CGRectMake(rs + 10,5,AlStyle.size.width - rs - 25,15))
+        ruLabel.font = AlStyle.font.small
         ruLabel.textAlignment = NSTextAlignment.Right
         self.addSubview(ruLabel)
         
-        rdLabel = UILabel(frame: CGRectMake(rs + 10,25,XuWidth - rs - 25,15))
-        rdLabel.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        rdLabel = UILabel(frame: CGRectMake(rs + 10,25,AlStyle.size.width - rs - 25,15))
+        rdLabel.font = AlStyle.font.small
         rdLabel.textAlignment = NSTextAlignment.Right
         self.addSubview(rdLabel)
         
@@ -65,24 +65,24 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
         let imageName = (showDetail ? "up" : "down")
         showButton = UIButton(type: UIButtonType.System)
         showButton.frame = CGRectMake(0, 0, 115, 15)
-        showButton.center = CGPointMake(XuWidth / 2, self.frame.height - 5)
+        showButton.center = CGPointMake(AlStyle.size.width / 2, self.frame.height - 5)
         showButton.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
         showButton.addTarget(self, action: #selector(RecordTableViewCell.shownDonwDetail(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(showButton)
     }
     
     func initDetailView() {
-        let view = UIView(frame: CGRectMake(0,50,XuWidth,1))
-        view.backgroundColor = XuColorGrayThin
+        let view = UIView(frame: CGRectMake(0,50,AlStyle.size.width,1))
+        view.backgroundColor = AlStyle.color.gray_light
         self.addSubview(view)
         
         let label = UILabel(frame: CGRectMake(0,60,100,20))
-        label.text = "电子收据";label.font = UIFont.systemFontOfSize(XuTextSizeSmall)
-        label.center.x = XuWidth / 2
+        label.text = "电子收据";label.font = AlStyle.font.small
+        label.center.x = AlStyle.size.width / 2
         label.textAlignment = NSTextAlignment.Center
         self.addSubview(label)
         
-        let tableView = UITableView(frame: CGRectMake(5, 80, XuWidth - 10, 25 * CGFloat(9 + record!.chargeStandard.count)))
+        let tableView = UITableView(frame: CGRectMake(5, 80, AlStyle.size.width - 10, 25 * CGFloat(9 + record!.chargeStandard.count)))
         tableView.rowHeight = 25;tableView.scrollEnabled = false
         tableView.backgroundColor = UIColor.clearColor()
         tableView.delegate = self
@@ -132,16 +132,16 @@ class RecordTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDel
         }
         let key = self.record?.KEYS[indexPath.row]
         cell?.textLabel?.text = self.record?.CHI[indexPath.row] as? String
-        cell?.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        cell?.textLabel?.font = AlStyle.font.small
         let value = self.record!.dic.objectForKey(key as! String)
         if let v = value as? String {
             cell?.detailTextLabel?.text =  v
         }else if let v = value as? NSArray {
-            index += 1
             cell?.detailTextLabel?.text = v[index] as? String
+            index += 1
         }
         cell?.detailTextLabel?.textColor = UIColor.blackColor()
-        cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        cell?.detailTextLabel?.font = AlStyle.font.small
         if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
             self.index = 0
         }

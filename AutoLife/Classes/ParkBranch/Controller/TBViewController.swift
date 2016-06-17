@@ -26,21 +26,21 @@ class TBViewController: UIViewController ,UITableViewDelegate,UITableViewDataSou
         super.viewDidLoad()
         
         self.navigationItem.title = "车位续费"
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight == 667 ? XuHeight : XuHeight - 40),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height == 667 ? AlStyle.size.height : AlStyle.size.height - 40),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
         
-        let vview = UIView(frame: CGRectMake(0,XuHeight - 50,XuWidth,50))
-        vview.backgroundColor = XuColorWhite
+        let vview = UIView(frame: CGRectMake(0,AlStyle.size.height - 50,AlStyle.size.width,50))
+        vview.backgroundColor = AlStyle.color.white
         self.view.addSubview(vview)
         let label = UILabel(frame: CGRectMake(10,0,200,50))
         label.text = "总计¥0.01";label.font = UIFont.systemFontOfSize(17, weight: 2)
         label.textColor = UIColor(red: 10/255, green: 36/255, blue: 0, alpha: 1)
         vview.addSubview(label)
-        let btn = UIButton(frame: CGRectMake(XuWidth * 0.618,0,XuWidth * 0.382,50))
+        let btn = UIButton(frame: CGRectMake(AlStyle.size.width * 0.618,0,AlStyle.size.width * 0.382,50))
         btn.backgroundColor = UIColor(red: 241/255, green: 83/255, blue: 83/255, alpha: 1)
         btn.setTitle("确认", forState: UIControlState.Normal)
         vview.addSubview(btn)
@@ -77,8 +77,8 @@ class TBViewController: UIViewController ,UITableViewDelegate,UITableViewDataSou
         if cell == nil {
             cell = UITableViewCell(style: .Value1, reuseIdentifier: "defaultCell")
             cell?.backgroundColor = UIColor.clearColor()
-            cell?.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-            cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+            cell?.textLabel?.font = AlStyle.font.normal
+            cell?.detailTextLabel?.font = AlStyle.font.normal
             if indexPath.section == 1 {cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator}
         }
         let data = (indexPath.section == 0 ? parkInfo : privileges)

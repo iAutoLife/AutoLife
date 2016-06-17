@@ -30,7 +30,7 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
     private var areas:NSArray?
     lazy var datePicker = UIDatePicker()
     var pickerView:UIPickerView?
-    let rectPicker = CGRectMake(0, 44, XuWidth, XuHeight / 3 - 45)
+    let rectPicker = CGRectMake(0, 44, AlStyle.size.width, AlStyle.size.height / 3 - 45)
     var pathArray:NSArray?
     var delegate:XuPickerViewDelegate?
     lazy var component = 3;lazy var row0 = 0;lazy var row1 = 0
@@ -38,10 +38,10 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
     var locate:Locate = Locate()
 
     init(style:XuPickerStyle) {
-        super.init(frame: CGRectMake(0, 0, XuWidth, XuHeight / 3))
-        self.layer.borderColor = XuColorGrayThin.CGColor
+        super.init(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height / 3))
+        self.layer.borderColor = AlStyle.color.gray_light.CGColor
         self.layer.borderWidth = 1
-        self.backgroundColor = XuColorWhite
+        self.backgroundColor = AlStyle.color.white
         self.initBarView()
         switch style {
         case .Date:
@@ -75,7 +75,7 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
     }
     
     func initBarView() {
-        let bar = UINavigationBar(frame: CGRectMake(0,0,XuWidth,44))
+        let bar = UINavigationBar(frame: CGRectMake(0,0,AlStyle.size.width,44))
         let navItem = UINavigationItem()
         navItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(XuPickerView.cancel(_:)))
         navItem.rightBarButtonItem = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(XuPickerView.ensure(_:)))
@@ -206,8 +206,8 @@ class XuPickerView: UIView ,UIPickerViewDataSource,UIPickerViewDelegate{
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-        let label = UILabel(frame: CGRectMake(0,0,XuWidth / 3, 20))
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        let label = UILabel(frame: CGRectMake(0,0,AlStyle.size.width / 3, 20))
+        label.font = AlStyle.font.normal
         label.text = self.stringWithRow(row, component: component)
         label.textAlignment = NSTextAlignment.Center
         return label

@@ -17,7 +17,7 @@ class PersonalViewController: UIViewController ,UICollectionViewDataSource,UICol
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         self.navigationItem.title = "个人资料"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PersonalViewController.showMessageView(_:)))
         self.initCollectionView()
@@ -26,8 +26,8 @@ class PersonalViewController: UIViewController ,UICollectionViewDataSource,UICol
     func initCollectionView() {
         collectionView = UICollectionView(frame: UIScreen.mainScreen().bounds, collectionViewLayout: PersonCollectionViewLayout())
         collectionView.layer.borderWidth = 10
-        collectionView.layer.borderColor = XuColorGrayThin.CGColor
-        collectionView.backgroundColor = XuColorGrayThin
+        collectionView.layer.borderColor = AlStyle.color.gray_light.CGColor
+        collectionView.backgroundColor = AlStyle.color.gray_light
         collectionView.dataSource = self
         collectionView.delegate = self
         self.view.addSubview(collectionView)
@@ -84,30 +84,30 @@ class PersonalViewController: UIViewController ,UICollectionViewDataSource,UICol
         switch indexPath.row {
         case 0:
             CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
             CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), 0)
             CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
             let verticalLine = CALayer()
             verticalLine.frame = CGRectMake(CGRectGetMaxX(bounds) - lineHeight, CGRectGetMinY(bounds), lineHeight, bounds.height)
-            verticalLine.backgroundColor = XuColorGrayThin.CGColor
+            verticalLine.backgroundColor = AlStyle.color.gray_light.CGColor
             layer.addSublayer(verticalLine)
         case 1:
             CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
             CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), 0)
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
             CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
         case 3:
             CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
             CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
         default:CGPathAddRect(pathRef, nil, bounds)
         }
         layer.path = pathRef
-        layer.fillColor = XuColorWhite.CGColor
+        layer.fillColor = AlStyle.color.white.CGColor
         let lineLayer = CALayer()
         lineLayer.frame = CGRectMake(CGRectGetMinX(bounds), bounds.size.height - lineHeight, bounds.size.width, lineHeight)
-        lineLayer.backgroundColor = XuColorGrayThin.CGColor
+        lineLayer.backgroundColor = AlStyle.color.gray_light.CGColor
         layer.addSublayer(lineLayer)
         let view = UIView(frame: bounds)
         view.layer.insertSublayer(layer, atIndex: 0)
@@ -155,16 +155,16 @@ class PersonCollectionViewLayout: UICollectionViewLayout {
                 case 0:
                     attributes.frame = CGRectMake(0, 20, 120, 100)
                     let headerAttribues = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: XuCollectionAttributesType.Header, withIndexPath: indexPath)
-                    headerAttribues.frame = CGRectMake(0, 0, XuWidth, 20)
+                    headerAttribues.frame = CGRectMake(0, 0, AlStyle.size.width, 20)
                     headers[indexPath] = headerAttribues
                 case 1:
-                    attributes.frame = CGRectMake(100, 20, XuWidth - 100, 50)
+                    attributes.frame = CGRectMake(100, 20, AlStyle.size.width - 100, 50)
                 case 2:
-                    attributes.frame = CGRectMake(100, 70, XuWidth - 100, 50)
+                    attributes.frame = CGRectMake(100, 70, AlStyle.size.width - 100, 50)
                 case 3:
-                    attributes.frame = CGRectMake(0, 120, XuWidth, 50)
+                    attributes.frame = CGRectMake(0, 120, AlStyle.size.width, 50)
                     let footerAttributes = UICollectionViewLayoutAttributes(forSupplementaryViewOfKind: XuCollectionAttributesType.Footer, withIndexPath: indexPath)
-                    footerAttributes.frame = CGRectMake(0, 170, XuWidth, 30)
+                    footerAttributes.frame = CGRectMake(0, 170, AlStyle.size.width, 30)
                     footers[indexPath] = footerAttributes
                 default:break
                 }
@@ -208,7 +208,7 @@ class PersonCollectionCell: UICollectionViewCell {
     
     var leftText:String? {
         didSet{
-            let width = CGFloat (NSString(string: leftText!).length) * XuTextSizeSmall
+            let width = CGFloat (NSString(string: leftText!).length) * AlStyle.font.small.pointSize
             leftLabel?.frame.size.width = width + 10
             leftLabel?.center.y = self.frame.height / 2
             leftLabel?.text = leftText
@@ -217,7 +217,7 @@ class PersonCollectionCell: UICollectionViewCell {
     
     var rightText:String? {
         didSet{
-            let width = CGFloat (NSString(string: rightText!).length) * XuTextSizeSmall
+            let width = CGFloat (NSString(string: rightText!).length) * AlStyle.font.small.pointSize
             rightLabel?.frame.size.width = width + 10
             rightLabel?.center.y = self.frame.height / 2
             rightLabel?.center.x = self.frame.width - width / 2 - 25
@@ -229,11 +229,11 @@ class PersonCollectionCell: UICollectionViewCell {
         super.init(frame: frame)
         
         leftLabel = UILabel(frame: CGRectMake(20,0,20,20))
-        leftLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        leftLabel?.font = AlStyle.font.small
         self.addSubview(leftLabel!)
         
         rightLabel = UILabel(frame: CGRectMake(0,0,20,20))
-        rightLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        rightLabel?.font = AlStyle.font.small
         rightLabel?.textAlignment = NSTextAlignment.Right
         self.addSubview(rightLabel!)
     }
@@ -251,10 +251,10 @@ class PersonCollectionReusableView: UICollectionReusableView {
         super.init(frame: frame)
         self.backgroundColor = UIColor.clearColor()
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(XuWidth - 85, 5, 70, 20)
+        button.frame = CGRectMake(AlStyle.size.width - 85, 5, 70, 20)
         button.setTitle("添加驾驶员", forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        button.titleLabel?.font = AlStyle.font.normal
+        button.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         button.addTarget(self, action: #selector(PersonCollectionReusableView.addDriver(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(button)
         

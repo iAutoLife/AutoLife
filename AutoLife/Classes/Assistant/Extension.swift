@@ -12,7 +12,7 @@ import UIKit
 extension String {
     func sizeWithMaxSize(mSize:CGSize,fontSize:CGFloat) -> CGSize {
         let str = NSString(string: self)
-        return str.boundingRectWithSize(mSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(fontSize)], context: nil).size
+        return str.boundingRectWithSize(mSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:fontSize], context: nil).size
     }
 }
 

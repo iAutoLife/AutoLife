@@ -20,11 +20,11 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     }
     
     func initTableView() {
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         
         self.navigationItem.title = "车辆"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(CarViewController.showMessageView(_:)))
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -72,10 +72,10 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForHeaderInSection(section))
-        view.backgroundColor = XuColorGrayThin
+        view.backgroundColor = AlStyle.color.gray_light
         let label = UILabel(frame: CGRectMake(15, 10, 200, 15))
         label.text = (section == 0 ? "车主车辆" : "其他车辆")
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         view.addSubview(label)
         
         return view
@@ -84,10 +84,10 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForFooterInSection(section))
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(XuWidth - 120, 15, 110, 20)
+        button.frame = CGRectMake(AlStyle.size.width - 120, 15, 110, 20)
         button.setTitle("添加车辆", forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        button.titleLabel?.font = AlStyle.font.normal
+        button.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         button.setImage(UIImage(named: "add"), forState: UIControlState.Normal)
         button.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         button.addTarget(self, action: #selector(CarViewController.addCarlincense(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -102,7 +102,7 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
             cell = CarTableViewCell(reuseIdentifier: "carCell")
         }
         cell?.delegate = self
-        cell!.backgroundColor = XuColorGrayThin
+        cell!.backgroundColor = AlStyle.color.gray_light
         let array = carOwnershipArray[indexPath.section] as! NSArray
         if let xco = array[indexPath.row] as? CarOwnership {
             cell?.setupWithCarOwnership(xco)

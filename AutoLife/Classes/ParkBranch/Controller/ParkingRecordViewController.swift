@@ -22,7 +22,7 @@ class ParkingRecordViewController: UIViewController ,UITableViewDelegate,UITable
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ParkingRecordViewController.showMessageView(_:)))
         
         //
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         let path = NSBundle.mainBundle().pathForResource("ParkingRecord", ofType: ".plist")
         self.records = NSMutableArray(contentsOfFile: path!)
         for ele in records {
@@ -31,7 +31,7 @@ class ParkingRecordViewController: UIViewController ,UITableViewDelegate,UITable
             self.cellArraydata.addObject(dic)
         }
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.sectionHeaderHeight = 20

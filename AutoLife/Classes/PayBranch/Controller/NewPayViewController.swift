@@ -18,10 +18,10 @@ class NewPayViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         self.navigationItem.title = "添加支付方式"
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -41,7 +41,7 @@ class NewPayViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         let key = (payDic.allKeys as NSArray).objectAtIndex(indexPath.row)
         cell.imageView?.image = UIImage(named: key as! String)
         cell.textLabel?.text = payDic.objectForKey(key) as? String
-        cell.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        cell.textLabel?.font = AlStyle.font.normal
         cell.backgroundColor = UIColor.clearColor()
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell

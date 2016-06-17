@@ -17,11 +17,11 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         self.navigationItem.title = "支付"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(PayViewController.showMessageView(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -85,9 +85,9 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard section == 1 else {return nil}
         let view = UIView(frame: tableView.rectForFooterInSection(section))
-        view.backgroundColor = XuColorGrayThin
+        view.backgroundColor = AlStyle.color.gray_light
         let leftButton = UIButton(type: UIButtonType.System)
-        leftButton.setup("发 票", fontsize: XuTextSizeMiddle, fontColor: UIColor.whiteColor(), bkColor: XuColorBlue)
+        leftButton.setup("发 票", fontsize: AlStyle.font.normal.pointSize, fontColor: UIColor.whiteColor(), bkColor: AlStyle.color.blue)
         leftButton.handleControlEvent(UIControlEvents.TouchUpInside) { (_) -> Void in
             print("发票")
             self.navigationController?.pushViewController(ReceiptViewController(), animated: true)
@@ -97,14 +97,14 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         
         let rightButton = UIButton(type: UIButtonType.System)
         rightButton.adjustsImageWhenHighlighted = true
-        rightButton.setup("支付明细", fontsize: XuTextSizeMiddle, fontColor: XuColorBlueThin, bkColor: XuColorGrayThin)
+        rightButton.setup("支付明细", fontsize: AlStyle.font.normal.pointSize, fontColor: AlStyle.color.blue_light, bkColor: AlStyle.color.gray_light)
         rightButton.handleControlEvent(UIControlEvents.TouchUpInside) { (_) -> Void in
             print("支付明细")
             print(rightButton.state == UIControlState.Highlighted)
             print(rightButton.state == UIControlState.Selected)
         }
         view.addSubview(rightButton)
-        rightButton.center = CGPointMake(XuWidth - CGRectGetWidth(rightButton.frame) / 2 - 10, 20)
+        rightButton.center = CGPointMake(AlStyle.size.width - CGRectGetWidth(rightButton.frame) / 2 - 10, 20)
         return view
     }
     
@@ -137,7 +137,7 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     func rechargeCell(indexPath:NSIndexPath) -> UITableViewCell{
         func lineWith(xLocation:CGFloat) -> UIView {
             let view = UIView(frame: CGRectMake(0,0,1,XuCellHeight / 2))
-            view.backgroundColor = XuColorGrayThin
+            view.backgroundColor = AlStyle.color.gray_light
             view.center = CGPointMake(xLocation, XuCellHeight / 2)
             return view
         }
@@ -146,15 +146,15 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         cell.backgroundColor = UIColor.clearColor()
         let label = UILabel(frame: CGRectMake(15,20,30,20))
         label.text = leftText;label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         label.center.y = XuCellHeight / 2
         cell.contentView.addSubview(label)
         cell.contentView.addSubview(lineWith(60))
         if indexPath.row == 0 {
             let rightLabel = UILabel(frame: CGRectMake(0,0,50,20))
             rightLabel.text = "¥25.00";rightLabel.textAlignment = NSTextAlignment.Right
-            rightLabel.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-            rightLabel.center = CGPointMake(XuWidth - 45, XuCellHeight / 2)
+            rightLabel.font = AlStyle.font.normal
+            rightLabel.center = CGPointMake(AlStyle.size.width - 45, XuCellHeight / 2)
             cell.contentView.addSubview(rightLabel)
             return cell
         }

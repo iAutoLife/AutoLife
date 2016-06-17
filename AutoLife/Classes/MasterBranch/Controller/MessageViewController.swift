@@ -14,7 +14,7 @@ class MessageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         self.navigationItem.title = "消息"
         
         self.initView()

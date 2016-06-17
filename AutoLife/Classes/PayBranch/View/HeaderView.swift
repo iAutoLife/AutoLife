@@ -19,16 +19,16 @@ class HeaderView: UIView {
 
     init(frame: CGRect,leftText text:String,rightButtonState style:RightButtonStyle,rightButtonText bText:String) {
         super.init(frame: frame)
-        let leftLabel = UILabel(frame: CGRectMake(10,frame.height - 20,XuTextSizeMiddle * CGFloat((NSString(string: text)).length),20))
+        let leftLabel = UILabel(frame: CGRectMake(10,frame.height - 20,AlStyle.font.normal.pointSize * CGFloat((NSString(string: text)).length),20))
         leftLabel.text = text
-        leftLabel.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        leftLabel.font = AlStyle.font.normal
         self.addSubview(leftLabel)
         if style == RightButtonStyle.textAndImage {
             HeaderView.AddButtonWith(bText, superView: self)
         }else {
             let button = UIButton(type: UIButtonType.System)
-            button.setup(bText, fontsize: XuTextSizeMiddle, fontColor: UIColor.whiteColor(), bkColor: XuColorBlue)
-            button.center = CGPointMake(XuWidth - CGRectGetWidth(button.frame) / 2 - 10, frame.height - 10)
+            button.setup(bText, fontsize: AlStyle.font.normal.pointSize, fontColor: UIColor.whiteColor(), bkColor: AlStyle.color.blue)
+            button.center = CGPointMake(AlStyle.size.width - CGRectGetWidth(button.frame) / 2 - 10, frame.height - 10)
             button.handleControlEvent(UIControlEvents.TouchUpInside, withBlock: { (sender) -> Void in
                 self.action?(sender: sender)
             })
@@ -43,11 +43,11 @@ class HeaderView: UIView {
     class func AddButtonWith(text:String,superView view:UIView) {
         
         let button = UIButton(type: UIButtonType.System)
-        let width = XuTextSizeMiddle * CGFloat(NSString(string: text).length) + 10
-        button.frame = CGRectMake(XuWidth - width - 10, view.frame.height - 20, width, 20)
+        let width = AlStyle.font.normal.pointSize * CGFloat(NSString(string: text).length) + 10
+        button.frame = CGRectMake(AlStyle.size.width - width - 10, view.frame.height - 20, width, 20)
         button.setTitle(text, forState: UIControlState.Normal)
-        button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
-        button.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        button.titleLabel?.font = AlStyle.font.normal
+        button.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         button.addTarget(view, action: #selector(HeaderView.add(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         

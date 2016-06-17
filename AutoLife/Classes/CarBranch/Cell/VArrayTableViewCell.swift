@@ -38,8 +38,8 @@ class VArrayTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewDataS
     
     init(reuseIdentifier: String?) {
         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, 0))
-        tableView.separatorColor = XuColorGrayThin
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, 0))
+        tableView.separatorColor = AlStyle.color.gray_light
         tableView.scrollEnabled = false
         self.addSubview(tableView)
         tableView.dataSource = self

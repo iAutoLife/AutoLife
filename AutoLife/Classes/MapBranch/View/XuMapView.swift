@@ -57,13 +57,13 @@ class XuMapView: MAMapView {
         self.rotateEnabled = false
         
         let trafficBtn = UIButton(type: UIButtonType.Custom)
-        trafficBtn.frame = CGRectMake(XuWidth - 45, 50, 40, 40)
+        trafficBtn.frame = CGRectMake(AlStyle.size.width - 45, 50, 40, 40)
         trafficBtn.setImage(UIImage(named: "traffic_show"), forState: UIControlState.Normal)
         trafficBtn.setImage(UIImage(named: "traffic_hide"), forState: UIControlState.Normal)
         self.addSubview(trafficBtn)
         
         let feedbackBtn = UIButton(type: UIButtonType.Custom)
-        feedbackBtn.frame = CGRectMake(XuWidth - 45, 95, 40, 40)
+        feedbackBtn.frame = CGRectMake(AlStyle.size.width - 45, 95, 40, 40)
         feedbackBtn.setImage(UIImage(named: "feedback"), forState: UIControlState.Normal)
         self.addSubview(feedbackBtn)
         
@@ -80,7 +80,7 @@ class XuMapView: MAMapView {
         }
         self.addSubview(trackButton!)
         
-        stepper = XuStepper(style: XuStepperStyle.Vertical, origin: CGPointMake(XuWidth - 42, XuHeight - 200), width: 33)
+        stepper = XuStepper(style: XuStepperStyle.Vertical, origin: CGPointMake(AlStyle.size.width - 42, AlStyle.size.height - 200), width: 33)
         stepper?.maximumValue = self.maxZoomLevel;stepper?.minimumValue = self.minZoomLevel
         stepper?.value = 7
         self.addSubview(stepper!)

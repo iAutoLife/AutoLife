@@ -31,8 +31,8 @@ class CarportTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewData
     }
     
     func initTableView() {
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, self.frame.height), style: UITableViewStyle.Plain)
-        tableView.backgroundColor = UIColor.clearColor()//XuColorGrayThin
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, self.frame.height), style: UITableViewStyle.Plain)
+        tableView.backgroundColor = UIColor.clearColor()//AlStyle.color.gray_light
         tableView.scrollEnabled = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         tableView.rowHeight = 50
@@ -90,9 +90,9 @@ class CarportTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewData
         if indexPath.row == 0 {
             lineLayer.frame = CGRectMake(CGRectGetMinX(bounds), bounds.size.height - lineHeight, 135, lineHeight)
         }else {
-            lineLayer.frame = CGRectMake(CGRectGetMinX(bounds) + 45, bounds.size.height - lineHeight, XuWidth - 45, lineHeight)
+            lineLayer.frame = CGRectMake(CGRectGetMinX(bounds) + 45, bounds.size.height - lineHeight, AlStyle.size.width - 45, lineHeight)
         }
-        lineLayer.backgroundColor = XuColorGrayThin.CGColor
+        lineLayer.backgroundColor = AlStyle.color.gray_light.CGColor
         layer.addSublayer(lineLayer)
         let testView = UIView(frame: bounds)
         testView.layer.insertSublayer(layer, atIndex: 0)

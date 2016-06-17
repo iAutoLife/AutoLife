@@ -47,8 +47,8 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
     }
     
     func initTableView() {
-        subTableView = UITableView(frame: CGRectMake(0, 0, XuWidth, self.frame.height), style: UITableViewStyle.Plain)
-        subTableView?.backgroundColor = UIColor.clearColor()//XuColorGrayThin
+        subTableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, self.frame.height), style: UITableViewStyle.Plain)
+        subTableView?.backgroundColor = UIColor.clearColor()//AlStyle.color.gray_light
         subTableView?.scrollEnabled = false
         subTableView?.separatorStyle = UITableViewCellSeparatorStyle.None
         
@@ -62,18 +62,18 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
         self.contentView.addSubview(leftImageV!)
         
         leftLabel = UILabel(frame: CGRectMake(50, centerY - 10, 70, 20))
-        leftLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        leftLabel?.font = AlStyle.font.normal
         contentView.addSubview(leftLabel!)
         
         rSwtch = UISwitch(frame: CGRectZero)
         rSwtch?.addTarget(self, action: #selector(CarTableViewCell.swithAuthorize(_:)), forControlEvents: UIControlEvents.ValueChanged)
         rSwtch?.transform = CGAffineTransformMakeScale(0.7, 0.7)
-        rSwtch?.center = CGPointMake(XuWidth - 45, centerY)
+        rSwtch?.center = CGPointMake(AlStyle.size.width - 45, centerY)
         contentView.addSubview(rSwtch!)
         
         rightLabel = UILabel(frame: CGRectMake(CGRectGetMinX(rSwtch!.frame) - 50, centerY - 10, 60, 20))
-        rightLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
-        rightLabel?.textColor = XuColorGray
+        rightLabel?.font = AlStyle.font.small
+        rightLabel?.textColor = AlStyle.color.gray
         contentView.addSubview(rightLabel!)
     }
     
@@ -95,7 +95,7 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
             let button = UIButton(type: UIButtonType.System)
             button.frame = CGRectMake(CGRectGetMaxX((leftLabel?.frame)!) , centerY - 10, 60, 20)
             button.setTitle("车主未认证", forState: UIControlState.Normal)
-            button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+            button.titleLabel?.font = AlStyle.font.small
             button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
             contentView.addSubview(button)
             button.addTarget(self, action: #selector(CarTableViewCell.carOwnerCerificate(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -153,11 +153,11 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "textCell")
             }
             let text = self.xCarOwnership?.assistPhones?.objectAtIndex(indexPath.row - 1)
-            let label = UILabel(frame: CGRectMake(55, 15, XuWidth - 60, 20))
+            let label = UILabel(frame: CGRectMake(55, 15, AlStyle.size.width - 60, 20))
             cell?.contentView.addSubview(label)
             label.text = "账户\(text!)为您的车辆开启在线支付功能"
-            label.font = UIFont.systemFontOfSize(XuTextSizeSmall)
-            label.textColor = XuColorGray
+            label.font = AlStyle.font.small
+            label.textColor = AlStyle.color.gray
             cell?.backgroundColor = UIColor.clearColor()
             cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
             return cell!
@@ -175,7 +175,7 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
         let lineLayer = CALayer()
         let lineHeight = 1 / UIScreen.mainScreen().scale
         lineLayer.frame = CGRectMake(CGRectGetMinX(bounds) + 45, bounds.size.height - lineHeight, 135, lineHeight)
-        lineLayer.backgroundColor = XuColorGrayThin.CGColor
+        lineLayer.backgroundColor = AlStyle.color.gray_light.CGColor
         layer.addSublayer(lineLayer)
         let testView = UIView(frame: bounds)
         testView.layer.insertSublayer(layer, atIndex: 0)

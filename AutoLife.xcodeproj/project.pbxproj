@@ -305,9 +305,9 @@
 		8F6A7B191C5787A00071879C /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberView.swift; path = Classes/CarBranch/view/NumberView.swift; sourceTree = "<group>"; };
 		8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Classes/CarBranch/Controller/PickerViewController.swift; sourceTree = "<group>"; };
-		8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlStyle.swift; path = Classes/Assistant/AlStyle.swift; sourceTree = "<group>"; };
-		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; };
-		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; };
+		8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = AlStyle.swift; path = Classes/Assistant/AlStyle.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FBCC83F1C9F96A4007E868F /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = Classes/Assistant/HMSegmentedControl.h; sourceTree = "<group>"; };
 		8FBCC8401C9F96A4007E868F /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = Classes/Assistant/HMSegmentedControl.m; sourceTree = "<group>"; };
 		8FBCC8451C9FDCFD007E868F /* SunTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SunTableViewCell.swift; path = Classes/Insurance/Cell/SunTableViewCell.swift; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 		8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Classes/Universal/SwiftyJSON.swift; sourceTree = "<group>"; };
 		8FF92C001C4C923000D5C3F8 /* StaticDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticDefine.swift; path = Classes/Universal/StaticDefine.swift; sourceTree = "<group>"; };
 		8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assistant.swift; path = Classes/Assistant/ExtentClass/Assistant.swift; sourceTree = "<group>"; };
-		8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BrandViewController.swift; path = Classes/CarBranch/Controller/BrandViewController.swift; sourceTree = "<group>"; };
+		8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = BrandViewController.swift; path = Classes/CarBranch/Controller/BrandViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FF92C081C4FAFC100D5C3F8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Classes/Assistant/MBProgressHUD.h; sourceTree = "<group>"; };
 		8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Classes/Assistant/MBProgressHUD.m; sourceTree = "<group>"; };
 		C57D6B321C47EB4E00C92E33 /* i車生活.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i車生活.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,8 +376,8 @@
 		C57D6B791C47ED3100C92E33 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		C57D6B7D1C47ED4900C92E33 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C57D6B871C47EF1900C92E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Classes/MasterBranch/Controller/LoginViewController.swift; sourceTree = "<group>"; };
-		C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeDefine.swift; path = Classes/Assistant/TypeDefine.swift; sourceTree = "<group>"; };
+		C57D6B871C47EF1900C92E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = LoginViewController.swift; path = Classes/MasterBranch/Controller/LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = TypeDefine.swift; path = Classes/Assistant/TypeDefine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuKeyChain.swift; path = Classes/Assistant/XuKeyChain.swift; sourceTree = "<group>"; };
 		C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuRegularExpression.swift; path = Classes/Assistant/XuRegularExpression.swift; sourceTree = "<group>"; };
 		C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuUserDefault.swift; path = Classes/Assistant/XuUserDefault.swift; sourceTree = "<group>"; };
@@ -397,10 +397,10 @@
 		C57D6BBA1C47FBBA00C92E33 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoshiTextField.swift; path = Classes/Assistant/ExtentClass/HoshiTextField.swift; sourceTree = "<group>"; };
 		C57D6BBB1C47FBBA00C92E33 /* TextFieldsEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldsEffects.swift; path = Classes/Assistant/ExtentClass/TextFieldsEffects.swift; sourceTree = "<group>"; };
 		C57D6BC41C47FC1200C92E33 /* MasterMapDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterMapDelegate.swift; path = Classes/MapBranch/Controller/MasterMapDelegate.swift; sourceTree = "<group>"; };
-		C57D6BCC1C47FCF300C92E33 /* FootMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FootMenuView.swift; path = Classes/MapBranch/View/FootMenuView.swift; sourceTree = "<group>"; };
+		C57D6BCC1C47FCF300C92E33 /* FootMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = FootMenuView.swift; path = Classes/MapBranch/View/FootMenuView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6BCD1C47FCF300C92E33 /* SubMasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubMasterView.swift; path = Classes/MapBranch/View/SubMasterView.swift; sourceTree = "<group>"; };
 		C57D6BCE1C47FCF300C92E33 /* XuAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuAnnotationView.swift; path = Classes/MapBranch/View/XuAnnotationView.swift; sourceTree = "<group>"; };
-		C57D6BCF1C47FCF300C92E33 /* XuCustomPointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuCustomPointView.swift; path = Classes/MapBranch/View/XuCustomPointView.swift; sourceTree = "<group>"; };
+		C57D6BCF1C47FCF300C92E33 /* XuCustomPointView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = XuCustomPointView.swift; path = Classes/MapBranch/View/XuCustomPointView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6BD01C47FCF300C92E33 /* XuMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuMapView.swift; path = Classes/MapBranch/View/XuMapView.swift; sourceTree = "<group>"; };
 		C57D6BD11C47FCF300C92E33 /* XuPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuPointAnnotation.swift; path = Classes/MapBranch/View/XuPointAnnotation.swift; sourceTree = "<group>"; };
 		C57D6BD21C47FCF300C92E33 /* XuStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuStepper.swift; path = Classes/MapBranch/View/XuStepper.swift; sourceTree = "<group>"; };
@@ -415,7 +415,7 @@
 		C57D6BF11C48AAD800C92E33 /* ParkStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkStateViewController.swift; path = Classes/ParkBranch/Controller/ParkStateViewController.swift; sourceTree = "<group>"; };
 		C57D6BF41C48AB0E00C92E33 /* NewPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPayViewController.swift; path = Classes/PayBranch/Controller/NewPayViewController.swift; sourceTree = "<group>"; };
 		C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayViewController.swift; path = Classes/PayBranch/Controller/PayViewController.swift; sourceTree = "<group>"; };
-		C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiptViewController.swift; path = Classes/PayBranch/Controller/ReceiptViewController.swift; sourceTree = "<group>"; };
+		C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ReceiptViewController.swift; path = Classes/PayBranch/Controller/ReceiptViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6BFA1C48AB4D00C92E33 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarViewController.swift; path = Classes/CarBranch/Controller/CarViewController.swift; sourceTree = "<group>"; };
 		C57D6BFB1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OwnerIdentifyViewController.swift; path = Classes/CarBranch/Controller/OwnerIdentifyViewController.swift; sourceTree = "<group>"; };
 		C57D6BFE1C48AB6F00C92E33 /* CarportShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportShareViewController.swift; path = Classes/ParkBranch/Controller/CarportShareViewController.swift; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 		C57D6C061C48AC9300C92E33 /* UniversalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UniversalTableViewCell.swift; path = Classes/Universal/Cell/UniversalTableViewCell.swift; sourceTree = "<group>"; };
 		C57D6C081C48ACF600C92E33 /* VArrayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VArrayTableViewCell.swift; path = Classes/CarBranch/Cell/VArrayTableViewCell.swift; sourceTree = "<group>"; };
 		C57D6C0A1C48ADBA00C92E33 /* ViolationObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationObject.swift; path = Classes/CarBranch/Model/ViolationObject.swift; sourceTree = "<group>"; };
-		C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarTableViewCell.swift; path = Classes/CarBranch/Cell/CarTableViewCell.swift; sourceTree = "<group>"; };
+		C57D6C0C1C48ADE800C92E33 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = CarTableViewCell.swift; path = Classes/CarBranch/Cell/CarTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6C0E1C48AE1E00C92E33 /* CarOwnership.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarOwnership.swift; path = Classes/CarBranch/Model/CarOwnership.swift; sourceTree = "<group>"; };
 		C57D6C101C48AE7300C92E33 /* ViolationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViolationTableViewCell.swift; path = Classes/CarBranch/Cell/ViolationTableViewCell.swift; sourceTree = "<group>"; };
 		C57D6C121C48AEF900C92E33 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = Classes/PayBranch/View/HeaderView.swift; sourceTree = "<group>"; };
@@ -1213,6 +1213,11 @@
 					C57D6B311C47EB4E00C92E33 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 37RRWFQN4Y;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C57D6B451C47EB4F00C92E33 = {
 						CreatedOnToolsVersion = 7.2;
@@ -1573,6 +1578,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1617,6 +1623,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

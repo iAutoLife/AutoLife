@@ -17,9 +17,9 @@ class ProvincesView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate
     private var hintView:UIView!
     
     init(oy:CGFloat) {
-        super.init(frame: CGRectMake(0, oy, XuWidth, 216))
+        super.init(frame: CGRectMake(0, oy, AlStyle.size.width, 216))
         let layout = UICollectionViewFlowLayout()
-        let width:CGFloat = (XuWidth == 375 ? 30 : 24)
+        let width:CGFloat = (AlStyle.size.width == 375 ? 30 : 24)
         layout.itemSize = CGSizeMake(width, 36)
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
         collectionView = UICollectionView(frame: CGRectMake(0, 0, frame.width, frame.height), collectionViewLayout: layout)
@@ -27,17 +27,17 @@ class ProvincesView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.backgroundColor = XuColorGrayThin
+        collectionView.backgroundColor = AlStyle.color.gray_light
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "ccell")
         
         let button = UIButton(type: UIButtonType.Custom)
-        button.backgroundColor = XuColorBlue
-        let oXW:(CGFloat,CGFloat) = (XuWidth == 375 ? 294.5 : 251.5,XuWidth == 375 ? 70 : 58)
+        button.backgroundColor = AlStyle.color.blue
+        let oXW:(CGFloat,CGFloat) = (AlStyle.size.width == 375 ? 294.5 : 251.5,AlStyle.size.width == 375 ? 70 : 58)
         button.frame = CGRectMake(oXW.0, 148, oXW.1, 36)
-        button.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        button.titleLabel?.font = AlStyle.font.normal
         button.addTarget(self, action: #selector(ProvincesView.finished(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         button.setTitle("完 成", forState: UIControlState.Normal)
-        button.layer.cornerRadius = XuCornerRadius
+        button.layer.cornerRadius = AlStyle.cornerRadius
         self.addSubview(button)
     }
     
@@ -62,12 +62,12 @@ class ProvincesView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ccell", forIndexPath: indexPath)
         let label = UILabel(frame: cell.contentView.frame)
         label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         label.frame = cell.contentView.frame
         label.text = provinces[indexPath.row]
         cell.contentView.addSubview(label)
         cell.backgroundColor = UIColor.whiteColor()
-        cell.layer.cornerRadius = XuCornerRadius
+        cell.layer.cornerRadius = AlStyle.cornerRadius
         cell.layer.shadowColor = UIColor.grayColor().CGColor
         cell.layer.shadowOffset = CGSizeMake(0, 2)
         cell.layer.shadowOpacity = 1

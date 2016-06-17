@@ -41,7 +41,7 @@ class PickerViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(didCancel(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, self.view.frame.width - 45, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, self.view.frame.width - 45, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -84,7 +84,7 @@ class PickerViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cell")
             cell?.backgroundColor = UIColor.clearColor()
-            cell?.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+            cell?.textLabel?.font = AlStyle.font.normal
         }
         var text = "不确定"
         if indexPath.section == 1 {

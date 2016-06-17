@@ -5,23 +5,55 @@
 //  Created by xubupt218 on 16/4/22.
 //  Copyright © 2016年 徐成. All rights reserved.
 //
-
 import Foundation
+import UIKit
+
 internal struct AlStyle {
-    
-    var rawValue = 0
     
     internal static let cornerRadius:CGFloat = 5
     internal static let size = UIScreen.mainScreen().bounds.size
     internal static var scale = UIScreen.mainScreen().scale
+    internal static let cellHeight:CGFloat = AlStyle.algebraConvert(50)
+    internal static let XuWidth = UIScreen.mainScreen().bounds.width
+    internal static let XuHeight =  UIScreen.mainScreen().bounds.height
+    internal struct textSize{
+        internal static var smallest:CGFloat{
+            return AlStyle.algebraConvert(10)
+        }
+        internal static var small:CGFloat{
+            return AlStyle.algebraConvert(12)
+        }
+        internal static var normal:CGFloat{
+            return AlStyle.algebraConvert(14)
+        }
+        internal static var big:CGFloat{
+            return AlStyle.algebraConvert(16)
+        }
+        internal static var nav:CGFloat{
+            return AlStyle.algebraConvert(18)
+        }
+    }
     
     internal struct font {
-        internal static var normal:UIFont {
-            return UIFont.systemFontOfSize(AlStyle.algebraConvert(14))
+        
+        internal static var smallest:UIFont {
+            return UIFont.systemFontOfSize(AlStyle.algebraConvert(10))
         }
         
         internal static var small:UIFont {
             return UIFont.systemFontOfSize(AlStyle.algebraConvert(12))
+        }
+        
+        internal static var normal:UIFont {
+            return UIFont.systemFontOfSize(AlStyle.algebraConvert(14))
+        }
+        
+        internal static var big:UIFont {
+            return UIFont.systemFontOfSize(AlStyle.algebraConvert(16))
+        }
+        
+        internal static var nav:UIFont {
+            return UIFont.systemFontOfSize(AlStyle.algebraConvert(18))
         }
     }
     
@@ -42,6 +74,10 @@ internal struct AlStyle {
             return UIColor(red: 127/255, green: 193/255, blue: 1, alpha: 1)
         }
         
+        internal static var blue_dark:UIColor {
+            return UIColor(red: 0.12, green: 0.12, blue: 0.3, alpha: 1)
+        }
+        
         internal static var white:UIColor {
             return UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
         }
@@ -56,6 +92,10 @@ internal struct AlStyle {
         
         internal static var black:UIColor {
             return UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
+        }
+        
+        internal static var green_dark:UIColor {
+            return UIColor(red: 51/255, green: 113/255, blue: 65/255, alpha: 1)
         }
     }
 }

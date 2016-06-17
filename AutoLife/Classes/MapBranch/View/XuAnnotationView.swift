@@ -20,7 +20,7 @@ class XuAnnotationView: MAAnnotationView {
     func setAnnotationIndex(indexString:String) {
         label = UILabel(frame: CGRectMake(0,0,self.frame.width,self.frame.height))
         label?.textAlignment = NSTextAlignment.Center
-        label?.font = UIFont.systemFontOfSize(XuTextSizeMiddle, weight: 3)
+        label?.font = AlStyle.font.normal
         label?.textColor = UIColor.whiteColor()
         label?.text = indexString
         label?.transform = CGAffineTransformMakeTranslation(0, -self.frame.height / 6)

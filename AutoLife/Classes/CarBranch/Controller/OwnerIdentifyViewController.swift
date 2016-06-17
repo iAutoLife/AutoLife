@@ -17,9 +17,9 @@ class OwnerIdentifyViewController: UIViewController ,UITableViewDelegate,UITable
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         self.navigationItem.title = "车主认证"
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.sectionHeaderHeight = 20
@@ -44,11 +44,11 @@ class OwnerIdentifyViewController: UIViewController ,UITableViewDelegate,UITable
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForFooterInSection(section))
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(10, CGRectGetHeight(tableView.rectForFooterInSection(section)) - 40, XuWidth - 20, 30)
+        button.frame = CGRectMake(10, CGRectGetHeight(tableView.rectForFooterInSection(section)) - 40, AlStyle.size.width - 20, 30)
         button.setTitle("确 定", forState: UIControlState.Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.backgroundColor = XuColorBlue
-        button.layer.cornerRadius = XuCornerRadius
+        button.backgroundColor = AlStyle.color.blue
+        button.layer.cornerRadius = AlStyle.cornerRadius
         button.addTarget(self, action: #selector(OwnerIdentifyViewController.submitEnsureAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(button)
         view.backgroundColor = UIColor.clearColor()

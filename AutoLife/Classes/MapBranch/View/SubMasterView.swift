@@ -24,7 +24,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     var delegate:SubMasterViewDelegate?
     
     init() {
-        super.init(frame: UIScreen.mainScreen().bounds)//CGRectMake(0, 0, XuWidth * 2 / 3, UIScreen.mainScreen().bounds.size.height))
+        super.init(frame: UIScreen.mainScreen().bounds)//CGRectMake(0, 0, AlStyle.size.width * 2 / 3, UIScreen.mainScreen().bounds.size.height))
         self.backgroundColor = UIColor(red: 24/255, green: 30/255, blue: 36/255, alpha: 1)
         self.alpha = 0.96
         self.tableArray.addObject(section0)
@@ -35,7 +35,7 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     func initTableView() {
-        tableView = UITableView(frame: CGRectMake(XuWidth / 3, 0, XuWidth * 2 / 3, XuHeight), style: UITableViewStyle.Plain)
+        tableView = UITableView(frame: CGRectMake(AlStyle.size.width / 3, 0, AlStyle.size.width * 2 / 3, AlStyle.size.height), style: UITableViewStyle.Plain)
         tableView.backgroundColor = UIColor(red: 24/255, green: 30/255, blue: 36/255, alpha: 1)
         tableView.dataSource = self
         tableView.delegate = self
@@ -52,10 +52,10 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let line = UIView(frame: CGRectMake(14.5, 0, XuWidth * 2 / 3 - 15, 0.5))
+        let line = UIView(frame: CGRectMake(14.5, 0, AlStyle.size.width * 2 / 3 - 15, 0.5))
         line.backgroundColor = UIColor(red: 0, green: 89/255, blue: 131/255, alpha: 1)
         if section > 0 {
-            let view = UIView(frame: CGRectMake(0, 0, XuWidth, 0.5))
+            let view = UIView(frame: CGRectMake(0, 0, AlStyle.size.width, 0.5))
             view.addSubview(line)
             return view
         }
@@ -65,14 +65,14 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
         view.addSubview(imageView)
         let label = UILabel(frame: CGRectMake(70, 18, 180, 20))
         label.text = "爱车人 | 车主"
-        label.font = UIFont.systemFontOfSize(XutextSizeBig)
+        label.font = AlStyle.font.big
         view.addSubview(label)
         label.textColor = UIColor.whiteColor()
         
         let label1 = UILabel(frame: CGRectMake(70, 39, 180, 20))
         label1.text = "187****1234"
         label1.textColor = UIColor.whiteColor()
-        label1.font = UIFont.systemFontOfSize(XutextSizeBig)
+        label1.font = AlStyle.font.big
         view.addSubview(label1)
         view.backgroundColor = UIColor.clearColor()
         line.center.y = view.frame.height - 0.5
@@ -105,9 +105,9 @@ class SubMasterView: UIView ,UITableViewDataSource,UITableViewDelegate{
         let keys:NSArray = dic.allKeys
         cell?.textLabel?.text = keys[0] as? String
         cell?.textLabel?.textColor = UIColor.whiteColor()
-        cell?.textLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        cell?.textLabel?.font = AlStyle.font.normal
         cell?.detailTextLabel?.text = dic.objectForKey(String(keys[0])) as? String
-        cell?.detailTextLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmallest)
+        cell?.detailTextLabel?.font = AlStyle.font.smallest
         cell?.backgroundColor = UIColor.clearColor()
         cell?.selectionStyle = UITableViewCellSelectionStyle.None
         return cell!

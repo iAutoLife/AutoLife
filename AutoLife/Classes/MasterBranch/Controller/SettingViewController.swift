@@ -19,11 +19,11 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         self.navigationItem.title = "设置"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(SettingViewController.showMessageView(_:)))
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.sectionHeaderHeight = 20
@@ -73,12 +73,12 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
             cell?.rSwitchState = false
             return cell!
         case 3:
-            let cell = UITableViewCell(frame: CGRectMake(0, 0, XuWidth, 30))
-            let label = UILabel(frame: CGRectMake(0, 0, XuWidth, 30))
+            let cell = UITableViewCell(frame: CGRectMake(0, 0, AlStyle.size.width, 30))
+            let label = UILabel(frame: CGRectMake(0, 0, AlStyle.size.width, 30))
             let text = tbArray[indexPath.section][indexPath.row]
             label.text = text as String
             label.textAlignment = NSTextAlignment.Center
-            label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+            label.font = AlStyle.font.normal
             cell.contentView.addSubview(label)
             cell.backgroundColor = UIColor.clearColor()
             return cell
@@ -91,7 +91,8 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
         if indexPath.section == 3 {
             let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
             loginVC?.loginType = XuLoginType.Default

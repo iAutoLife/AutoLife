@@ -22,11 +22,11 @@ class ReceiptViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func initTableView() {
-        self.view.backgroundColor = XuColorGrayThin
+        self.view.backgroundColor = AlStyle.color.gray_light
         
         self.navigationItem.title = "开具发票"
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         
@@ -57,18 +57,18 @@ class ReceiptViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForFooterInSection(section))
         
-        let label = UILabel(frame: CGRectMake(12,5,XuWidth - 10,XuTextSizeMiddle))
+        let label = UILabel(frame: CGRectMake(12,5,AlStyle.size.width - 10,AlStyle.font.normal.pointSize))
         label.text = "200元以下支付¥5.00元邮费，200以上（含）免邮费"
-        label.font = UIFont.systemFontOfSize(XuTextSizeSmallest)
-        label.textColor = XuColorGray
+        label.font = AlStyle.font.smallest
+        label.textColor = AlStyle.color.gray
         view.addSubview(label)
         
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(10, 30, XuWidth - 20, 30)
+        button.frame = CGRectMake(10, 30, AlStyle.size.width - 20, 30)
         button.setTitle("确 定", forState: UIControlState.Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.backgroundColor = XuColorBlue
-        button.layer.cornerRadius = XuCornerRadius
+        button.backgroundColor = AlStyle.color.blue
+        button.layer.cornerRadius = AlStyle.cornerRadius
         view.addSubview(button)
         button.handleControlEvent(UIControlEvents.TouchUpInside) { (_) -> Void in
             print("确定")

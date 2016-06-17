@@ -15,9 +15,9 @@ class NumberView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate{
     var selectItem:((String)->Void)?
 
     init() {
-        super.init(frame: CGRectMake(0, 0, XuWidth, 45))
+        super.init(frame: CGRectMake(0, 0, AlStyle.size.width, 45))
         let layout = UICollectionViewFlowLayout()
-        let width:CGFloat = (XuWidth == 375 ? 30 : 24)
+        let width:CGFloat = (AlStyle.size.width == 375 ? 30 : 24)
         layout.itemSize = CGSizeMake(width, 36)
         layout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 5)
         layout.minimumInteritemSpacing = 5
@@ -26,7 +26,7 @@ class NumberView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate{
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.backgroundColor = XuColorGrayThin
+        collectionView.backgroundColor = AlStyle.color.gray_light
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "ccell")
 
     }
@@ -48,7 +48,7 @@ class NumberView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate{
         label.text = provinces[indexPath.row]
         cell.contentView.addSubview(label)
         cell.backgroundColor = UIColor.whiteColor()
-        cell.layer.cornerRadius = XuCornerRadius
+        cell.layer.cornerRadius = AlStyle.cornerRadius
         cell.layer.shadowColor = UIColor.grayColor().CGColor
         cell.layer.shadowOffset = CGSizeMake(0, 2)
         cell.layer.shadowOpacity = 1
@@ -56,7 +56,7 @@ class NumberView: UIView ,UICollectionViewDataSource,UICollectionViewDelegate{
     }
     
     func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
-        collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = XuColorGrayThin
+        collectionView.cellForItemAtIndexPath(indexPath)?.backgroundColor = AlStyle.color.gray_light
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {

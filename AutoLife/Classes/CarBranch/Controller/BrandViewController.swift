@@ -22,7 +22,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
     lazy private var pickerBrandVC:PickerViewController = {
         let pvc = PickerViewController()
         pvc.delegate = self
-        pvc.view.frame = CGRectMake(45,0,XuWidth - 45,XuHeight)
+        pvc.view.frame = CGRectMake(45,0,AlStyle.size.width - 45,AlStyle.size.height)
         pvc.backgroundView?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(BrandViewController.tapBackViewGesture(_:))))
         return pvc
     }()
@@ -37,7 +37,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         self.navigationItem.title = "选择车型"
         
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, XuHeight + 10),style: UITableViewStyle.Grouped)
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, AlStyle.size.height + 10),style: UITableViewStyle.Grouped)
         self.view.addSubview(tableView)
         XuSetup(tableView)
         tableView.dataSource = self
@@ -59,7 +59,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
     func setLetter(letter:[String]) {
         indexsView = XuIndexView(indexs: letter)
         self.view.addSubview(indexsView)
-        indexsView.center = CGPointMake(XuWidth - 20, XuHeight / 2 + 20)
+        indexsView.center = CGPointMake(AlStyle.size.width - 20, AlStyle.size.height / 2 + 20)
         indexsView.selectIndex = { (index) in
             self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: index), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
             self.sindex.1 = (index == self.letters!.count - 1 ? true : false)
@@ -140,13 +140,13 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
         pickerBrandVC.brandJSON = xjson!            //model_name
         if nav == nil {
             nav = UINavigationController(rootViewController: pickerBrandVC)
-            nav!.view.frame = CGRectMake(45,0,XuWidth - 45,XuHeight)
-            nav!.view.center.x += XuWidth
+            nav!.view.frame = CGRectMake(45,0,AlStyle.size.width - 45,AlStyle.size.height)
+            nav!.view.center.x += AlStyle.size.width
         }
         self.navigationController?.view.addSubview(pickerBrandVC.backgroundView!)
         self.navigationController?.view.addSubview(nav!.view)
         UIView.animateKeyframesWithDuration(0.6, delay: 0, options: UIViewKeyframeAnimationOptions.CalculationModeCubic, animations: { () -> Void in
-            self.nav!.view.transform = CGAffineTransformMakeTranslation( -XuWidth, 0)
+            self.nav!.view.transform = CGAffineTransformMakeTranslation( -AlStyle.size.width, 0)
             self.pickerBrandVC.backgroundView?.alpha = 0.6
             }, completion: nil)
     }
@@ -225,7 +225,7 @@ class Brandcell: UITableViewCell {
         
         label = UILabel(frame: CGRectMake(45,0,200,22))
         self.contentView.addSubview(label)
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         label.center.y = self.center.y
     }
     

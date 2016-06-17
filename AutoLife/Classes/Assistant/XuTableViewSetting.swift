@@ -15,25 +15,25 @@ func XutableView(tableView:UITableView,willDisplayCell cell:UITableViewCell,forR
     let pathRef = CGPathCreateMutable()
     let bounds = CGRectInset(cell.bounds, 10, 0)
     if indexPath.row == 0 && indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
-        CGPathAddRoundedRect(pathRef, nil, bounds, XuCornerRadius, XuCornerRadius)
+        CGPathAddRoundedRect(pathRef, nil, bounds, AlStyle.cornerRadius, AlStyle.cornerRadius)
     }else if indexPath.row == 0 {   //起点1--2--3，--3--4，终点4
         CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
         CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
     }else if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
         CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
         CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
     }else {
         CGPathAddRect(pathRef, nil, bounds)
     }
     layer.path = pathRef
-    layer.fillColor = XuColorWhite.CGColor
+    layer.fillColor = AlStyle.color.white.CGColor
     let lineLayer = CALayer();let lineHeight = 1 / UIScreen.mainScreen().scale
     lineLayer.frame = CGRectMake(CGRectGetMinX(bounds), bounds.size.height - lineHeight, bounds.size.width, lineHeight)
-    lineLayer.backgroundColor = XuColorGrayThin.CGColor
+    lineLayer.backgroundColor = AlStyle.color.gray_light.CGColor
     layer.addSublayer(lineLayer)
     cell.layer.insertSublayer(layer, atIndex: 0)
 }
@@ -43,25 +43,25 @@ func XutableView(tableView:UITableView,willDisplayCell cell:UITableViewCell,forR
     let pathRef = CGPathCreateMutable()
     let bounds = CGRectInset(cell.bounds, 10, 0)
     if indexPath.row == 0 && indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
-        CGPathAddRoundedRect(pathRef, nil, bounds, XuCornerRadius, XuCornerRadius)
+        CGPathAddRoundedRect(pathRef, nil, bounds, AlStyle.cornerRadius, AlStyle.cornerRadius)
     }else if indexPath.row == 0 {   //起点1--2--3，--3--4，终点4
         CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds))
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
         CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds))
     }else if indexPath.row == tableView.numberOfRowsInSection(indexPath.section) - 1 {
         CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds))
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), XuCornerRadius)
-        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), XuCornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), AlStyle.cornerRadius)
+        CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMinY(bounds), AlStyle.cornerRadius)
         CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds))
     }else {
         CGPathAddRect(pathRef, nil, bounds)
     }
     layer.path = pathRef
-    layer.fillColor = XuColorWhite.CGColor
+    layer.fillColor = AlStyle.color.white.CGColor
     let lineLayer = CALayer();let lineHeight = 1 / UIScreen.mainScreen().scale
     lineLayer.frame = CGRectMake(CGRectGetMinX(bounds) + leftShft, bounds.size.height - lineHeight, bounds.size.width - leftShft, lineHeight)
-    lineLayer.backgroundColor = XuColorGrayThin.CGColor
+    lineLayer.backgroundColor = AlStyle.color.gray_light.CGColor
     layer.addSublayer(lineLayer)
     let testView = UIView(frame: bounds)
     testView.layer.insertSublayer(layer, atIndex: 0)
@@ -76,8 +76,8 @@ func XuSetup(tableView:UITableView) {
     tableView.separatorInset = UIEdgeInsetsZero
     tableView.layer.borderWidth = 10
     tableView.layer.cornerRadius = 15
-    tableView.layer.borderColor = XuColorGrayThin.CGColor
+    tableView.layer.borderColor = AlStyle.color.gray_light.CGColor
     tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-    tableView.backgroundColor = XuColorGrayThin
-    tableView.separatorColor = XuColorGrayThin
+    tableView.backgroundColor = AlStyle.color.gray_light
+    tableView.separatorColor = AlStyle.color.gray_light
 }

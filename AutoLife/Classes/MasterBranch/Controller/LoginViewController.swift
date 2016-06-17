@@ -31,7 +31,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = XuColorWhite
+        self.view.backgroundColor = AlStyle.color.white
         let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.tapView(_:)))
         self.view.addGestureRecognizer(tap)
         switch loginType {
@@ -289,9 +289,9 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         
         changeBtn = UIButton(type: UIButtonType.Custom)
         changeBtn.frame = CGRectMake(CGRectGetWidth(self.view.frame) - 90, 30, 80, 40)
-        changeBtn.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        changeBtn.titleLabel?.font = AlStyle.font.small
         changeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
-        changeBtn.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        changeBtn.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         changeBtn.addTarget(self, action: #selector(LoginViewController.changeWayOfLogin(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(changeBtn)
         
@@ -302,7 +302,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         
         let label = UILabel(frame: CGRectMake(0, originHeight + gap * 2, self.view.frame.width, ctrlHeight))
         label.text = "三十辐共一毂  当其无有车之用"
-        label.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+        label.font = AlStyle.font.normal
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
         
@@ -314,7 +314,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         self.view.addSubview(self.userTextField)
         
         let line1 = UIView(frame: CGRectMake(20, originHeight + ctrlHeight + gap * 4, CGRectGetWidth(self.view.frame) - 40, 1))
-        line1.backgroundColor = XuColorGray
+        line1.backgroundColor = AlStyle.color.gray
         self.view.addSubview(line1)
         
         self.pwTextField = UITextField(frame: CGRectMake(20, originHeight + ctrlHeight + gap * 5 - 10, CGRectGetWidth(self.view.frame) - 40, 40))
@@ -322,13 +322,13 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         self.pwTextField.delegate = self
         
         let line2 = UIView(frame: CGRectMake(20, originHeight + ctrlHeight + gap * 6, CGRectGetWidth(self.view.frame) - 40, 1))
-        line2.backgroundColor = XuColorGray
+        line2.backgroundColor = AlStyle.color.gray
         self.view.addSubview(line2)
         
         let textBtn = UIButton(type: UIButtonType.Custom)
         let attributedText = NSMutableAttributedString(string: "登录即代表您已阅读并同意《账户协议》",attributes: [NSForegroundColorAttributeName:UIColor.lightGrayColor(),
-            NSFontAttributeName:UIFont.systemFontOfSize(XuTextSizeSmall, weight: 1.3)])
-        attributedText.addAttributes([NSForegroundColorAttributeName:XuColorBlueThin], range: NSMakeRange(attributedText.length - 6, 6))
+            NSFontAttributeName:AlStyle.font.small])
+        attributedText.addAttributes([NSForegroundColorAttributeName:AlStyle.color.blue_light], range: NSMakeRange(attributedText.length - 6, 6))
         textBtn.frame = CGRectMake(20, originHeight + ctrlHeight + gap * 6 + 10, CGFloat(attributedText.length) * 12, 15)
         textBtn.setAttributedTitle(attributedText, forState: UIControlState.Normal)
         textBtn.addTarget(self, action: #selector(LoginViewController.showAcProtocol(_:)), forControlEvents: UIControlEvents.TouchUpInside)
@@ -337,13 +337,13 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         loginBtn = UIButton(type: UIButtonType.System)
         let attributedTitle = NSMutableAttributedString(string: "登 录", attributes: [
             NSForegroundColorAttributeName:UIColor.whiteColor(),
-            NSFontAttributeName:UIFont.systemFontOfSize(XutextSizeNav, weight: 2)])
+            NSFontAttributeName:XutextSizeNav])
         loginBtn.setAttributedTitle(attributedTitle, forState: UIControlState.Normal)
         loginBtn.frame = CGRectMake(20, originHeight + ctrlHeight + gap * 9, CGRectGetWidth(self.view.frame) - 40, 40)
         loginBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         //loginBtn.enabled = false
-        //loginBtn.backgroundColor = XuColorGray
-        loginBtn.backgroundColor = XuColorBlue
+        //loginBtn.backgroundColor = AlStyle.color.gray
+        loginBtn.backgroundColor = AlStyle.color.blue
         loginBtn.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         loginBtn.layer.cornerRadius = 6
         self.view.addSubview(loginBtn)
@@ -356,10 +356,10 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
             dynamicCodeBtn.frame = CGRectMake(CGRectGetWidth(self.view.frame) / 2, originHeight + ctrlHeight + gap * 3 - 10, CGRectGetWidth(self.view.frame) / 2 - 20, 40)
             dynamicCodeBtn.setTitle("获取验证码", forState: UIControlState.Normal)
             dynamicCodeBtn.enabled = false
-            dynamicCodeBtn.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeMiddle)
+            dynamicCodeBtn.titleLabel?.font = AlStyle.font.normal
             dynamicCodeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
-            dynamicCodeBtn.setTitleColor(XuColorBlue, forState: UIControlState.Normal)
-            dynamicCodeBtn.setTitleColor(XuColorGray, forState: UIControlState.Disabled)
+            dynamicCodeBtn.setTitleColor(AlStyle.color.blue, forState: UIControlState.Normal)
+            dynamicCodeBtn.setTitleColor(AlStyle.color.gray, forState: UIControlState.Disabled)
             dynamicCodeBtn.addTarget(self, action: #selector(LoginViewController.getDynamicCode(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             self.view.addSubview(dynamicCodeBtn)
             
@@ -378,10 +378,10 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         
         changeBtn = UIButton(type: UIButtonType.Custom)
         changeBtn.frame = CGRectMake(CGRectGetWidth(self.view.frame) - 150, 30, 130, 20)
-        changeBtn.titleLabel?.font = UIFont.systemFontOfSize(XuTextSizeSmall)
+        changeBtn.titleLabel?.font = AlStyle.font.small
         changeBtn.setTitle("使用其他方式登录", forState: UIControlState.Normal)
         changeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
-        changeBtn.setTitleColor(XuColorBlueThin, forState: UIControlState.Normal)
+        changeBtn.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
         changeBtn.addTarget(self, action: #selector(LoginViewController.changeWayOfLogin(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(changeBtn)
         
@@ -412,11 +412,11 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         loginBtn = UIButton(type: UIButtonType.System)
         let attributedTitle = NSMutableAttributedString(string: "登 录", attributes: [
             NSForegroundColorAttributeName:UIColor.whiteColor(),
-            NSFontAttributeName:UIFont.systemFontOfSize(XutextSizeNav, weight: 2)])
+            NSFontAttributeName:XutextSizeNav])
         loginBtn.setAttributedTitle(attributedTitle, forState: UIControlState.Normal)
         loginBtn.frame = CGRectMake(20, originHeight + ctrlHeight + gap * 10, CGRectGetWidth(self.view.frame) - 40, 40)
         loginBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        loginBtn.backgroundColor = XuColorBlue
+        loginBtn.backgroundColor = AlStyle.color.blue
         loginBtn.addTarget(self, action: #selector(LoginViewController.loginAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         loginBtn.layer.cornerRadius = 6
         self.view.addSubview(loginBtn)

@@ -30,9 +30,9 @@ class ColTableViewCell: UITableViewCell ,UICollectionViewDataSource,UICollection
         self.selectionStyle = UITableViewCellSelectionStyle.None
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-        layout.itemSize = CGSizeMake(XuWidth - 20, CGFloat(datas[0].count) * 60)
+        layout.itemSize = CGSizeMake(AlStyle.size.width - 20, CGFloat(datas[0].count) * 60)
         layout.minimumLineSpacing = 0
-        colView = UICollectionView(frame: CGRectMake(0, 0, XuWidth - 20, CGFloat(datas[0].count) * 60), collectionViewLayout: layout)
+        colView = UICollectionView(frame: CGRectMake(0, 0, AlStyle.size.width - 20, CGFloat(datas[0].count) * 60), collectionViewLayout: layout)
         colView.registerClass(TbCollectionViewCell.self, forCellWithReuseIdentifier: "col")
         self.contentView.addSubview(colView)
         colView.delegate = self
@@ -45,7 +45,7 @@ class ColTableViewCell: UITableViewCell ,UICollectionViewDataSource,UICollection
     }
     
     func colScrollToItem(index:Int) {
-        self.colView.setContentOffset(CGPointMake((XuWidth - 20) * CGFloat(index),0), animated: true)
+        self.colView.setContentOffset(CGPointMake((AlStyle.size.width - 20) * CGFloat(index),0), animated: true)
     }
     
     //MARK:--UICollectionViewDelegate
@@ -69,7 +69,7 @@ class ColTableViewCell: UITableViewCell ,UICollectionViewDataSource,UICollection
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        self.delegate?.colItemDidChanged?(Int(ceil(scrollView.contentOffset.x / (XuWidth - 20))))
+        self.delegate?.colItemDidChanged?(Int(ceil(scrollView.contentOffset.x / (AlStyle.size.width - 20))))
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -92,10 +92,10 @@ class TbCollectionViewCell: UICollectionViewCell ,UITableViewDataSource,UITableV
     var cellDidSelectedIn : ((Int) -> Void)?
     
     override init(frame: CGRect) {
-        super.init(frame: CGRectMake(0, 0, XuWidth, frame.height))
+        super.init(frame: CGRectMake(0, 0, AlStyle.size.width, frame.height))
         self.backgroundColor = UIColor.clearColor()
         self.clipsToBounds = true
-        tableView = UITableView(frame: CGRectMake(0, 0, XuWidth, frame.height))
+        tableView = UITableView(frame: CGRectMake(0, 0, AlStyle.size.width, frame.height))
         tableView.backgroundColor = UIColor.clearColor()
         tableView.dataSource = self
         tableView.delegate = self

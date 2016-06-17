@@ -1,4 +1,4 @@
-//
+ //
 //  NewAutoViewController.swift
 //  AutoLife
 //
@@ -36,9 +36,9 @@ class NewAutoViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.skipThisTap(_:)))
         }
         provinceBtn.buttonWithLeft("京", right: UIImage(named: "down"))
-        provinceBtn.layer.borderColor = XuColorBlueThin.CGColor
+        provinceBtn.layer.borderColor = AlStyle.color.blue_light.CGColor
         provinceBtn.layer.borderWidth = 1
-        provinceBtn.layer.cornerRadius = XuCornerRadius
+        provinceBtn.layer.cornerRadius = AlStyle.cornerRadius
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.goback(_:)))
         
@@ -46,15 +46,15 @@ class NewAutoViewController: UIViewController {
         selectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NewAutoViewController.chooseBrandTap(_:))))
         
         self.navigationItem.rightBarButtonItem?.setTitleTextAttributes([
-            NSForegroundColorAttributeName:XuColorBlue,
-            NSFontAttributeName:UIFont.systemFontOfSize(XuTextSizeSmall, weight: 2)],
+            NSForegroundColorAttributeName:AlStyle.color.blue,
+            NSFontAttributeName:AlStyle.font.small],
             forState: UIControlState.Normal)
         
         self.navigationItem.title = "添加车辆"
         
         boundsView.layer.borderWidth = 1.0
         boundsView.layer.cornerRadius = 6.0
-        boundsView.layer.borderColor = XuColorGrayThin.CGColor
+        boundsView.layer.borderColor = AlStyle.color.gray_light.CGColor
         
         determineButton.layer.cornerRadius = 6.0
         
@@ -120,7 +120,7 @@ class NewAutoViewController: UIViewController {
         guard provinceView == nil else {return}
         self.plateTextField.resignFirstResponder()
         self.engineNumTF.resignFirstResponder()
-        provinceView = ProvincesView(oy: XuHeight)
+        provinceView = ProvincesView(oy: AlStyle.size.height)
         self.view.addSubview(provinceView)
         provinceView.selectItem = { (itemString) in
             UIView.animateWithDuration(0.3, animations: { () -> Void in
