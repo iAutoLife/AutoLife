@@ -42,9 +42,11 @@ class TBViewController: UIViewController ,UITableViewDelegate,UITableViewDataSou
         vview.addSubview(label)
         let btn = UIButton(frame: CGRectMake(AlStyle.size.width * 0.618,0,AlStyle.size.width * 0.382,50))
         btn.backgroundColor = UIColor(red: 241/255, green: 83/255, blue: 83/255, alpha: 1)
-        btn.setTitle("确认", forState: UIControlState.Normal)
+        btn.setTitle("立即支付", forState: UIControlState.Normal)
         vview.addSubview(btn)
         btn.handleControlEvent(.TouchUpInside) { (_) -> Void in
+            self.navigationController?.pushViewController(CarportPayViewController(), animated: true)
+            /*
             let hub = MBProgressHUD(view: self.view)
             hub.labelText = "正在提交";
             hub.show(true)
@@ -55,6 +57,7 @@ class TBViewController: UIViewController ,UITableViewDelegate,UITableViewDataSou
 //                    self.navigationController?.popViewControllerAnimated(true)
                 })
             })
+ */
         }
     }
     
@@ -96,16 +99,4 @@ class TBViewController: UIViewController ,UITableViewDelegate,UITableViewDataSou
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

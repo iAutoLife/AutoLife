@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7C15CB1D1A82F600E2FA93 /* CarportPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */; };
 		8F0194731CC5D0A00035FAD5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194721CC5D0A00035FAD5 /* Notifications.swift */; };
 		8F0194751CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */; };
 		8F0194771CC5D0E00035FAD5 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194761CC5D0E00035FAD5 /* Timeline.swift */; };
@@ -199,6 +200,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportPayViewController.swift; path = Classes/ParkBranch/Controller/CarportPayViewController.swift; sourceTree = "<group>"; };
 		8F0194721CC5D0A00035FAD5 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		8F0194761CC5D0E00035FAD5 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
@@ -1070,6 +1072,7 @@
 				C57D6BF11C48AAD800C92E33 /* ParkStateViewController.swift */,
 				C57D6BFE1C48AB6F00C92E33 /* CarportShareViewController.swift */,
 				C57D6BFF1C48AB6F00C92E33 /* CarportViewController.swift */,
+				4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */,
 				8FD146941C8E70F5009BBB47 /* TBViewController.swift */,
 			);
 			name = Controller;
@@ -1354,6 +1357,7 @@
 				C57D6C091C48ACF600C92E33 /* VArrayTableViewCell.swift in Sources */,
 				8FBCC84A1CA02797007E868F /* ColTableViewCell.swift in Sources */,
 				C57D6B8F1C47F13A00C92E33 /* XuKeyChain.swift in Sources */,
+				4D7C15CB1D1A82F600E2FA93 /* CarportPayViewController.swift in Sources */,
 				C57D6C0F1C48AE1E00C92E33 /* CarOwnership.swift in Sources */,
 				8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */,
 				C57D6BD31C47FCF300C92E33 /* FootMenuView.swift in Sources */,

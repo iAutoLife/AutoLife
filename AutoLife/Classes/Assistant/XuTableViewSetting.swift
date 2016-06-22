@@ -75,7 +75,7 @@ func XuSetup(tableView:UITableView) {
     tableView.delaysContentTouches = false
     tableView.separatorInset = UIEdgeInsetsZero
     tableView.layer.borderWidth = 10
-    tableView.layer.cornerRadius = 15
+    tableView.layer.cornerRadius = 5
     tableView.layer.borderColor = AlStyle.color.gray_light.CGColor
     tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     tableView.backgroundColor = AlStyle.color.gray_light
