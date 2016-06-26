@@ -94,7 +94,7 @@ class NewAutoViewController: UIViewController {
         let xhud = MBProgressHUD()
         self.view.addSubview(xhud)
         xhud.show(true)
-        XuAlamofire.getJSON(uHeader + "auto/brand.first", success: { (xjson) -> Void in
+        XuAlamofire.getJSON(AlStyle.uHeader + "auto/brand.first", success: { (xjson) -> Void in
             let brandVC = BrandViewController()
             self.navigationController?.pushViewController(brandVC, animated: true)
             brandVC.letters = xjson?.object.firstObject as? [String]
@@ -146,7 +146,7 @@ class NewAutoViewController: UIViewController {
         hud.labelText = "正在提交";hud.show(true)
         print(self.engineNumTF.text)
         let carLicense = (provinceBtn.titleLabel?.text)! + plateTextField!.text!
-        XuAlamofire.postParameters(uHeader + "car/add_info", parameters: ["phone":XuKeyChain.get(XuCurrentUser)!,
+        XuAlamofire.postParameters(AlStyle.uHeader + "car/add_info", parameters: ["phone":XuKeyChain.get(XuCurrentUser)!,
             "carLicense":carLicense,"isOwner":isOwner,"carBrand":self.brand.0,"engineNum":"\(engineNumTF.text!)"], successWithString: { (result) -> Void in
                 if result == "true" {
                     hud.mode = MBProgressHUDMode.CustomView
@@ -155,6 +155,7 @@ class NewAutoViewController: UIViewController {
                     XuGCD.after(1000, closure: { () -> Void in
                         //添加成功后跳转
                     })
+                    self.skipThisTap(nil)
                 }else if result == "-1" {
                     hud.labelText = "您已添加过此车辆"
                 }else {

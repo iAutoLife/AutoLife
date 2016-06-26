@@ -46,7 +46,7 @@ class CarportPayViewController: UIViewController ,UITableViewDelegate,UITableVie
         }
         if indexPath.section == 0 {
             let text = NSMutableAttributedString(string: "本次支付金额：0.01元")
-            text.addAttributes([NSForegroundColorAttributeName:AlStyle.color.blue], range: NSMakeRange(text.length - 5, 3))
+            text.addAttributes([NSForegroundColorAttributeName:AlStyle.color.blue], range: NSMakeRange(text.length - 5, 4))
             cell?.textLabel?.attributedText = text
         }else {
             cell?.imageView?.image = UIImage(named: images[indexPath.row])
@@ -106,15 +106,18 @@ class CarportPayViewController: UIViewController ,UITableViewDelegate,UITableVie
             button.frame = CGRectMake(40, 30, AlStyle.size.width - 80, 40)
             view.addSubview(button)
             button.handleControlEvent(.TouchUpInside, withBlock: { (_) in
-                print("pay now!")
                 switch self.selectedIndexPath.row {
                 case 0:
                     XuAlipay.alipayWithLocalKey({ () -> Void in
                         print("finished")
                     })
-                    
                 case 1:
-                    break
+                    let hub = MBProgressHUD(view: self.view)
+                    self.view.addSubview(hub)
+                    hub.show(true)
+                    hub.labelText = "正在支付..."
+                    hub.hide(true, afterDelay: 3)
+                    WeiChatPay.jumpToBizPay()
                 case 2:
                     self.presentViewController(Assistant.alertHint("我的钱包", message: "余额不足"), animated: true, completion: nil)
                 default:break

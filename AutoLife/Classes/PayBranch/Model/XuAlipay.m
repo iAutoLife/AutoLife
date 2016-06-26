@@ -102,6 +102,7 @@
         NSString *oneStr = [sourceStr substringWithRange:NSMakeRange(index, 1)];
         [resultStr appendString:oneStr];
     }
+    NSLog(@"generateTradeNO:%@",resultStr);
     return resultStr;
 }
 

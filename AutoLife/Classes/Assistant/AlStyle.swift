@@ -10,6 +10,8 @@ import UIKit
 
 internal struct AlStyle {
     
+    //10.104.5.172:8080
+    internal static let uHeader = "http://139.129.110.224/CarManageSystem/"       //139.129.110.224
     internal static let cornerRadius:CGFloat = 5
     internal static let size = UIScreen.mainScreen().bounds.size
     internal static var scale = UIScreen.mainScreen().scale

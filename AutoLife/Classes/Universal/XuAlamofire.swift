@@ -100,10 +100,10 @@ extension UIImageView {
             return
         }
         dispatch_async(dispatch_get_global_queue(0, 0)) { () -> Void in
-            Alamofire.request(.GET,uHeader +  urlString!).responseData { (xRe) -> Void in
+            Alamofire.request(.GET,AlStyle.uHeader + "../" +  urlString!).responseData { (xRe) -> Void in
                 if xRe.result.value != nil {
-                    print(xRe.result.value?.length)
-                    self.image = UIImage(data: xRe.result.value!)!.resize(CGSizeMake(25,25))
+                    let image = UIImage(data: xRe.result.value!)
+                    self.image = image?.resize(CGSizeMake(25,25))
                     return
                 }
             }

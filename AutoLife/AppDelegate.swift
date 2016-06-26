@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
+        WXApi.registerApp("wxdd6af3fdcbde0c2a", withDescription: "iAuto-Life")
         MAMapServices.sharedServices().apiKey = XuAPIKey
         AMapSearchServices.sharedServices().apiKey = XuAPIKey
         
@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = UINavigationController(rootViewController: MasterViewController())
         }
         return true
+    }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        return WXApi.handleOpenURL(url, delegate: WXApiManager.sharedManager)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -49,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        print(url.host)
         if url.host == "safepay" {
             AlipaySDK.defaultService().processOrderWithPaymentResult(url, standbyCallback: { (resultDic) -> Void in
                 print("AppDelegate result = \(resultDic)")

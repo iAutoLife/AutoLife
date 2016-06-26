@@ -14,8 +14,6 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     private var carportArray:NSMutableArray = []
     
     override func loadView() {
-        print("loadView")
-        print("loadView: \(CFGetRetainCount(self))")
         self.view = UIView()
         
     }
@@ -184,7 +182,6 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        print("willDisplayCell: \(CFGetRetainCount(self))")
         XutableView(tableView, willDisplayCell: cell, forRowIndexPath: indexPath)
     }
     

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D7C15CB1D1A82F600E2FA93 /* CarportPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */; };
+		4D7C15D01D1AA59800E2FA93 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C15CD1D1AA59800E2FA93 /* libWeChatSDK.a */; };
+		4D7C15D51D1AA70400E2FA93 /* WeiChatPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C15D41D1AA70400E2FA93 /* WeiChatPay.swift */; };
+		4D7C15D71D1AB4B000E2FA93 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C15D61D1AB4B000E2FA93 /* libsqlite3.0.tbd */; };
+		4D81CE241D1EB1E200777107 /* WXApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE231D1EB1E200777107 /* WXApiManager.swift */; };
 		8F0194731CC5D0A00035FAD5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194721CC5D0A00035FAD5 /* Notifications.swift */; };
 		8F0194751CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */; };
 		8F0194771CC5D0E00035FAD5 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194761CC5D0E00035FAD5 /* Timeline.swift */; };
@@ -66,7 +70,6 @@
 		8FF92BF11C4C7F1700D5C3F8 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92BF01C4C7F1700D5C3F8 /* Alamofire.swift */; };
 		8FF92BF31C4C7FB800D5C3F8 /* XuAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92BF21C4C7FB800D5C3F8 /* XuAlamofire.swift */; };
 		8FF92BFF1C4C86BD00D5C3F8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */; };
-		8FF92C011C4C923000D5C3F8 /* StaticDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C001C4C923000D5C3F8 /* StaticDefine.swift */; };
 		8FF92C051C4CCD2900D5C3F8 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */; };
 		8FF92C071C4FA62200D5C3F8 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */; };
 		8FF92C0A1C4FAFC100D5C3F8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */; };
@@ -201,6 +204,12 @@
 
 /* Begin PBXFileReference section */
 		4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarportPayViewController.swift; path = Classes/ParkBranch/Controller/CarportPayViewController.swift; sourceTree = "<group>"; };
+		4D7C15CD1D1AA59800E2FA93 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		4D7C15CE1D1AA59800E2FA93 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		4D7C15CF1D1AA59800E2FA93 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		4D7C15D41D1AA70400E2FA93 /* WeiChatPay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeiChatPay.swift; path = Classes/PayBranch/Model/WeiChatPay.swift; sourceTree = "<group>"; };
+		4D7C15D61D1AB4B000E2FA93 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4D81CE231D1EB1E200777107 /* WXApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXApiManager.swift; path = Classes/PayBranch/Model/WXApiManager.swift; sourceTree = "<group>"; };
 		8F0194721CC5D0A00035FAD5 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		8F0194761CC5D0E00035FAD5 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
@@ -347,7 +356,6 @@
 		8FF92BF01C4C7F1700D5C3F8 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		8FF92BF21C4C7FB800D5C3F8 /* XuAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuAlamofire.swift; path = Classes/Universal/XuAlamofire.swift; sourceTree = "<group>"; };
 		8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Classes/Universal/SwiftyJSON.swift; sourceTree = "<group>"; };
-		8FF92C001C4C923000D5C3F8 /* StaticDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StaticDefine.swift; path = Classes/Universal/StaticDefine.swift; sourceTree = "<group>"; };
 		8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Assistant.swift; path = Classes/Assistant/ExtentClass/Assistant.swift; sourceTree = "<group>"; };
 		8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = BrandViewController.swift; path = Classes/CarBranch/Controller/BrandViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FF92C081C4FAFC100D5C3F8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Classes/Assistant/MBProgressHUD.h; sourceTree = "<group>"; };
@@ -457,6 +465,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7C15D71D1AB4B000E2FA93 /* libsqlite3.0.tbd in Frameworks */,
 				8FDA66511C9943B0006F144C /* CoreText.framework in Frameworks */,
 				8FDA664F1C99439F006F144C /* CoreMotion.framework in Frameworks */,
 				8FDA664D1C994396006F144C /* CFNetwork.framework in Frameworks */,
@@ -471,6 +480,7 @@
 				C57D6B781C47ED2800C92E33 /* CoreGraphics.framework in Frameworks */,
 				C57D6B761C47ED2200C92E33 /* CoreTelephony.framework in Frameworks */,
 				C57D6B741C47ED1B00C92E33 /* CoreLocation.framework in Frameworks */,
+				4D7C15D01D1AA59800E2FA93 /* libWeChatSDK.a in Frameworks */,
 				C57D6B721C47ED1300C92E33 /* OpenGLES.framework in Frameworks */,
 				C57D6B701C47ED0900C92E33 /* SystemConfiguration.framework in Frameworks */,
 				C57D6B6E1C47ECF800C92E33 /* QuartzCore.framework in Frameworks */,
@@ -497,6 +507,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D7C15CC1D1AA57100E2FA93 /* Weixin */ = {
+			isa = PBXGroup;
+			children = (
+				4D7C15CD1D1AA59800E2FA93 /* libWeChatSDK.a */,
+				4D7C15CE1D1AA59800E2FA93 /* WXApi.h */,
+				4D7C15CF1D1AA59800E2FA93 /* WXApiObject.h */,
+			);
+			name = Weixin;
+			sourceTree = "<group>";
+		};
 		8FBCC8361C9F823E007E868F /* Insurance */ = {
 			isa = PBXGroup;
 			children = (
@@ -796,10 +816,12 @@
 		C57D6B7F1C47ED5900C92E33 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				4D7C15CC1D1AA57100E2FA93 /* Weixin */,
 				8FDA66521C9943CE006F144C /* AliFramework */,
 				C57D6B7D1C47ED4900C92E33 /* libc++.tbd */,
 				C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */,
 				C57D6B791C47ED3100C92E33 /* libz.tbd */,
+				4D7C15D61D1AB4B000E2FA93 /* libsqlite3.0.tbd */,
 				C57D6B771C47ED2800C92E33 /* CoreGraphics.framework */,
 				C57D6B751C47ED2200C92E33 /* CoreTelephony.framework */,
 				C57D6B731C47ED1B00C92E33 /* CoreLocation.framework */,
@@ -1018,6 +1040,8 @@
 				8F0297981C994DD400A49D06 /* Order.m */,
 				8F02979A1C994E3B00A49D06 /* XuAlipay.h */,
 				8F02979B1C994E3B00A49D06 /* XuAlipay.m */,
+				4D7C15D41D1AA70400E2FA93 /* WeiChatPay.swift */,
+				4D81CE231D1EB1E200777107 /* WXApiManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1083,7 +1107,6 @@
 			children = (
 				8FF92BF21C4C7FB800D5C3F8 /* XuAlamofire.swift */,
 				8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */,
-				8FF92C001C4C923000D5C3F8 /* StaticDefine.swift */,
 				8FF905DF1C59EF2900FF21B4 /* XuGCD.swift */,
 				8FF92BF51C4C81F000D5C3F8 /* FrameworkFiles */,
 			);
@@ -1366,6 +1389,7 @@
 				8F6A7B1A1C5787A00071879C /* NumberView.swift in Sources */,
 				C57D6C0D1C48ADE800C92E33 /* CarTableViewCell.swift in Sources */,
 				8FF92BF31C4C7FB800D5C3F8 /* XuAlamofire.swift in Sources */,
+				4D7C15D51D1AA70400E2FA93 /* WeiChatPay.swift in Sources */,
 				C57D6BF21C48AAD800C92E33 /* ParkingRecordViewController.swift in Sources */,
 				C57D6BFD1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift in Sources */,
 				C57D6BE61C48A9FD00C92E33 /* ViolationDetailViewController.swift in Sources */,
@@ -1381,7 +1405,6 @@
 				C57D6BD81C47FCF300C92E33 /* XuPointAnnotation.swift in Sources */,
 				C57D6BFC1C48AB4D00C92E33 /* CarViewController.swift in Sources */,
 				8F0296B51C994C0E00A49D06 /* RSADataVerifier.m in Sources */,
-				8FF92C011C4C923000D5C3F8 /* StaticDefine.swift in Sources */,
 				8F0296B01C994C0E00A49D06 /* DataVerifier.m in Sources */,
 				C57D6BE11C48A94A00C92E33 /* SettingViewController.swift in Sources */,
 				8FEB94561C510A89009D24CB /* XuIndexView.swift in Sources */,
@@ -1395,6 +1418,7 @@
 				C57D6BAC1C47F6D100C92E33 /* MasterViewController.swift in Sources */,
 				C57D6BB21C47F9D500C92E33 /* UIButton+Block.m in Sources */,
 				C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */,
+				4D81CE241D1EB1E200777107 /* WXApiManager.swift in Sources */,
 				C57D6BF31C48AAD800C92E33 /* ParkStateViewController.swift in Sources */,
 				8FA287EB1CCA5B0900AB9CC5 /* AlStyle.swift in Sources */,
 				8F0297991C994DD400A49D06 /* Order.m in Sources */,
@@ -1654,6 +1678,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AutoLife/Framework",
@@ -1664,6 +1689,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AutoLife/Framework",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
@@ -1684,6 +1710,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AutoLife/Framework",
@@ -1694,6 +1721,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AutoLife/Framework",
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;

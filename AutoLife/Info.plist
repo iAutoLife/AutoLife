@@ -26,6 +26,16 @@
 				<string>iAutoLifeAlipay</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxdd6af3fdcbde0c2a</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
@@ -33,6 +43,7 @@
 	<dict/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>weixin</string>
 		<string>iosamap</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>

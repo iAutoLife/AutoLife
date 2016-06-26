@@ -7,7 +7,8 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 
-
+#import "WXApi.h"
+#import "WXApiObject.h"
 #import "MBProgressHUD.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "XuAlipay.h"

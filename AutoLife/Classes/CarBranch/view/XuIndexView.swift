@@ -15,7 +15,8 @@ class XuIndexView: UIView ,UITableViewDataSource,UITableViewDelegate{
     var selectIndex:((Int)->Void)?
     
     init(indexs:[String]) {
-        super.init(frame: CGRectMake(0, 0, 20, CGFloat(indexs.count) * 22))
+        let cHeight = 22 * AlStyle.size.height / 667
+        super.init(frame: CGRectMake(0, 0, 20, CGFloat(indexs.count) * cHeight))
         self.indexs = indexs
         tableView = UITableView(frame: self.frame)
         self.addSubview(tableView)
@@ -24,7 +25,7 @@ class XuIndexView: UIView ,UITableViewDataSource,UITableViewDelegate{
         tableView.layer.borderWidth = 1
         tableView.dataSource = self;tableView.delegate = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableView.rowHeight = 22
+        tableView.rowHeight = cHeight
         tableView.scrollEnabled = false
     }
     

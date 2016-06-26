@@ -134,7 +134,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
         self.view.addSubview(xhud);xhud.show(true)
         switch loginType {
         case .DynamicCode:
-            let url = uHeader + "applogin/message.check"
+            let url = AlStyle.uHeader + "applogin/message.check"
             XuAlamofire.postParameters(url, parameters: ["p":userTextField.text!,"m":pwTextField.text!],
                 successWithString: { (xrString) -> Void in
                     print(xrString)
@@ -161,7 +161,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
                     print("login failed!   error:\(xError)")
             })
         default:
-            let url = uHeader + "applogin/password"
+            let url = AlStyle.uHeader + "applogin/password"
             XuAlamofire.postParameters(url, parameters: ["p":userTextField.text!,"pwd":pwTextField.text!],
                 successWithString: { (xrString) -> Void in
                     print(xrString)
@@ -201,7 +201,7 @@ class LoginViewController: UIViewController ,UITextFieldDelegate{
     
     func getDynamicCode(sender:UIButton) {
         resignFirstResponders()
-        let url = uHeader + "applogin/message.send?p=\(userTextField.text!)"
+        let url = AlStyle.uHeader + "applogin/message.send?p=\(userTextField.text!)"
         XuAlamofire.getString(url, success: { (xString) -> Void in
             print(xString)
             self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(LoginViewController.OnTimer(_:)), userInfo: nil, repeats: true)

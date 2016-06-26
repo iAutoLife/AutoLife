@@ -112,7 +112,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let cell = tableView.cellForRowAtIndexPath(indexPath) as? Brandcell {
             self.superVC?.brand = ("\(cell.brand.0)","\(cell.brand.1)")
-            XuAlamofire.getJSON(uHeader + "auto/brand.second?id=\(cell.brand.0)", success: { (xjson) -> Void in
+            XuAlamofire.getJSON(AlStyle.uHeader + "auto/brand.second?id=\(cell.brand.0)", success: { (xjson) -> Void in
                 self.pickerBrandVC.navigationItem.title = cell.brand.1
                 self.showSubBrandView(xjson)
                 }, failed: { (error) -> Void in
@@ -169,7 +169,7 @@ class BrandViewController: UIViewController  ,UITableViewDelegate,UITableViewDat
     //MARK:--BrandPickerDelegate
     func brandPickerDidFinish(id: String, brand: String, hasNext: Bool) {
         if hasNext {
-            XuAlamofire.getJSON(uHeader + "auto/brand.third?id=\(id)", success: { (xjson) -> Void in
+            XuAlamofire.getJSON(AlStyle.uHeader + "auto/brand.third?id=\(id)", success: { (xjson) -> Void in
                 self.hideSubBrandView({ (isFinished) -> Void in
                     guard isFinished else {return}
                     self.showSubBrandView(xjson)

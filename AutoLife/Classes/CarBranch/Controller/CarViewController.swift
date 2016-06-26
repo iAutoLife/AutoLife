@@ -84,7 +84,7 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView(frame: tableView.rectForFooterInSection(section))
         let button = UIButton(type: UIButtonType.System)
-        button.frame = CGRectMake(AlStyle.size.width - 120, 15, 110, 20)
+        button.frame = CGRectMake(AlStyle.size.width - 130, 15, 120, 20)
         button.setTitle("添加车辆", forState: UIControlState.Normal)
         button.titleLabel?.font = AlStyle.font.normal
         button.setTitleColor(AlStyle.color.blue_light, forState: UIControlState.Normal)
@@ -139,8 +139,10 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     
     //MARK: --ControllerAction
     func showMessageView(sender:UIBarButtonItem) {
-        let messageVC = MessageViewController()
-        self.navigationController?.pushViewController(messageVC, animated: true)
+        WeiChatPay.authorizationToLogin(self)
+        
+//        let messageVC = MessageViewController()
+//        self.navigationController?.pushViewController(messageVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
