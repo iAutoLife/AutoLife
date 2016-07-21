@@ -12,6 +12,19 @@
 		4D7C15D51D1AA70400E2FA93 /* WeiChatPay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C15D41D1AA70400E2FA93 /* WeiChatPay.swift */; };
 		4D7C15D71D1AB4B000E2FA93 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7C15D61D1AB4B000E2FA93 /* libsqlite3.0.tbd */; };
 		4D81CE241D1EB1E200777107 /* WXApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE231D1EB1E200777107 /* WXApiManager.swift */; };
+		4D81CE2E1D2001D300777107 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE2B1D2001D300777107 /* HomeViewController.swift */; };
+		4D81CE2F1D2001D300777107 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE2C1D2001D300777107 /* MainViewController.swift */; };
+		4D81CE301D2001D300777107 /* TouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE2D1D2001D300777107 /* TouchViewController.swift */; };
+		4D81CE341D20027400777107 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE321D20027400777107 /* CollectionView.swift */; };
+		4D81CE351D20027400777107 /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE331D20027400777107 /* FeatureView.swift */; };
+		4D81CE371D2002A200777107 /* AlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE361D2002A200777107 /* AlButton.swift */; };
+		4D81CE391D2002FB00777107 /* AlTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE381D2002FB00777107 /* AlTouch.swift */; };
+		4D81CE3B1D2009CE00777107 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE3A1D2009CE00777107 /* LoginViewController.swift */; };
+		4D81CE3D1D200A3000777107 /* AlTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81CE3C1D200A3000777107 /* AlTextField.swift */; };
+		4D9FCA901D32553800AD5952 /* WayOfPayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9FCA8F1D32553800AD5952 /* WayOfPayTableViewCell.swift */; };
+		4DB45B0E1D2E4772000D8F15 /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB45B0D1D2E4772000D8F15 /* ParkingViewController.swift */; };
+		4DB45B101D3135CD000D8F15 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB45B0F1D3135CD000D8F15 /* PaymentViewController.swift */; };
+		4DC467471D34BB56000FA5CF /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC467461D34BB56000FA5CF /* OrderViewController.swift */; };
 		8F0194731CC5D0A00035FAD5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194721CC5D0A00035FAD5 /* Notifications.swift */; };
 		8F0194751CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */; };
 		8F0194771CC5D0E00035FAD5 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0194761CC5D0E00035FAD5 /* Timeline.swift */; };
@@ -73,6 +86,7 @@
 		8FF92C051C4CCD2900D5C3F8 /* Assistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */; };
 		8FF92C071C4FA62200D5C3F8 /* BrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */; };
 		8FF92C0A1C4FAFC100D5C3F8 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */; };
+		BF08F492DB15B47B18E71C31 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BD62801A8F2DA081E0EBF2 /* Pods.framework */; };
 		C57D6B361C47EB4E00C92E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */; };
 		C57D6B3B1C47EB4E00C92E33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B391C47EB4E00C92E33 /* Main.storyboard */; };
 		C57D6B3D1C47EB4E00C92E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57D6B3C1C47EB4E00C92E33 /* Assets.xcassets */; };
@@ -93,8 +107,6 @@
 		C57D6B7A1C47ED3100C92E33 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B791C47ED3100C92E33 /* libz.tbd */; };
 		C57D6B7C1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */; };
 		C57D6B7E1C47ED4900C92E33 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C57D6B7D1C47ED4900C92E33 /* libc++.tbd */; };
-		C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B871C47EF1900C92E33 /* LoginViewController.swift */; };
-		C57D6B8B1C47F08700C92E33 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */; };
 		C57D6B8F1C47F13A00C92E33 /* XuKeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */; };
 		C57D6B901C47F13A00C92E33 /* XuRegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */; };
 		C57D6B911C47F13A00C92E33 /* XuUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */; };
@@ -210,6 +222,19 @@
 		4D7C15D41D1AA70400E2FA93 /* WeiChatPay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeiChatPay.swift; path = Classes/PayBranch/Model/WeiChatPay.swift; sourceTree = "<group>"; };
 		4D7C15D61D1AB4B000E2FA93 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4D81CE231D1EB1E200777107 /* WXApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WXApiManager.swift; path = Classes/PayBranch/Model/WXApiManager.swift; sourceTree = "<group>"; };
+		4D81CE2B1D2001D300777107 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Classes/MasterBranch/Controller/HomeViewController.swift; sourceTree = "<group>"; };
+		4D81CE2C1D2001D300777107 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/MasterBranch/Controller/MainViewController.swift; sourceTree = "<group>"; };
+		4D81CE2D1D2001D300777107 /* TouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchViewController.swift; path = Classes/MasterBranch/Controller/TouchViewController.swift; sourceTree = "<group>"; };
+		4D81CE321D20027400777107 /* CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionView.swift; path = Classes/MasterBranch/View/CollectionView.swift; sourceTree = "<group>"; };
+		4D81CE331D20027400777107 /* FeatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeatureView.swift; path = Classes/MasterBranch/View/FeatureView.swift; sourceTree = "<group>"; };
+		4D81CE361D2002A200777107 /* AlButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlButton.swift; path = Classes/Universal/AlButton.swift; sourceTree = "<group>"; };
+		4D81CE381D2002FB00777107 /* AlTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlTouch.swift; path = Classes/Universal/AlTouch.swift; sourceTree = "<group>"; };
+		4D81CE3A1D2009CE00777107 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Classes/MasterBranch/Controller/LoginViewController.swift; sourceTree = "<group>"; };
+		4D81CE3C1D200A3000777107 /* AlTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlTextField.swift; path = Classes/Universal/AlTextField.swift; sourceTree = "<group>"; };
+		4D9FCA8F1D32553800AD5952 /* WayOfPayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WayOfPayTableViewCell.swift; path = Classes/PayBranch/Cell/WayOfPayTableViewCell.swift; sourceTree = "<group>"; };
+		4DB45B0D1D2E4772000D8F15 /* ParkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkingViewController.swift; path = Classes/ParkBranch/Controller/ParkingViewController.swift; sourceTree = "<group>"; };
+		4DB45B0F1D3135CD000D8F15 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = Classes/PayBranch/Controller/PaymentViewController.swift; sourceTree = "<group>"; };
+		4DC467461D34BB56000FA5CF /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderViewController.swift; path = Classes/PayBranch/Controller/OrderViewController.swift; sourceTree = "<group>"; };
 		8F0194721CC5D0A00035FAD5 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8F0194741CC5D0AD0035FAD5 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		8F0194761CC5D0E00035FAD5 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
@@ -316,6 +341,7 @@
 		8F6A7B191C5787A00071879C /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberView.swift; path = Classes/CarBranch/view/NumberView.swift; sourceTree = "<group>"; };
 		8F78F0731CA8D5C800E753F4 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AlipaySDK.bundle; path = AutoLife/Framework/AlipaySDK.bundle; sourceTree = "<group>"; };
 		8F8069C11C51D1F9007C9DA0 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Classes/CarBranch/Controller/PickerViewController.swift; sourceTree = "<group>"; };
+		8F8944863A0D4668AD500467 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = AlStyle.swift; path = Classes/Assistant/AlStyle.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FBCC83A1C9F82DF007E868F /* InsuranceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = InsuranceViewController.swift; path = Classes/Insurance/Controller/InsuranceViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FBCC83D1C9F9037007E868F /* SegHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SegHeadView.swift; path = Classes/Insurance/View/SegHeadView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -360,6 +386,7 @@
 		8FF92C061C4FA62200D5C3F8 /* BrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = BrandViewController.swift; path = Classes/CarBranch/Controller/BrandViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8FF92C081C4FAFC100D5C3F8 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Classes/Assistant/MBProgressHUD.h; sourceTree = "<group>"; };
 		8FF92C091C4FAFC100D5C3F8 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Classes/Assistant/MBProgressHUD.m; sourceTree = "<group>"; };
+		99FEA26D59CA42D5E82E62D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C57D6B321C47EB4E00C92E33 /* i車生活.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "i車生活.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D6B351C47EB4E00C92E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C57D6B3A1C47EB4E00C92E33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -386,8 +413,6 @@
 		C57D6B791C47ED3100C92E33 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C57D6B7B1C47ED3A00C92E33 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		C57D6B7D1C47ED4900C92E33 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		C57D6B871C47EF1900C92E33 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = LoginViewController.swift; path = Classes/MasterBranch/Controller/LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = TypeDefine.swift; path = Classes/Assistant/TypeDefine.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuKeyChain.swift; path = Classes/Assistant/XuKeyChain.swift; sourceTree = "<group>"; };
 		C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuRegularExpression.swift; path = Classes/Assistant/XuRegularExpression.swift; sourceTree = "<group>"; };
 		C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuUserDefault.swift; path = Classes/Assistant/XuUserDefault.swift; sourceTree = "<group>"; };
@@ -443,6 +468,7 @@
 		C57D6C181C48AFB700C92E33 /* Carport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Carport.swift; path = Classes/ParkBranch/Model/Carport.swift; sourceTree = "<group>"; };
 		C57D6C1A1C48B33300C92E33 /* XuPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XuPickerView.swift; path = Classes/Assistant/ExtentClass/XuPickerView.swift; sourceTree = "<group>"; };
 		C57D6C1C1C48B34E00C92E33 /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColors.swift; path = Classes/Assistant/ExtentClass/SwiftColors.swift; sourceTree = "<group>"; };
+		D1BD62801A8F2DA081E0EBF2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +513,7 @@
 				8FF92BCB1C4C7EB400D5C3F8 /* Alamofire.framework in Frameworks */,
 				C57D6B6C1C47ECD100C92E33 /* Foundation.framework in Frameworks */,
 				C57D6B6A1C47ECC800C92E33 /* UIKit.framework in Frameworks */,
+				BF08F492DB15B47B18E71C31 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +542,31 @@
 				4D7C15CF1D1AA59800E2FA93 /* WXApiObject.h */,
 			);
 			name = Weixin;
+			sourceTree = "<group>";
+		};
+		4D81CE311D20025A00777107 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D81CE321D20027400777107 /* CollectionView.swift */,
+				4D81CE331D20027400777107 /* FeatureView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4DB45B0C1D2CE7C5000D8F15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7589722F3A10246BE75F9241 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F8944863A0D4668AD500467 /* Pods.debug.xcconfig */,
+				99FEA26D59CA42D5E82E62D2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		8FBCC8361C9F823E007E868F /* Insurance */ = {
@@ -558,14 +610,12 @@
 		8FBCC8421C9F97D9007E868F /* My */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6B8A1C47F08700C92E33 /* TypeDefine.swift */,
 				8FF92C041C4CCD2900D5C3F8 /* Assistant.swift */,
 				C57D6C021C48AC1600C92E33 /* Extension.swift */,
 				C57D6BE21C48A9BB00C92E33 /* XuTableViewSetting.swift */,
 				C57D6B8C1C47F13A00C92E33 /* XuKeyChain.swift */,
 				C57D6B8D1C47F13A00C92E33 /* XuRegularExpression.swift */,
 				C57D6B8E1C47F13A00C92E33 /* XuUserDefault.swift */,
-				8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */,
 			);
 			name = My;
 			sourceTree = "<group>";
@@ -761,6 +811,14 @@
 			name = FrameworkFiles;
 			sourceTree = "<group>";
 		};
+		C2117D8E68771DE0BE7E9776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1BD62801A8F2DA081E0EBF2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C57D6B291C47EB4E00C92E33 = {
 			isa = PBXGroup;
 			children = (
@@ -771,6 +829,8 @@
 				8FF92BB71C4C7EB400D5C3F8 /* Alamofire */,
 				8FF92BC51C4C7EB400D5C3F8 /* AlamofireTests */,
 				C57D6B331C47EB4E00C92E33 /* Products */,
+				7589722F3A10246BE75F9241 /* Pods */,
+				C2117D8E68771DE0BE7E9776 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -869,11 +929,16 @@
 		C57D6B821C47EE5800C92E33 /* MasterBranch */ = {
 			isa = PBXGroup;
 			children = (
-				C57D6B871C47EF1900C92E33 /* LoginViewController.swift */,
+				4D81CE2C1D2001D300777107 /* MainViewController.swift */,
+				4D81CE2B1D2001D300777107 /* HomeViewController.swift */,
+				4D81CE2D1D2001D300777107 /* TouchViewController.swift */,
+				4D81CE3A1D2009CE00777107 /* LoginViewController.swift */,
 				C57D6BA61C47F5EB00C92E33 /* AgreementViewController.swift */,
 				C57D6BDC1C48A8FD00C92E33 /* MessageViewController.swift */,
 				C57D6BDE1C48A94A00C92E33 /* PersonalViewController.swift */,
 				C57D6BDF1C48A94A00C92E33 /* SettingViewController.swift */,
+				4D81CE311D20025A00777107 /* View */,
+				4DB45B0C1D2CE7C5000D8F15 /* Model */,
 			);
 			name = MasterBranch;
 			sourceTree = "<group>";
@@ -1029,6 +1094,7 @@
 		C57D6BE81C48AA2500C92E33 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4D9FCA8F1D32553800AD5952 /* WayOfPayTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -1061,6 +1127,8 @@
 				8FE397681CC71BDD00AF7D9C /* NewPaymentViewController.swift */,
 				C57D6BF51C48AB0E00C92E33 /* PayViewController.swift */,
 				C57D6BF61C48AB0E00C92E33 /* ReceiptViewController.swift */,
+				4DB45B0F1D3135CD000D8F15 /* PaymentViewController.swift */,
+				4DC467461D34BB56000FA5CF /* OrderViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1098,6 +1166,7 @@
 				C57D6BFF1C48AB6F00C92E33 /* CarportViewController.swift */,
 				4D7C15CA1D1A82F600E2FA93 /* CarportPayViewController.swift */,
 				8FD146941C8E70F5009BBB47 /* TBViewController.swift */,
+				4DB45B0D1D2E4772000D8F15 /* ParkingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1105,6 +1174,10 @@
 		C57D6C041C48AC3500C92E33 /* Universal */ = {
 			isa = PBXGroup;
 			children = (
+				4D81CE361D2002A200777107 /* AlButton.swift */,
+				8FA287EA1CCA5B0900AB9CC5 /* AlStyle.swift */,
+				4D81CE381D2002FB00777107 /* AlTouch.swift */,
+				4D81CE3C1D200A3000777107 /* AlTextField.swift */,
 				8FF92BF21C4C7FB800D5C3F8 /* XuAlamofire.swift */,
 				8FF92BFE1C4C86BD00D5C3F8 /* SwiftyJSON.swift */,
 				8FF905DF1C59EF2900FF21B4 /* XuGCD.swift */,
@@ -1168,10 +1241,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57D6B5A1C47EB4F00C92E33 /* Build configuration list for PBXNativeTarget "AutoLife" */;
 			buildPhases = (
+				50860AFB83B134199592BB39 /* Check Pods Manifest.lock */,
 				C57D6B2E1C47EB4E00C92E33 /* Sources */,
 				C57D6B2F1C47EB4E00C92E33 /* Frameworks */,
 				C57D6B301C47EB4E00C92E33 /* Resources */,
 				8FF92BD21C4C7EB400D5C3F8 /* Embed Frameworks */,
+				FC57EAC91230DE301AEF7D63 /* Embed Pods Frameworks */,
+				DDEA70C5EE129F44BDC54288 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1238,7 +1314,7 @@
 					};
 					C57D6B311C47EB4E00C92E33 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 37RRWFQN4Y;
+						DevelopmentTeam = 8V7NT4DETG;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -1330,6 +1406,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50860AFB83B134199592BB39 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDEA70C5EE129F44BDC54288 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC57EAC91230DE301AEF7D63 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8FF92BB11C4C7EB400D5C3F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1370,22 +1494,24 @@
 				C57D6C011C48AB6F00C92E33 /* CarportViewController.swift in Sources */,
 				C57D6BD51C47FCF300C92E33 /* XuAnnotationView.swift in Sources */,
 				8F0296B41C994C0E00A49D06 /* RSADataSigner.m in Sources */,
+				4D81CE351D20027400777107 /* FeatureView.swift in Sources */,
 				C57D6BF71C48AB0E00C92E33 /* NewPayViewController.swift in Sources */,
 				C57D6C191C48AFB700C92E33 /* Carport.swift in Sources */,
 				C57D6C111C48AE7300C92E33 /* ViolationTableViewCell.swift in Sources */,
 				8FE397691CC71BDE00AF7D9C /* NewPaymentViewController.swift in Sources */,
 				C57D6C0B1C48ADBA00C92E33 /* ViolationObject.swift in Sources */,
 				8F0296AF1C994C0E00A49D06 /* DataSigner.m in Sources */,
-				C57D6B881C47EF1900C92E33 /* LoginViewController.swift in Sources */,
 				C57D6C091C48ACF600C92E33 /* VArrayTableViewCell.swift in Sources */,
 				8FBCC84A1CA02797007E868F /* ColTableViewCell.swift in Sources */,
 				C57D6B8F1C47F13A00C92E33 /* XuKeyChain.swift in Sources */,
 				4D7C15CB1D1A82F600E2FA93 /* CarportPayViewController.swift in Sources */,
+				4DB45B101D3135CD000D8F15 /* PaymentViewController.swift in Sources */,
 				C57D6C0F1C48AE1E00C92E33 /* CarOwnership.swift in Sources */,
 				8FBCC83E1C9F9037007E868F /* SegHeadView.swift in Sources */,
 				C57D6BD31C47FCF300C92E33 /* FootMenuView.swift in Sources */,
 				8FF92C051C4CCD2900D5C3F8 /* Assistant.swift in Sources */,
 				C57D6C131C48AEF900C92E33 /* HeaderView.swift in Sources */,
+				4D81CE3D1D200A3000777107 /* AlTextField.swift in Sources */,
 				8F6A7B1A1C5787A00071879C /* NumberView.swift in Sources */,
 				C57D6C0D1C48ADE800C92E33 /* CarTableViewCell.swift in Sources */,
 				8FF92BF31C4C7FB800D5C3F8 /* XuAlamofire.swift in Sources */,
@@ -1393,24 +1519,29 @@
 				C57D6BF21C48AAD800C92E33 /* ParkingRecordViewController.swift in Sources */,
 				C57D6BFD1C48AB4D00C92E33 /* OwnerIdentifyViewController.swift in Sources */,
 				C57D6BE61C48A9FD00C92E33 /* ViolationDetailViewController.swift in Sources */,
+				4D81CE341D20027400777107 /* CollectionView.swift in Sources */,
 				8FF92C071C4FA62200D5C3F8 /* BrandViewController.swift in Sources */,
 				C57D6BA51C47F20F00C92E33 /* NewAutoViewController.swift in Sources */,
 				C57D6BD91C47FCF300C92E33 /* XuStepper.swift in Sources */,
 				C57D6B901C47F13A00C92E33 /* XuRegularExpression.swift in Sources */,
 				8F02979C1C994E3B00A49D06 /* XuAlipay.m in Sources */,
 				8F6A7B181C576AA70071879C /* ProvincesView.swift in Sources */,
+				4D81CE371D2002A200777107 /* AlButton.swift in Sources */,
 				C57D6B911C47F13A00C92E33 /* XuUserDefault.swift in Sources */,
+				4D9FCA901D32553800AD5952 /* WayOfPayTableViewCell.swift in Sources */,
 				C57D6C031C48AC1600C92E33 /* Extension.swift in Sources */,
 				8F8069C21C51D1F9007C9DA0 /* PickerViewController.swift in Sources */,
 				C57D6BD81C47FCF300C92E33 /* XuPointAnnotation.swift in Sources */,
 				C57D6BFC1C48AB4D00C92E33 /* CarViewController.swift in Sources */,
 				8F0296B51C994C0E00A49D06 /* RSADataVerifier.m in Sources */,
+				4D81CE301D2001D300777107 /* TouchViewController.swift in Sources */,
 				8F0296B01C994C0E00A49D06 /* DataVerifier.m in Sources */,
 				C57D6BE11C48A94A00C92E33 /* SettingViewController.swift in Sources */,
 				8FEB94561C510A89009D24CB /* XuIndexView.swift in Sources */,
 				C57D6BE01C48A94A00C92E33 /* PersonalViewController.swift in Sources */,
 				8FF905E01C59EF2900FF21B4 /* XuGCD.swift in Sources */,
 				C57D6BC51C47FC1200C92E33 /* MasterMapDelegate.swift in Sources */,
+				4D81CE391D2002FB00777107 /* AlTouch.swift in Sources */,
 				8FD146951C8E70F5009BBB47 /* TBViewController.swift in Sources */,
 				8FBCC8471C9FDCFD007E868F /* SunTableViewCell.swift in Sources */,
 				C57D6BD61C47FCF300C92E33 /* XuCustomPointView.swift in Sources */,
@@ -1421,6 +1552,7 @@
 				4D81CE241D1EB1E200777107 /* WXApiManager.swift in Sources */,
 				C57D6BF31C48AAD800C92E33 /* ParkStateViewController.swift in Sources */,
 				8FA287EB1CCA5B0900AB9CC5 /* AlStyle.swift in Sources */,
+				4D81CE2F1D2001D300777107 /* MainViewController.swift in Sources */,
 				8F0297991C994DD400A49D06 /* Order.m in Sources */,
 				C57D6BDD1C48A8FD00C92E33 /* MessageViewController.swift in Sources */,
 				8FF92C0A1C4FAFC100D5C3F8 /* MBProgressHUD.m in Sources */,
@@ -1429,9 +1561,9 @@
 				C57D6BBD1C47FBBA00C92E33 /* TextFieldsEffects.swift in Sources */,
 				C57D6C151C48AF5800C92E33 /* RecordTableViewCell.swift in Sources */,
 				C57D6C001C48AB6F00C92E33 /* CarportShareViewController.swift in Sources */,
-				C57D6B8B1C47F08700C92E33 /* TypeDefine.swift in Sources */,
 				8F0296AE1C994C0E00A49D06 /* base64.m in Sources */,
 				C57D6BF81C48AB0E00C92E33 /* PayViewController.swift in Sources */,
+				4DB45B0E1D2E4772000D8F15 /* ParkingViewController.swift in Sources */,
 				C57D6BDB1C47FD4700C92E33 /* CarMaster.swift in Sources */,
 				8F0296B11C994C0E00A49D06 /* MD5DataSigner.m in Sources */,
 				C57D6BBC1C47FBBA00C92E33 /* HoshiTextField.swift in Sources */,
@@ -1442,8 +1574,11 @@
 				C57D6C171C48AF9F00C92E33 /* CarportTableViewCell.swift in Sources */,
 				8F0296B21C994C0E00A49D06 /* NSDataEx.m in Sources */,
 				C57D6C071C48AC9300C92E33 /* UniversalTableViewCell.swift in Sources */,
+				4D81CE3B1D2009CE00777107 /* LoginViewController.swift in Sources */,
 				C57D6BF91C48AB0E00C92E33 /* ReceiptViewController.swift in Sources */,
 				C57D6C1B1C48B33300C92E33 /* XuPickerView.swift in Sources */,
+				4D81CE2E1D2001D300777107 /* HomeViewController.swift in Sources */,
+				4DC467471D34BB56000FA5CF /* OrderViewController.swift in Sources */,
 				8FF92BFF1C4C86BD00D5C3F8 /* SwiftyJSON.swift in Sources */,
 				C57D6BA71C47F5EB00C92E33 /* AgreementViewController.swift in Sources */,
 				C57D6BD41C47FCF300C92E33 /* SubMasterView.swift in Sources */,
@@ -1671,6 +1806,7 @@
 		};
 		C57D6B5B1C47EB4F00C92E33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F8944863A0D4668AD500467 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1691,7 +1827,10 @@
 					"$(PROJECT_DIR)/AutoLife/Framework",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
 				PRODUCT_MODULE_NAME = AutoLife;
 				PRODUCT_NAME = "i車生活";
@@ -1703,6 +1842,7 @@
 		};
 		C57D6B5C1C47EB4F00C92E33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99FEA26D59CA42D5E82E62D2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1723,7 +1863,10 @@
 					"$(PROJECT_DIR)/AutoLife/Framework",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Pursue.AutoLife;
 				PRODUCT_MODULE_NAME = AutoLife;
 				PRODUCT_NAME = "i車生活";

@@ -19,7 +19,7 @@ class CarportTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewData
     private var tableView:UITableView!
     var shares:NSArray = [] {
         didSet{
-            self.frame.size.height = XuCellHeight * (1 + CGFloat(shares.count))
+            self.frame.size.height = AlStyle.cellHeight * (1 + CGFloat(shares.count))
             tableView.frame.size.height = CGRectGetHeight(self.frame)
             tableView.reloadData()
         }

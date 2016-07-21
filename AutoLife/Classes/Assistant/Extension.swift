@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 extension String {
-    func sizeWithMaxSize(mSize:CGSize,fontSize:CGFloat) -> CGSize {
+    func sizeWithMaxSize(mSize:CGSize,font:UIFont) -> CGSize {
         let str = NSString(string: self)
-        return str.boundingRectWithSize(mSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:fontSize], context: nil).size
+        let rect = str.boundingRectWithSize(mSize, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
+        return rect.size
     }
 }
 
@@ -30,6 +31,63 @@ extension UILabel {
     func widthFitText() -> CGFloat {
         guard self.text != nil else {return 0}
         return self.font.pointSize * CGFloat(NSString(string: self.text!).length)
+    }
+    
+    func cornerBorder(cornerRadius:CGFloat,font:UIFont) {
+        self.layer.borderColor = AlStyle.color.gray.CGColor
+        self.layer.borderWidth = 0.5
+        self.layer.cornerRadius = 2
+        self.font = font
+        self.textAlignment = NSTextAlignment.Center
+        self.layer.backgroundColor = AlStyle.color.white.CGColor
+    }
+}
+
+extension String {
+    func toDate() -> NSDate? {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter.dateFromString(self)
+    }
+    
+    func dateStringSinceDate(dateString:String) -> String? {
+        let date = self.toDate()?.timeIntervalSinceDate(dateString.toDate()!)
+        guard date != nil else {return nil}
+        var timeInterval = -date!
+        var day = 0
+        while timeInterval > 86400 {
+            timeInterval -= 86400
+            day += 1
+        }
+        let zeroString = "00:00:00"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        let newDate = NSDate(timeInterval: timeInterval, sinceDate: formatter.dateFromString(zeroString)!)
+        var s = formatter.stringFromDate(newDate)
+        print(s)
+        print(s.substringToIndex(s.startIndex.advancedBy(2)))
+        var hh = NSString(string: s.substringToIndex(s.startIndex.advancedBy(2))).intValue
+        if day > 0 {
+            day *= 24
+        }
+        hh += day
+        s.replaceRange(s.startIndex ..< s.startIndex.advancedBy(2), with: "\(hh)")
+        return s
+    }
+}
+
+extension NSDate {
+    func toString() -> NSString {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter.stringFromDate(self)
+    }
+    
+    class func ZeroDate() -> NSDate? {
+        let zeroString = "00:00:00"
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter.dateFromString(zeroString)
     }
 }
 

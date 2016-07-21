@@ -87,8 +87,7 @@ class CarportShareViewController: UIViewController ,UITableViewDelegate,UITableV
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        let leftShift:CGFloat = (indexPath.section == 0 ? 120 : 0)
-        XutableView(tableView, willDisplayCell: cell, forRowIndexPath: indexPath, leftShft: leftShift)
+        XutableView(tableView, willDisplayCell: cell, forRowIndexPath: indexPath)
     }
     
     //MARK: --ControllerAction

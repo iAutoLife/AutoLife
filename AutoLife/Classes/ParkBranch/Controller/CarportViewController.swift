@@ -126,9 +126,9 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 2 {
             guard let carport = self.carportArray[indexPath.section] as? Carport else {return 0}
-            return (CGFloat(carport.shares!.count) + 1) * XuCellHeight
+            return (CGFloat(carport.shares!.count) + 1) * AlStyle.cellHeight
         }
-        return XuCellHeight
+        return AlStyle.cellHeight
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

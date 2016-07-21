@@ -16,5 +16,6 @@
 @interface XuAlipay : NSObject
 
 +(void) alipayWithLocalKey:(void(^)())finished;
++(void) alipayWithDic:(NSDictionary *)dictionary andFinish:(void(^)(NSDictionary *resultDic))finished;
 
 @end

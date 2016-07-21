@@ -15,9 +15,17 @@ internal struct AlStyle {
     internal static let cornerRadius:CGFloat = 5
     internal static let size = UIScreen.mainScreen().bounds.size
     internal static var scale = UIScreen.mainScreen().scale
-    internal static let cellHeight:CGFloat = AlStyle.algebraConvert(50)
     internal static let XuWidth = UIScreen.mainScreen().bounds.width
     internal static let XuHeight =  UIScreen.mainScreen().bounds.height
+    internal static var cellHeight:CGFloat = {
+        var once:dispatch_once_t = 0
+        var height:CGFloat!
+        dispatch_once(&once, { () -> Void in
+            print("dispatch_once cellHeight")
+            height = AlStyle.algebraConvert(44)
+        })
+        return height
+        }()
     internal struct textSize{
         internal static var smallest:CGFloat{
             return AlStyle.algebraConvert(10)

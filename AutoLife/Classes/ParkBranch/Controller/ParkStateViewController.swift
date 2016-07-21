@@ -76,11 +76,11 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        guard let array = self.currentState[indexPath.section] as? NSArray else {return XuCellHeight}
+        guard let array = self.currentState[indexPath.section] as? NSArray else {return AlStyle.cellHeight}
         if let ar = array[indexPath.row] as? NSArray {
-            return XuCellHeight * CGFloat(ar.count)
+            return AlStyle.cellHeight * CGFloat(ar.count)
         }
-        return XuCellHeight
+        return AlStyle.cellHeight
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -210,13 +210,18 @@ class ParkStateViewController: UIViewController ,UITableViewDelegate,UITableView
 
 class ArrayTBCell: UITableViewCell ,UITableViewDataSource,UITableViewDelegate{
     private var tableView:UITableView!
-    private var xarray:NSArray! {
+    var xarray:NSArray! {
         didSet{
-            tableView.frame = CGRectMake(0,0,AlStyle.size.width,CGFloat(xarray.count) * XuCellHeight)
+            if xarray.count == 1 {
+                tableView.separatorColor = UIColor.clearColor()
+            }else {
+                tableView.separatorColor = AlStyle.color.gray_light
+            }
+            tableView.frame = CGRectMake(0,0,AlStyle.size.width,CGFloat(xarray.count) * AlStyle.cellHeight)
             tableView.reloadData()
         }
     }
-    private var title:String = ""
+    var title:String = ""
     
     init(reuseIdentifier: String?) {
         super.init(style: UITableViewCellStyle.Default, reuseIdentifier: reuseIdentifier)
@@ -224,9 +229,8 @@ class ArrayTBCell: UITableViewCell ,UITableViewDataSource,UITableViewDelegate{
         tableView.scrollEnabled = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = XuCellHeight
+        tableView.rowHeight = AlStyle.cellHeight
         tableView.backgroundColor = UIColor.clearColor()
-        tableView.separatorColor = AlStyle.color.gray_light
         self.addSubview(tableView)
     }
     

@@ -136,9 +136,9 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     
     func rechargeCell(indexPath:NSIndexPath) -> UITableViewCell{
         func lineWith(xLocation:CGFloat) -> UIView {
-            let view = UIView(frame: CGRectMake(0,0,1,XuCellHeight / 2))
+            let view = UIView(frame: CGRectMake(0,0,1,AlStyle.cellHeight / 2))
             view.backgroundColor = AlStyle.color.gray_light
-            view.center = CGPointMake(xLocation, XuCellHeight / 2)
+            view.center = CGPointMake(xLocation, AlStyle.cellHeight / 2)
             return view
         }
         let leftText = (indexPath.row == 0 ? "余额" : "充值")
@@ -147,14 +147,14 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
         let label = UILabel(frame: CGRectMake(15,20,30,20))
         label.text = leftText;label.textAlignment = NSTextAlignment.Center
         label.font = AlStyle.font.normal
-        label.center.y = XuCellHeight / 2
+        label.center.y = AlStyle.cellHeight / 2
         cell.contentView.addSubview(label)
         cell.contentView.addSubview(lineWith(60))
         if indexPath.row == 0 {
             let rightLabel = UILabel(frame: CGRectMake(0,0,50,20))
             rightLabel.text = "¥25.00";rightLabel.textAlignment = NSTextAlignment.Right
             rightLabel.font = AlStyle.font.normal
-            rightLabel.center = CGPointMake(AlStyle.size.width - 45, XuCellHeight / 2)
+            rightLabel.center = CGPointMake(AlStyle.size.width - 45, AlStyle.cellHeight / 2)
             cell.contentView.addSubview(rightLabel)
             return cell
         }
@@ -163,7 +163,7 @@ class PayViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
             let button = UIButton(type: UIButtonType.Custom)
             button.frame = CGRectMake(0, 0, 50, 40)
             button.setImage(UIImage(named: element), forState: UIControlState.Normal)
-            button.center = CGPointMake(90 + CGFloat(icons.indexOf(element)!) * 50, XuCellHeight / 2)
+            button.center = CGPointMake(90 + CGFloat(icons.indexOf(element)!) * 50, AlStyle.cellHeight / 2)
             cell.contentView.addSubview(button)
             button.handleControlEvent(UIControlEvents.TouchUpInside, withBlock: { (_) -> Void in
                 print(element)

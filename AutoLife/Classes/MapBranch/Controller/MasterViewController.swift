@@ -151,8 +151,9 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     }
     
     func showMessageView(sender:UIBarButtonItem) {
-        let messageVC = MessageViewController()
-        self.navigationController?.pushViewController(messageVC, animated: true)
+        self.dismissViewControllerAnimated(true, completion: nil)
+//        let messageVC = MessageViewController()
+//        self.navigationController?.pushViewController(messageVC, animated: true)
     }
     
     func hideSubMasterView(sender:NSObject) {
@@ -252,7 +253,8 @@ class MasterViewController: UIViewController ,MAMapViewDelegate,AMapSearchDelega
     
     func initNavigationItemView() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "head_protraits"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MasterViewController.showSubMasterView(_:)))   //head_protraits
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MasterViewController.showMessageView(_:)))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "message_off"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MasterViewController.showMessageView(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "主页", style: .Plain, target: self, action: #selector(showMessageView(_:)))
         self.navigationItem.titleView = MapTitleView(city: "北京", text: "今日限行0/5")
         
         self.search = AMapSearchAPI()

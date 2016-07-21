@@ -31,19 +31,14 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     private var rightButton:UIButton?
     var textField:HoshiTextField?
     var rightObject:NSObject?
-    var leftShift:CGFloat = 0 {
-        didSet{
-            guard leftLabel != nil else {return}
-            leftLabel?.center.x += leftShift
-        }
-    }
+    var leftShift:CGFloat = 0
     
     var leftImage:UIImage? {
         didSet{
             guard leftImageView != nil else {return}
             leftImageView?.frame = CGRectMake(0, 0, 30, 30 * leftImage!.size.height / leftImage!.size.width)
             leftImageView?.image = leftImage
-            leftImageView?.center = CGPointMake(35, XuCellHeight / 2)
+            leftImageView?.center = CGPointMake(35, AlStyle.cellHeight / 2)
             guard leftLabel != nil else {return}
             leftLabel?.center.x += 40
         }
@@ -52,10 +47,7 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     var leftLabelText:String? {
         didSet{
             guard leftLabel != nil else {return}
-            let width = AlStyle.font.normal.pointSize * CGFloat(NSString(string: leftLabelText!).length)
-            leftLabel?.frame.size = CGSizeMake(width + 10, AlStyle.font.normal.pointSize + 5)
             leftLabel?.text = leftLabelText
-            leftLabel?.center = CGPointMake(25 + width / 2, XuCellHeight / 2)
         }
     }
     
@@ -78,40 +70,18 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     var rightLabelText:String? {
         didSet{
             guard rightLabel != nil && rightLabelText != nil else {return}
-            let width = AlStyle.font.normal.pointSize * CGFloat(NSString(string: rightLabelText!).length)
-            var size = CGSizeMake(width + 10, AlStyle.font.normal.pointSize + 5)
-            var center = CGPointMake(AlStyle.size.width - width / 2 - 35,XuCellHeight / 2)
-            if (width > AlStyle.size.width - 120) && (!rightLabelText!.containsString("/")) {
-                size = rightLabelText!.sizeWithMaxSize(CGSizeMake(AlStyle.size.width - 120, AlStyle.size.width - 120), fontSize: AlStyle.font.normal.pointSize)
-                center.y = size.height / 2 + 18
-                center.x = AlStyle.size.width - size.width / 2 - 30
-                rightLabel?.textAlignment = NSTextAlignment.Left
-                rightLabel?.numberOfLines = 0
-                self.frame.size.height = size.height + 36
-            }
-            rightLabel?.frame.size = size
             rightLabel?.text = rightLabelText
-            rightLabel?.center = center
-            if self.accessoryType != UITableViewCellAccessoryType.DisclosureIndicator {
-                rightLabel?.center.x += 10
+            if NSString.init(string: rightLabelText!).length > 15 {
+                rightLabel?.numberOfLines = 0
+                rightLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
             }
         }
     }
     
     var rightButtonTitle:String? {
         didSet{
-            guard rightButton != nil else {return}
+            self.initRightButton()
             rightButton?.setTitle(rightButtonTitle, forState: UIControlState.Normal)
-            let width = AlStyle.font.normal.pointSize * CGFloat(NSString(string: rightButtonTitle!).length) + 5
-            rightButton?.frame.size = CGSizeMake(width + 10, AlStyle.font.normal.pointSize + 5)
-            rightButton?.center = CGPointMake(AlStyle.size.width - width / 2 - 35, XuCellHeight / 2)
-            if rightLabel != nil {
-                rightLabel?.center.x -= width + 20
-            }
-            
-            if self.accessoryType != UITableViewCellAccessoryType.DisclosureIndicator {
-                rightButton?.center.x += 10
-            }
         }
     }
     
@@ -151,7 +121,6 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         switch universalStyle {
         case .RightButton:
             self.initLeftLabel()
-            self.initRightButton()
         case .RightSwitch:
             self.initLeftLabel()
             self.initRightSwitch()
@@ -177,7 +146,7 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
             break
         case is UIView:
             self.rightObject = rightObject
-            (rightObject as! UIView).center = CGPointMake(AlStyle.size.width - CGRectGetWidth((rightObject as! UIView).frame) / 2 - 30, XuCellHeight / 2)
+            (rightObject as! UIView).center = CGPointMake(AlStyle.size.width - CGRectGetWidth((rightObject as! UIView).frame) / 2 - 30, AlStyle.cellHeight / 2)
             if self.accessoryType != UITableViewCellAccessoryType.DisclosureIndicator {
                 (rightObject as! UIView).center.x += 10
             }
@@ -190,7 +159,6 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     func initLeftLabel() {
         leftLabel = UILabel(frame: CGRectMake(15, 0, 0, 20))
         leftLabel?.font = AlStyle.font.normal
-        leftLabel?.center.y = XuCellHeight / 2
         self.contentView.addSubview(leftLabel!)
     }
     
@@ -200,11 +168,10 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     }
     
     func initRightButton() {
-        rightButton = UIButton(type: UIButtonType.System)
-        rightButton?.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        rightButton = UIButton(type: UIButtonType.Custom)
+//        rightButton?.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         rightButton?.titleLabel?.font = AlStyle.font.normal
         rightButton?.backgroundColor = AlStyle.color.blue
-        rightButton?.frame = CGRectZero
         rightButton?.layer.cornerRadius = AlStyle.cornerRadius
         rightButton?.addTarget(self, action: #selector(UniversalTableViewCell.rightButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.contentView.addSubview(rightButton!)
@@ -214,14 +181,13 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         rightSwitch = UISwitch(frame: CGRectZero)
         rightSwitch?.addTarget(self, action: #selector(UniversalTableViewCell.rightSwitchAction(_:)), forControlEvents: UIControlEvents.ValueChanged)
         rightSwitch?.transform = CGAffineTransformMakeScale(0.7, 0.7)
-        rightSwitch?.center = CGPointMake(AlStyle.size.width - 45, XuCellHeight / 2)
+        rightSwitch?.center = CGPointMake(AlStyle.size.width - 45, AlStyle.cellHeight / 2)
         contentView.addSubview(rightSwitch!)
     }
     
     func initRightLabel() {
         rightLabel = UILabel(frame: CGRectMake(15, 0, 0, 20))
         rightLabel?.font = AlStyle.font.normal
-        rightLabel?.center.y = XuCellHeight / 2
         rightLabel?.textAlignment = NSTextAlignment.Right
         self.contentView.addSubview(rightLabel!)
     }
@@ -231,7 +197,7 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
         textField?.font = AlStyle.font.normal
         textField?.setValue(UIFont.systemFontOfSize(20), forKeyPath: "_placeholderLabel.font")
         textField?.autocorrectionType = UITextAutocorrectionType.No
-        textField?.center.y = XuCellHeight / 2
+        textField?.center.y = AlStyle.cellHeight / 2
         self.contentView.addSubview(textField!)
         textField?.addTarget(self, action: #selector(UniversalTableViewCell.textFieldValueChanged(_:)), forControlEvents: UIControlEvents.AllEditingEvents)
     }
@@ -270,6 +236,37 @@ class UniversalTableViewCell: UITableViewCell ,XuPickerViewDelegate{
     func XupickerViewDidChanged(pickerString: String) {
         textField?.text = pickerString
         print(pickerString)
+    }
+    
+    override func layoutSubviews() {
+        rightButton?.snp_makeConstraints(closure: { (make) in
+            make.right.equalTo(contentView).offset(-20)
+            make.centerY.equalTo(contentView.snp_centerY)
+            make.height.equalTo(AlStyle.font.normal.pointSize + 5)
+        })
+        rightLabel?.snp_makeConstraints(closure: { (make) in
+            if rightButton != nil {
+                make.right.equalTo(rightButton!.snp_left).offset(-10)
+            }else {
+                make.right.equalTo(contentView).offset(-20)
+            }
+            make.centerY.equalTo(contentView.snp_centerY)
+        })
+        
+        leftLabel?.snp_makeConstraints(closure: { (make) in
+            make.left.equalTo(contentView).offset(20 + leftShift)
+            make.centerY.equalTo(contentView)
+        })
+        
+        rightLabel?.snp_makeConstraints(closure: { (make) in
+            make.centerY.equalTo(contentView)
+            make.width.lessThanOrEqualTo(AlStyle.XuWidth * 0.6)
+            if rightButton != nil {
+                make.right.equalTo(rightButton!.snp_left).offset(-10)
+            }else {
+                make.right.equalTo(contentView).offset(-20)
+            }
+        })
     }
     
     required init?(coder aDecoder: NSCoder) {

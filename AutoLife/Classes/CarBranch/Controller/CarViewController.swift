@@ -139,7 +139,7 @@ class CarViewController: UIViewController ,UITableViewDelegate,UITableViewDataSo
     
     //MARK: --ControllerAction
     func showMessageView(sender:UIBarButtonItem) {
-        WeiChatPay.authorizationToLogin(self)
+//        WeiChatPay.authorizationToLogin(self)
         
 //        let messageVC = MessageViewController()
 //        self.navigationController?.pushViewController(messageVC, animated: true)

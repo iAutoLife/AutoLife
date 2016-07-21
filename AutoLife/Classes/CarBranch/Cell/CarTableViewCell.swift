@@ -34,13 +34,13 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
     
     func setupWithCarOwnership(xcarO:CarOwnership) {
         if xcarO.assistPhones == nil {
-            self.frame.size.height = XuCellHeight
-            self.centerY = XuCellHeight / 2
+            self.frame.size.height = AlStyle.cellHeight
+            self.centerY = AlStyle.cellHeight / 2
             self.initBaseView()
             self.setupViewData(xcarO)
             self.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }else {
-            self.frame.size.height = XuCellHeight * (1 + CGFloat(xcarO.assistPhones!.count))
+            self.frame.size.height = AlStyle.cellHeight * (1 + CGFloat(xcarO.assistPhones!.count))
             self.xCarOwnership = xcarO
             self.initTableView()
         }
@@ -130,7 +130,7 @@ class CarTableViewCell: UITableViewCell ,UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return XuCellHeight
+        return AlStyle.cellHeight
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

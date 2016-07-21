@@ -16,18 +16,18 @@ class XuAlamofire: NSObject {
         var xmanager:Alamofire.Manager!
         dispatch_once(&once, { () -> Void in
             let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-            config.timeoutIntervalForRequest = 5
+            config.timeoutIntervalForRequest = 20
             print("dispatch_once manager")
             xmanager = Manager(configuration:config)
         })
         return xmanager
     }()
     
-    class func getString(url:String,success:(String?)->Void,failed:(NSError,Bool)->Void) {
+    class func getString(url:String,success:(String?)->Void,failed:((NSError,Bool)->Void)?) {
         let request = manager.request(.GET, url)
         request.responseString { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!,xRe.result.error?.code == -1001)
+                failed?(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             success(xRe.result.value)
@@ -47,10 +47,10 @@ class XuAlamofire: NSObject {
         }
     }
     
-    class func postParameters(url:String,parameters:[String:AnyObject]?,successWithString success:(String?)->Void,failed:(NSError,Bool)->Void) {
+    class func postParameters(url:String,parameters:[String:AnyObject]?,successWithString success:(String?)->Void,failed:((NSError,Bool)->Void)?) {
         manager.request(.POST, url, parameters: parameters).responseString { (xRe) -> Void in
             if xRe.result.error != nil {
-                failed(xRe.result.error!,xRe.result.error?.code == -1001)
+                failed?(xRe.result.error!,xRe.result.error?.code == -1001)
                 return
             }
             success(xRe.result.value)

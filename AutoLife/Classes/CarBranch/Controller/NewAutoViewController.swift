@@ -32,15 +32,17 @@ class NewAutoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         if isNewLogin {
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.skipThisTap(_:)))
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "跳过", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(skipThisTap(_:)))
+            self.navigationItem.leftBarButtonItem = nil
+        }else {
+            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(goback(_:)))
         }
         provinceBtn.buttonWithLeft("京", right: UIImage(named: "down"))
         provinceBtn.layer.borderColor = AlStyle.color.blue_light.CGColor
         provinceBtn.layer.borderWidth = 1
         provinceBtn.layer.cornerRadius = AlStyle.cornerRadius
-        
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(NewAutoViewController.goback(_:)))
         
         boundsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NewAutoViewController.tapSuperView(_:))))
         selectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(NewAutoViewController.chooseBrandTap(_:))))
@@ -111,9 +113,10 @@ class NewAutoViewController: UIViewController {
     }
     
     func skipThisTap(sender:UIBarButtonItem?) {
-        let mapView = MasterViewController()
-        let nav = UINavigationController(rootViewController: mapView)
-        self.presentViewController(nav, animated: true, completion: nil)
+//        let mapView = UINavigationController(rootViewController: MainViewController())
+//        let nav = UINavigationController(rootViewController: MainViewController())
+//        self.presentViewController(nav, animated: true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func provinceClicked(sender: UIButton) {
@@ -140,6 +143,9 @@ class NewAutoViewController: UIViewController {
     }
 
     @IBAction func determainAction(sender: AnyObject) {
+        if plateTextField == "" {
+            self.presentViewController(Assistant.alertHint("请完成表单再提交", message: nil), animated: true, completion: nil)
+        }
         self.plateTextField.resignFirstResponder()
         self.engineNumTF.resignFirstResponder()
         let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)

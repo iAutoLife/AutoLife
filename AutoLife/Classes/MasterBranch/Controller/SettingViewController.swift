@@ -49,7 +49,7 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         if indexPath.section == self.tbArray.count - 1 {
             return 30
         }
-        return XuCellHeight
+        return AlStyle.cellHeight
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -94,12 +94,14 @@ class SettingViewController: UIViewController ,UITableViewDelegate,UITableViewDa
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
         if indexPath.section == 3 {
-            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
-            loginVC?.loginType = XuLoginType.Default
-            loginVC?.defaultUser = XuKeyChain.get(XuCurrentUser)
-            self.presentViewController(loginVC!, animated: true, completion: { () -> Void in
-                XuKeyChain.set("", forkey: XuCurrentUser)
-            })
+            let url = AlStyle.uHeader + "applogin/cleanToken?phone=" + XuKeyChain.get(XuCurrentUser)!
+            XuAlamofire.getString(url, success: { (result) in
+                print(result)
+                if result == "true" {
+                    XuKeyChain.remove(XuCurrentUser)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                }, failed: nil)
         }
     }
     

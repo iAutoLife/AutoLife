@@ -54,10 +54,10 @@ class ViolationDetailViewController: UIViewController ,UITableViewDelegate,UITab
         case "address":
             guard AlStyle.size.width < 375 else {return 50}
             let content = xviolation?["address"] as? String
-            return (content?.sizeWithMaxSize(CGSizeMake(200, 200), fontSize: AlStyle.font.normal.pointSize).height)! + 36
+            return (content?.sizeWithMaxSize(CGSizeMake(200, 200), font: AlStyle.font.normal).height)! + 36
         case "content":
             let content = xviolation?["content"] as? String
-            return (content?.sizeWithMaxSize(CGSizeMake(AlStyle.size.width - 120, AlStyle.size.width - 120), fontSize: AlStyle.font.normal.pointSize).height)! + 36
+            return (content?.sizeWithMaxSize(CGSizeMake(AlStyle.size.width - 120, AlStyle.size.width - 120), font: AlStyle.font.normal).height)! + 36
         default:return 50
         }
     }
