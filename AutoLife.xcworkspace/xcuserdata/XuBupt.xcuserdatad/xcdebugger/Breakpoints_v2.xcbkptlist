@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AutoLife/AppDelegate.swift"
-            timestampString = "490006009.684962"
+            filePath = "AutoLife/Classes/PayBranch/Controller/PaymentViewController.swift"
+            timestampString = "492529147.918484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "application(_:didReceiveRemoteNotification:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AutoLife/AppDelegate.swift"
-            timestampString = "490005884.419528"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "application(_:didReceiveRemoteNotification:)"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "confirmCharge()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

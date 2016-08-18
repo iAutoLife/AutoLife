@@ -98,6 +98,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let js = JSON.init(userInfo["NEWS_CATEGORY"]!)
         parkingVC = ParkingViewController()
         let showedVC = Assistant.getShowedViewController()
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(500 * NSEC_PER_MSEC)), dispatch_get_main_queue()) {
+            if js["master"]["OutTime"] {
+                print(js)
+                let paymentVC = PaymentViewController()
+                paymentVC.json = js["master"]
+                showedVC.presentViewController(UINavigationController.init(rootViewController: paymentVC), animated: true, completion: nil)
+            }else {
+                print("hhh")
+                self.parkingVC!.json = js
+                showedVC.presentViewController(UINavigationController.init(rootViewController: self.parkingVC!), animated: true, completion: nil)
+            }
+        }
+    
+        /*
         let alertVC = UIAlertController(title: "通知", message: "您有新消息", preferredStyle: .Alert)
         alertVC.addAction(UIAlertAction(title: "好的", style: .Cancel, handler: nil))
         alertVC.addAction(UIAlertAction(title: "查看", style: .Default, handler: {(_) in
@@ -112,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 showedVC.presentViewController(UINavigationController.init(rootViewController: self.parkingVC!), animated: true, completion: nil)
             }
             }))
-        showedVC.presentViewController(alertVC, animated: true, completion: nil)
+        showedVC.presentViewController(alertVC, animated: true, completion: nil)*/
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {

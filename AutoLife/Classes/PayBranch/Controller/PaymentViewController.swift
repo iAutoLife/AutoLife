@@ -70,12 +70,14 @@ class PaymentViewController: UIViewController ,UITableViewDelegate,UITableViewDa
 //            hub.show(true)
             switch row {
             case 0:
-                XuAlipay.alipayWithDic(self.json.dictionaryObject, andFinish: { (result) in
+                XuAlipay.alipayWithDic(self.json.dictionaryObject, andFinish: { [weak self] (result) in
+                    guard let weakSelf = self else {return}
+                    weakSelf.confirmCharge()
                     if result["resultStatus"]?.description() == "9000" {
                         hub.hide(true)
                         let orderVC = OrderViewController()
-                        orderVC.json = self.json
-                        self.navigationController?.pushViewController(orderVC, animated: true)
+                        orderVC.json = weakSelf.json
+                        weakSelf.navigationController?.pushViewController(orderVC, animated: true)
                     }else {
                         hub.labelText = result["memo"]!.description()
                         hub.customView = UIImageView(image: UIImage(named:"wrong"))
@@ -83,13 +85,16 @@ class PaymentViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                     }
                 })
             case 1:
-                WeiChatPay.doWXPayPost(["order":(self.json.description),"way":"\(self.selectedIndex.row)"], payClosure: { (isSuccess) in
+                WeiChatPay.doWXPayPost(["order":(self.json.description),"way":"\(self.selectedIndex.row)"], payClosure: {
+                    [weak self] (isSuccess) in
+                    guard let weakSelf = self else {return}
+                    weakSelf.confirmCharge()
                     print(isSuccess)
                     if isSuccess {
                         hub.hide(true)
                         let orderVC = OrderViewController()
-                        orderVC.json = (self.json)
-                        self.navigationController?.pushViewController(orderVC, animated: true)
+                        orderVC.json = weakSelf.json
+                        weakSelf.navigationController?.pushViewController(orderVC, animated: true)
                     }else {
                         hub.labelText = "支付失败"
                         hub.customView = UIImageView(image: UIImage(named:"wrong"))
@@ -100,6 +105,29 @@ class PaymentViewController: UIViewController ,UITableViewDelegate,UITableViewDa
                 print(row)
             }
         }
+    }
+    
+    func confirmCharge() {
+        guard let confirmUrl = json["confirmUrl"].string else {return}
+        let dic:NSMutableDictionary = [:]
+        dic.setObject(json["parkioId"].description, forKey: "parkioId")
+        dic.setObject(json["plateNumber"].description, forKey: "plateNumber")
+        let date = getCurrentTime()
+        dic.setObject(date, forKey: "payTime")
+        dic.setObject(date, forKey: "confirmTime")
+        dic.setObject("0.01", forKey: "currentFee")
+        
+        XuAlamofire.postParameters(confirmUrl, parameters: ["info":JSON(dic).description], successWithString: { (re) in
+            print(re)
+            }) { (error, flag) in
+                print(error)
+        }
+    }
+    
+    func getCurrentTime() -> String {
+        let dateFormat = NSDateFormatter()
+        dateFormat.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return dateFormat.stringFromDate(NSDate())
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
