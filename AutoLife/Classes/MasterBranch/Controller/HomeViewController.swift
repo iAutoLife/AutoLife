@@ -13,7 +13,8 @@ class HomeViewController: UIViewController {
     
     var coverView:UIImageView!
     var weatherLabel:UILabel!
-    var mainView:CollectionView!
+//    var mainView:CollectionView!
+    var mainView = HighwayView()
     private let gap = AlStyle.algebraConvert(7)
     private var locationLabel = UILabel()
     private var label1 = UILabel()
@@ -87,8 +88,8 @@ class HomeViewController: UIViewController {
         print(AlStyle.font.normal.pointSize)
         self.view.addSubview(weatherLabel)
         
-        mainView = CollectionView(texts: ["洗车","换轮胎","保养维修","服务中心"], images: ["car_wash","tyre","repair","service"])
-        mainView.setLayout(0)
+//        mainView = CollectionView(texts: ["洗车","换轮胎","保养维修","服务中心"], images: ["car_wash","tyre","repair","service"])
+//        mainView.setLayout(0)
         self.view.addSubview(mainView)
         
         self.limitNumber()
@@ -325,5 +326,56 @@ class FuctionView: UIView {
     //MARK: --event action
     func showMap(sender:UIButton) {
         self.closureOfAction?()
+    }
+}
+
+class HighwayView: UIView {
+    private var titleLabel = UILabel.init()
+    private var subTitleLabel = UILabel.init()
+    private var wayLabel = UILabel.init()
+    private var payLabel = UILabel.init()
+    
+    init() {
+        super.init(frame: CGRectZero)
+        backgroundColor = AlStyle.color.white
+        layer.cornerRadius = AlStyle.cornerRadius
+        titleLabel.text = "高  速"
+        titleLabel.font = AlStyle.font.big
+        self.addSubview(titleLabel)
+        subTitleLabel.text = "首发集团提醒您："
+        subTitleLabel.font = AlStyle.font.normal
+        self.addSubview(subTitleLabel)
+        wayLabel.text = "您的京AB1212车辆于2016-6-12 12:12 在昌平西关16入口进入G6京藏高速"
+        wayLabel.font = AlStyle.font.smallest
+        wayLabel.textColor = AlStyle.color.gray
+        self.addSubview(wayLabel)
+        payLabel.text = "您的车辆已绑定支付，可从APP出口不停车驶出"
+        payLabel.font = AlStyle.font.smallest
+        payLabel.textColor = AlStyle.color.gray
+        self.addSubview(payLabel)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        titleLabel.snp_makeConstraints { (make) in
+            make.centerX.equalTo(self)
+            make.top.equalTo(3)
+        }
+        subTitleLabel.snp_makeConstraints { (make) in
+            make.left.equalTo(self).offset(10)
+            make.top.equalTo(titleLabel.snp_bottom).offset(3)
+        }
+        wayLabel.snp_makeConstraints { (make) in
+            make.top.equalTo(subTitleLabel.snp_bottom).offset(5)
+            make.left.equalTo(self).offset(20)
+        }
+        payLabel.snp_makeConstraints { (make) in
+            make.top.equalTo(wayLabel.snp_bottom).offset(5)
+            make.left.equalTo(self).offset(20)
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
