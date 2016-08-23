@@ -15,20 +15,10 @@ class CarportViewController: UIViewController ,UITableViewDelegate,UITableViewDa
     
     override func loadView() {
         self.view = UIView()
-        
     }
     
     deinit {
         print("deinit: \(CFGetRetainCount(self))")
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        print("viewDidDisappear: \(CFGetRetainCount(self))")
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        
-        print("viewDidAppear: \(CFGetRetainCount(self))")
     }
     
     override func viewDidLoad() {

@@ -60,15 +60,15 @@ class MainViewController: UITabBarController ,UITabBarControllerDelegate{
     }
     
     func initTabBar() {
-        let vc1 = UINavigationController(rootViewController: UIViewController())
+        let vc1 = UINavigationController(rootViewController: CarViewController())
         vc1.setTabBarItemWith(title: "车辆", image: UIImage(named: "vehicle"), selectedImage: nil)
-        let vc2 = UINavigationController(rootViewController: UIViewController())
+        let vc2 = UINavigationController(rootViewController: CarportViewController())
         vc2.setTabBarItemWith(title: "车位", image: UIImage(named: "carports"), selectedImage: nil)
         let vc3 = UINavigationController(rootViewController:HomeViewController())
         vc3.setTabBarItemWith(title: nil, image: nil, selectedImage: nil)
         let vc4 = UINavigationController(rootViewController:InsuranceViewController())
         vc4.setTabBarItemWith(title: "保险", image: UIImage(named: "insurances"), selectedImage: nil)
-        let vc5 = UINavigationController(rootViewController: UIViewController())
+        let vc5 = UINavigationController(rootViewController: PersonalViewController())
         vc5.setTabBarItemWith(title: "我的", image: UIImage(named: "mine"), selectedImage: nil)
         
         self.viewControllers = [vc1,vc2,vc3,vc4,vc5]

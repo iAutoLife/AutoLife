@@ -35,7 +35,7 @@ class CarportTableViewCell: UITableViewCell ,UITableViewDelegate,UITableViewData
         tableView.backgroundColor = UIColor.clearColor()//AlStyle.color.gray_light
         tableView.scrollEnabled = false
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        tableView.rowHeight = 50
+        tableView.rowHeight = AlStyle.cellHeight
         
         tableView.dataSource = self
         tableView.delegate = self
